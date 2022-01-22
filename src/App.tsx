@@ -1,17 +1,20 @@
 import React from 'react';
-import { SectionScroll } from './components/sectionScroll/index';
+import { SectionScroll } from './pages/sectionScroll/index';
 import './style/global.css'
-import { AboutMe } from './components/aboutMe/index';
-import { ProjectReactNative } from './components/projectReactNative/index';
+import { AppWrap } from './style/globalComponents';
+import { Navigation } from './components/navigation/index';
+import { AboutMe } from './pages/aboutMe/index';
+import { AdminApp } from './pages/adminApp/index';
 
 function App() {
   return (
-    <SectionScroll>
-          <AboutMe />
-          <ProjectReactNative />
-          <AboutMe />
-          <ProjectReactNative />
-    </SectionScroll>      
+    <AppWrap>
+      <Navigation />
+      <SectionScroll>
+            <AboutMe />
+            <AdminApp />
+      </SectionScroll>      
+    </AppWrap>
   );
 }
 
