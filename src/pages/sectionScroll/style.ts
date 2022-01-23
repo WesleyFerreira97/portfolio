@@ -1,11 +1,12 @@
+// ComponentDefaultStyles
 import styled from 'styled-components'
+import { colors } from '../../components/utilities/colors'
 
 export const Section = styled.div`
-    background-color: #32024e;
+    background-color: ${colors.primary};
     height: 100vh;
     overflow: hidden;
 `;
-
 
 export const SectionWrap = styled.div`
     height: 100%;

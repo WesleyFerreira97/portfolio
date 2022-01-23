@@ -1,24 +1,19 @@
+// SectionScroll style.ts
 import styled from 'styled-components';
-
+import { colors } from '../../components/utilities/colors';
+import { typography } from './typography';
 interface PageProps {
     bg?: string;
 }
 
 export const PageContainer = styled.div<PageProps>`
+    align-self: flex-end;
     flex-direction: column;
     align-items: center;
-    background: #1F1D36;
-    padding: 3rem;
-    color: #fff;
     white-space: normal;
-    align-self: flex-end;
-    border: 2px solid orange;
-    background-color: ${props => props.bg};
+    padding: 3rem;
+    background-color: ${colors.primary};
 `;
-
-PageContainer.defaultProps = {
-    bg: '#32024e',
-}
 
 
 export const ProjectPreview = styled.div`
@@ -38,6 +33,12 @@ export const ProjectPreview = styled.div`
 `;
 
 export const AboutProject = styled.div`
-    background: #000;
     color: #fff;
+    
+    .about-project {
+        
+        &__title {
+            ${typography.TitleDisplay}
+        }
+    }
 `;

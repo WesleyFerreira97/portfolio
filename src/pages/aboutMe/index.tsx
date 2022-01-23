@@ -12,11 +12,11 @@ export function AboutMe() {
                 </div>
             </ProjectPreview>
             <AboutProject>
-                <h1>APP Administrativo</h1>
-                <h2>React Native</h2>
-                <p>React Native runs on React, a popular open source library for building user interfaces with JavaScript. To make the most of React Native, it helps to understand React itself. This section can get you started or can serve as a refresher course.</p>
+                <h1 className='about-project__title'>APP Administrativo</h1>
+                <h2 className='about-project__subtitle'>React Native</h2>
+                <p className='about-project__text'>React Native runs on React, a popular open source library for building user interfaces with JavaScript. To make the most of React Native, it helps to understand React itself. This section can get you started or can serve as a refresher course.</p>
                 <p>We’re going to cover the core concepts behind React:</p>
-                <ul>
+                <ul className='about-project__menu'>
                     <li>React Native</li>
                     <li>React Navigation</li>
                     <li>TypeScript</li>

@@ -1,4 +1,4 @@
-import {css} from 'styled-components';
+import { css } from 'styled-components';
 
 interface TypographyProps {
     TitleDisplay?: object;
@@ -8,11 +8,11 @@ interface TypographyProps {
 export const typography: TypographyProps = {}
 
 const Title = css`
-    font-family: 'Roboto', sans-serif;
-`
+    font-family: 'Bebas Neue', cursive;
+`;
 
 const Text = css`
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
 `;
 
 typography.TitleDisplay = css`
