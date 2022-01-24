@@ -1,7 +1,6 @@
 // SectionScroll style.ts
 import styled from 'styled-components';
 import { colors } from '../../components/utilities/colors';
-import { typography } from './typography';
 interface PageProps {
     bg?: string;
 }
@@ -38,7 +37,11 @@ export const AboutProject = styled.div`
     .about-project {
         
         &__title {
-            ${typography.TitleDisplay}
+            color: ${props => props.theme.scheme.colors.primary};
+            ${props => props.theme.typography.titleXl}
+        }
+        &__subtitle {
+            ${props => props.theme.typography.textMd}
         }
     }
 `;
