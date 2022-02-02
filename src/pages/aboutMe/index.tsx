@@ -1,10 +1,6 @@
-import React from 'react';
-import { About } from './style';
-import { PageContainer, ProjectPreview, AboutProject } from '../../components/utilities/componentsDefault';
-
+import { PageContainer, ProjectPreview } from '../../components/utilities/componentsDefault';
 
 export function AboutMe() {
-
     return (
         <PageContainer>
             <ProjectPreview>
@@ -13,7 +9,7 @@ export function AboutMe() {
                 </div>
             </ProjectPreview>
             
-            <AboutProject>
+            <div>
                 <h1 className='about-project__title'>APP Administrativo</h1>
                 <h2 className='about-project__subtitle'>React Native</h2>
                 <p className='about-project__text'>React Native runs on React, a popular open source library for building user interfaces with JavaScript. To make the most of React Native, it helps to understand React itself. This section can get you started or can serve as a refresher course.</p>
@@ -26,7 +22,7 @@ export function AboutMe() {
                     <li>Styled Components</li>
                     <li>Firebase</li>
                 </ul>
-            </AboutProject>
+            </div>
         </PageContainer>
     );
 }

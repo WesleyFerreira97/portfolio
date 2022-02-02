@@ -1,6 +1,6 @@
 // SectionScroll style.ts
 import styled from 'styled-components';
-import { colors } from './colors';
+
 interface PageProps {
     bg?: string;
 }
@@ -11,8 +11,8 @@ export const PageContainer = styled.div<PageProps>`
     align-items: center;
     white-space: normal;
     padding: 3rem;
-    background-color: ${colors.primary};
-`;
+    `;
+    // background-color: ${colors.primary};
 
 
 export const ProjectPreview = styled.div`
@@ -27,21 +27,6 @@ export const ProjectPreview = styled.div`
             height: 100%;
             width: 100%;
             object-fit: cover;
-        }
-    }
-`;
-
-export const AboutProject = styled.div`
-    color: #fff;
-    
-    .about-project {
-        
-        &__title {
-            color: ${props => props.theme.scheme.colors.primary};
-            ${props => props.theme.typography.titleXl}
-        }
-        &__subtitle {
-            ${props => props.theme.typography.textMd}
         }
     }
 `;

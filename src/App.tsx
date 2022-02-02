@@ -1,11 +1,10 @@
-import React from 'react';
 import './style/global.css'
 import { ThemeProvider } from 'styled-components';
 import { SectionScroll } from './components/sectionScroll/index';
 import { AppWrap } from './style/globalComponents';
 import { Navigation } from './components/navigation/index';
 import { AboutMe } from './pages/aboutMe/index';
-import { themeLight, themeDark } from './style/theme/colors';
+import { themeLight } from './style/theme/colors';
 import { typography } from './style/theme/typography';
 
 function App() {
