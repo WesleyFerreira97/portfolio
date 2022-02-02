@@ -28,6 +28,7 @@ export const Row = styled.div<RowProps>`
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    
     @media (max-width: ${breakpoint.sm}) {
         width: 95%;
     }
