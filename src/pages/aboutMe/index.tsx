@@ -1,6 +1,7 @@
 import React from 'react';
 import { About } from './style';
-import { PageContainer, ProjectPreview, AboutProject } from '../../components/utilities/componentDefaultStyles';
+import { PageContainer, ProjectPreview, AboutProject } from '../../components/utilities/componentsDefault';
+
 
 export function AboutMe() {
 
@@ -11,6 +12,7 @@ export function AboutMe() {
                     <img src="https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="project preview" />
                 </div>
             </ProjectPreview>
+            
             <AboutProject>
                 <h1 className='about-project__title'>APP Administrativo</h1>
                 <h2 className='about-project__subtitle'>React Native</h2>

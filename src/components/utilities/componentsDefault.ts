@@ -1,6 +1,6 @@
 // SectionScroll style.ts
 import styled from 'styled-components';
-import { colors } from '../../components/utilities/colors';
+import { colors } from './colors';
 interface PageProps {
     bg?: string;
 }
