@@ -13,10 +13,10 @@ function App() {
       <AppWrap>
         <Navigation />
         <SectionScroll>
-              <AboutMe bg="#280F34"/>
-              <AboutMe bg="#B30753"/>
-              <AboutMe bg="#13293D"/>
-              <AboutMe bg="#FFAF87"/>
+              <AboutMe bg="#3F097D"/>
+              <AboutMe bg="#3F097D"/>
+              <AboutMe bg="#3F097D"/>
+              <AboutMe bg="#3F097D"/>
         </SectionScroll>      
       </AppWrap>
     </ThemeProvider>
