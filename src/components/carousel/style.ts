@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-// background-color: ${colors.primary};
 export const Section = styled.div`
     height: 100vh;
     overflow: hidden;

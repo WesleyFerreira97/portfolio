@@ -37,7 +37,7 @@ export function SectionScroll({ children }: SectionProps) {
     }, 1000)
   }
 
-  const scrollWheel = (key: WheelEvent) => {
+  const scrollWheel = (key: React.WheelEvent<HTMLDivElement>) => {
     
     if (isMoving) return
     disableInteraction();

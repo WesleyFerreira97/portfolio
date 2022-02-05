@@ -33,18 +33,3 @@ export const ProjectPreview = styled.div`
         }
     }
 `;
-
-export const AboutProject = styled.div`
-    color: #fff;
-    
-    .about-project {
-        
-        &__title {
-            color: ${props => props.theme.scheme.colors.primary};
-            ${props => props.theme.typography.titleXl}
-        }
-        &__subtitle {
-            ${props => props.theme.typography.textMd}
-        }
-    }
-`;
