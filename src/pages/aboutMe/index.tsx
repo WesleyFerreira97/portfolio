@@ -1,11 +1,16 @@
 import React from 'react';
 import { About } from './style';
-import { PageContainer, ProjectPreview, AboutProject } from '../../components/utilities/componentsDefault';
+import { PageContainer, ProjectPreview, AboutProject } from '../../style/componentsDefault';
 
+interface AboutProps {
+    bg: string;    
+}
 
-export function AboutMe() {
-
+export function AboutMe(props: AboutProps) {
+    const { bg } = props;
+    
     return (
+        <div style={{backgroundColor: bg}}>
         <PageContainer>
             <ProjectPreview>
                 <div className='project-preview__wrap'>
@@ -28,5 +33,7 @@ export function AboutMe() {
                 </ul>
             </AboutProject>
         </PageContainer>
+        </div>
     );
 }
+

@@ -1,6 +1,10 @@
 // SectionScroll style.ts
 import styled from 'styled-components';
-import { colors } from './colors';
+
+export const AppWrap = styled.div`
+    display: flex;
+`;
+
 interface PageProps {
     bg?: string;
 }
@@ -11,14 +15,13 @@ export const PageContainer = styled.div<PageProps>`
     align-items: center;
     white-space: normal;
     padding: 3rem;
-    background-color: ${colors.primary};
 `;
-
+/* background-color: ${colors.primary}; */
 
 export const ProjectPreview = styled.div`
-    background-color: #E9A6A6;
-    order: 1;
     width: 80%;
+    order: 1;
+    background-color: #E9A6A6;
 
     .project-preview__wrap {
         height: 150px;

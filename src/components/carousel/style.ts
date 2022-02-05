@@ -1,10 +1,14 @@
 import styled from 'styled-components'
-import { colors } from '../utilities/colors'
 
+// background-color: ${colors.primary};
 export const Section = styled.div`
-    background-color: ${colors.primary};
     height: 100vh;
     overflow: hidden;
+
+    & > * {
+        height: 100%;
+        width: 100%;
+    }
 `;
 
 export const SectionWrap = styled.div`

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoint } from "./breakpoints";
+import { breakpoint } from "../../style/theme/breakpoints";
 // import { colors } from "./colors";
 
 interface ContainerProps {
@@ -37,4 +37,3 @@ export const Row = styled.div<RowProps>`
 Row.defaultProps = {
     width: "90%"
 }
-
