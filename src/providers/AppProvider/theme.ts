@@ -1,26 +1,30 @@
 export const theme = {
     colors: {
         primary: {
-            100: '#E6E6E6',
-            200: '#D8D8D8',
-            300: '#CACACA',
-            400: '#B4B4B4',
-            500: '#9E9E9E',
-            600: '#828282',
-            700: '#666666',
-            800: '#4D4D4D',
-            900: '#333333',
+            c000: '#600DBF',
+            c050: '#560CAC',
+            c100: '#4D0B99',
+            c200: '#3F097D',
+            c300: '#3A0872',
+            c400: '#B4B4B4',
+            c500: '#30075F',
+            c600: '#26054C',
+            c700: '#1D0439',
+            c800: '#130326',
+            c900: '#0A0113',
         },
         neutral: {
-            100: '#F5F5F5',
-            200: '#EEEEEE',
-            300: '#E0E0E0',
-            400: '#BDBDBD',
-            500: '#9E9E9E',
-            600: '#757575',
-            700: '#616161',
-            800: '#424242',
-            900: '#424242',
+            c000: "#FFFFFF",
+            c050: "#F4F5F6",
+            c100: "#E9EAED",
+            c200: "#DDE0E3",
+            c300: "#D3D6DB",
+            c400: "#C7CBD1",
+            c500: "#BCC0C8",
+            c600: "#B0B6BF",
+            c700: "#A5ABB6",
+            c800: "#9AA1AC",
+            c900: "#8F97A3",
         }
     },
     breakpoints: {
@@ -34,32 +38,3 @@ export const theme = {
 }
 
 
-
-
-// #3F097D Roxo escuro
-// #420884 Roxo pouco claro
-// #8106DF Roxo bem claro
-
-// export const themeLight = {
-//     title: 'light',
-
-//     colors: {
-//         primary: '#3F097D',
-//         secondary: '#420884',
-//         tertiary: '#8106DF',
-//         neutral: '#000',
-
-//     },
-// };
-
-// export const themeDark = {
-//     title: 'light',
-
-//     colors: {
-//         primary: '#000',
-//         secondary: '#fff',
-//         tertiary: '#e8e8e8',
-//         neutral: '#000',
-
-//     },
-// };
