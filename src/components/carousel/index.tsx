@@ -25,6 +25,8 @@ export function SectionScroll({ children }: SectionProps) {
   const handlers = useSwipeable({
     onSwipedLeft: () => updateIndex(activeIndex + 1),
     onSwipedRight: () => updateIndex(activeIndex - 1),
+    // Add Swipe top and bottom 
+    // Add Control by Arrows 
   });
 
   const disableInteraction = () => {

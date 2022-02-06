@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { breakpoint } from "../../style/theme/breakpoints";
-// import { colors } from "./colors";
 
 interface ContainerProps {
     bg: string;
@@ -29,7 +27,7 @@ export const Row = styled.div<RowProps>`
     flex-wrap: wrap;
     position: relative;
     
-    @media (max-width: ${breakpoint.sm}) {
+    @media (max-width: ${props => props.theme.breakpoints.md}) {
         width: 95%;
     }
 `;

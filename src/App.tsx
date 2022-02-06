@@ -1,16 +1,12 @@
 import './style/global.css'
-import { ThemeProvider } from 'styled-components';
 import { SectionScroll } from './components/carousel/index';
-import { AppWrap } from './style/componentsDefault';
 import { Navigation } from './components/navigation/index';
 import { AboutMe } from './pages/aboutMe/index';
-import { themeLight } from './style/theme/colors';
-import { typography } from './style/theme/typography';
+import { AppProvider } from './providers/AppProvider';
 
 function App() {
   return (
-    <ThemeProvider theme={{scheme: themeLight, typography: typography}}>
-      <AppWrap>
+      <AppProvider>
         <Navigation />
         <SectionScroll>
               <AboutMe bg="#3F097D"/>
@@ -18,8 +14,7 @@ function App() {
               <AboutMe bg="#3F097D"/>
               <AboutMe bg="#3F097D"/>
         </SectionScroll>      
-      </AppWrap>
-    </ThemeProvider>
+      </AppProvider>
   );
 }
 
