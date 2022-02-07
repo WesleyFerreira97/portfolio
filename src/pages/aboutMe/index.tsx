@@ -9,12 +9,10 @@ export function AboutMe(props: AboutProps) {
     const { bg } = props;
     
     return (
-        // <div style={{backgroundColor: bg}}>
-        <div style={{backgroundColor: bg}}>
         <PageContainer>
             <ProjectPreview>
                 <div className='project-preview__wrap'>
-                    <img src="https://images.unsplash.com/photo-1534670007418-fbb7f6cf32c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="project preview" />
+                    {/* <img src="https://user-images.githubusercontent.com/7539166/151867825-67f21ae1-5546-493b-9a4d-f0960ee54db7.png" alt="project preview" /> */}
                 </div>
             </ProjectPreview>
             
@@ -33,7 +31,6 @@ export function AboutMe(props: AboutProps) {
                 </ul>
             </PageText>
         </PageContainer>
-        </div>
     );
 }
 

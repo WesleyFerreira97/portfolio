@@ -4,7 +4,7 @@ import { NavigationWrap } from './style';
 export function Navigation() {
   return (
     <NavigationWrap>
-        Navigation
+     a   
     </NavigationWrap>
   );
 }

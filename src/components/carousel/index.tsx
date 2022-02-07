@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Section, SectionWrap, Navigation } from './style';
+import { Section, SectionWrap } from './style';
 import { useSwipeable } from "react-swipeable";
 
 interface SectionProps {
@@ -55,10 +55,6 @@ export function SectionScroll({ children }: SectionProps) {
 
   return (
     <>
-      <Navigation>
-        <button onClick={() => updateIndex(activeIndex - 1)}>{'prev'}</button>
-        <button onClick={() => updateIndex(activeIndex + 1)}>{'Next >'}</button>
-      </Navigation>
       <Section {...handlers}>
         <div onWheel={(e) => scrollWheel(e)}>
           <SectionWrap style={{ transform: `translateX(-${activeIndex * 100}% )` }}>

@@ -6,7 +6,7 @@ export const theme = {
             c100: '#4D0B99',
             c200: '#3F097D',
             c300: '#3A0872',
-            c400: '#B4B4B4',
+            c400: '#3A0872',
             c500: '#30075F',
             c600: '#26054C',
             c700: '#1D0439',
@@ -26,6 +26,13 @@ export const theme = {
             c800: "#9AA1AC",
             c900: "#8F97A3",
         }
+    },
+    spacing: {
+        xs: ".5rem",
+        sm: ".75rem",
+        md: "1rem",
+        lg: "1.25rem",
+        xl: "1.5rem",
     },
     breakpoints: {
         xs: '576px',

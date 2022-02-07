@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const Section = styled.div`
     height: 100vh;
     overflow: hidden;
-
+    width: 100%;
+    
     & > * {
         height: 100%;
         width: 100%;
