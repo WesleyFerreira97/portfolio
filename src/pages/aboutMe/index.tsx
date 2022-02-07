@@ -10,26 +10,27 @@ export function AboutMe(props: AboutProps) {
     
     return (
         <PageContainer>
-            <ProjectPreview>
-                <div className='project-preview__wrap'>
-                    {/* <img src="https://user-images.githubusercontent.com/7539166/151867825-67f21ae1-5546-493b-9a4d-f0960ee54db7.png" alt="project preview" /> */}
-                </div>
-            </ProjectPreview>
-            
-            <PageText>
-                <h1 className='page-text__title'>APP Administrativo</h1>
-                <h2 className='page-text__subtitle'>React Native</h2>
-                <p className='page-text__paragraph'>React Native runs on React, a popular open source library for building user interfaces with JavaScript. To make the most of React Native, it helps to understand React itself. This section can get you started or can serve as a refresher course.</p>
-                <p className='page-text__paragraph'>We’re going to cover the core concepts behind React:</p>
-                <ul className='page-text__list'>
-                    <li>React Native</li>
-                    <li>React Navigation</li>
-                    <li>TypeScript</li>
-                    <li>HTML/CSS</li>
-                    <li>Styled Components</li>
-                    <li>Firebase</li>
-                </ul>
-            </PageText>
+            <div className='page-container__wrap'>
+                <ProjectPreview>
+                    <div className='project-preview__wrap'>
+                        <img src="https://github.com/WesleyFerreira97/siamfight-admin-react-native/raw/main/ScreenShots/Screenshot%20(1).jpg" alt="project preview" />
+                    </div>
+                </ProjectPreview>
+                
+                <PageText>
+                    <h1 className='page-text__title'>APP Administrativo</h1>
+                    <h2 className='page-text__subtitle'>React Native</h2>
+                    <p className='page-text__paragraph'>App desenvolvido para uma academia local com a finalidade de criar um melhor gerênciamento de clientes e pagamentos</p>
+                    <ul className='page-text__list'>
+                        <li>TypeScript</li>
+                        <li>React Native</li>
+                        <li>React Navigation</li>
+                        <li>React Native Paper</li>
+                        <li>Formik com Yup</li>
+                        <li>Firebase</li>
+                    </ul>
+                </PageText>
+            </div>
         </PageContainer>
     );
 }

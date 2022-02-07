@@ -7,29 +7,45 @@ export const typography: any = {};
 
 typography.TitleXl = css`
     font-family: ${title};
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     line-height: 125%;
-    letter-spacing: 0.1rem;
     font-weight: 400;
-
-    @media (max-width: ${props => props.theme.breakpoints.md}) {
+    
+    @media (min-width: ${props => props.theme.breakpoints.sm}) {
+        font-size: 3rem;
+    }
+    
+    @media (min-width: ${props => props.theme.breakpoints.lg}) {
         font-size: 3.5rem;
+        letter-spacing: 0.1rem;
     }
 `;
 
 typography.TitleMd = css`
     font-family: ${title};
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 125%;
-    letter-spacing: 0.1rem;
     font-weight: 400;
+    
+    @media (min-width: ${props => props.theme.breakpoints.sm}) {
+        font-size: 1.8rem;
+    }
+    
+    @media (min-width: ${props => props.theme.breakpoints.lg}) {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+    }
 `;
 
 typography.TextMd = css`
     font-family: ${text};
-    font-size: 1.2rem;
-    line-height: 125%;
+    font-size: 1rem;
+    line-height: 130%;
     font-weight: 400;
+        
+    @media (min-width: ${props => props.theme.breakpoints.lg}) {
+        font-size: 1.2rem;
+    }
 `;
 
 typography.TextSm = css`

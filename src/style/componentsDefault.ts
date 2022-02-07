@@ -12,27 +12,46 @@ interface PageProps {
 
 export const PageContainer = styled.div<PageProps>`
     height: 100%;
-    align-self: flex-end;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     white-space: normal;
-    padding: 3rem;
     background-color: ${props => props.theme.colors.primary.c400};
+    
+    .page-container__wrap {
+        height: 100%;
+        width: 100%;
+        align-self: flex-end;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    @media (min-width: ${props => props.theme.breakpoints.xl}) {
+        .page-container__wrap {
+            width: 80%;
+            flex-direction: row;
+        }
+    }
 `;
 
 export const ProjectPreview = styled.div`
-    width: 80%;
+    height: 80vh;
+    width: 50%;
     order: 1;
-    background-color: #E9A6A6;
+    /* background-color: #E9A6A6; */
+
+    @media (min-width: ${props => props.theme.breakpoints.xl}) {
+        order: 0;
+    }
 
     .project-preview__wrap {
-        height: 80vh;
-        width: 30%;
+        width: 100%;
+        height: 100%;
 
         img {
             height: 100%;
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
     }
 `;
@@ -41,6 +60,7 @@ export const ProjectPreview = styled.div`
 
 export const PageText = styled.div`
     /* background-color: ${props => props.theme.colors.primary.c800}; */
+    /* padding-left: 4rem; */
 
     .page-text {
 
@@ -50,7 +70,7 @@ export const PageText = styled.div`
         }
         
         &__subtitle {
-            color: ${props => props.theme.colors.neutral.c300};
+            color: ${props => props.theme.colors.neutral.c900};
             margin: .5rem 0 2rem 0;
             ${typography.TitleMd}
         }
@@ -59,6 +79,14 @@ export const PageText = styled.div`
             color: ${props => props.theme.colors.neutral.c100};
             ${typography.TextMd}
             margin: ${props => props.theme.spacing.sm} 0;
+
+            li {
+                margin: .5rem 0;
+            }
         }
+    }
+
+    @media (min-width: ${props => props.theme.breakpoints.xl}) {
+        padding-left: 4rem;
     }
 `;

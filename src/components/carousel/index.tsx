@@ -7,7 +7,7 @@ interface SectionProps {
 }
 
 
-export function SectionScroll({ children }: SectionProps) {
+export function Carousel({ children }: SectionProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMoving, setIsMoving] = useState(false);
 
