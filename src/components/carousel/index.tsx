@@ -31,10 +31,8 @@ export function Carousel({ children }: SectionProps) {
 
   const disableInteraction = () => {
     setIsMoving(true);
-    console.log(isMoving);
 
     setTimeout(() => {
-      console.log(isMoving);
       setIsMoving(false);
     }, 1000)
   }

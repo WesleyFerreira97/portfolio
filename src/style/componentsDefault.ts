@@ -12,33 +12,33 @@ interface PageProps {
 
 export const PageContainer = styled.div<PageProps>`
     height: 100%;
-    justify-content: center;
     white-space: normal;
     background: ${props => props.theme.colors.primary.c400};
-    /* background: rgb(44,4,89);
-    background: linear-gradient(90deg, rgba(44,4,89,1) 0%, rgba(58,8,114,1) 50%, rgba(36,3,74,1) 100%); */
     
     .page-container__wrap {
         height: 100%;
-        width: 100%;
+        width: 80%;
         align-self: flex-end;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 1rem;
+        /* background: crimson; */
     }
 
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
         .page-container__wrap {
-            width: 80%;
+            height: 80%;
+            width: 95%;
             flex-direction: row;
+            margin: auto 0;
         }
     }
 `;
 
 export const ProjectPreview = styled.div`
-    height: 80vh;
-    width: 50%;
+    height: 100%;
+    /* width: 50%; */
     order: 1;
     /* background-color: #E9A6A6; */
 
@@ -56,13 +56,14 @@ export const ProjectPreview = styled.div`
             object-fit: contain;
         }
     }
+    
 `;
 
-
-
 export const PageText = styled.div`
+    height: 100%;
     /* background-color: ${props => props.theme.colors.primary.c800}; */
     /* padding-left: 4rem; */
+    
 
     .page-text {
 
@@ -89,6 +90,7 @@ export const PageText = styled.div`
     }
 
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
+        width: 40%;
         padding-left: 4rem;
     }
 `;
