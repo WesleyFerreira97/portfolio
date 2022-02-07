@@ -15,9 +15,12 @@ typography.TitleXl = css`
         font-size: 3rem;
     }
     
-    @media (min-width: ${props => props.theme.breakpoints.lg}) {
-        font-size: 3.5rem;
+    @media (min-width: ${props => props.theme.breakpoints.xl}) {
+        font-size: 3rem;
         letter-spacing: 0.1rem;
+    }
+    @media (min-width: ${props => props.theme.breakpoints.xxl}) {
+        font-size: 3rem;
     }
 `;
 

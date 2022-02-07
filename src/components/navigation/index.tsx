@@ -4,7 +4,12 @@ import { NavigationWrap } from './style';
 export function Navigation() {
   return (
     <NavigationWrap>
-     a   
+
+        <ul>
+          <li>APP Administrativo</li>  
+          <li>Aluracord</li>  
+          <li>API de Filmes</li>  
+        </ul>   
     </NavigationWrap>
   );
 }

@@ -14,7 +14,9 @@ export const PageContainer = styled.div<PageProps>`
     height: 100%;
     justify-content: center;
     white-space: normal;
-    background-color: ${props => props.theme.colors.primary.c400};
+    background: ${props => props.theme.colors.primary.c400};
+    /* background: rgb(44,4,89);
+    background: linear-gradient(90deg, rgba(44,4,89,1) 0%, rgba(58,8,114,1) 50%, rgba(36,3,74,1) 100%); */
     
     .page-container__wrap {
         height: 100%;
