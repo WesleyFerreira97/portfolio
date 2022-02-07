@@ -9,10 +9,10 @@ function App() {
       <AppProvider>
         <Navigation />
         <Carousel>
-              <AboutMe bg="#3F097D"/>
-              <AboutMe bg="#3F097D"/>
-              <AboutMe bg="#3F097D"/>
-              <AboutMe bg="#3F097D"/>
+              <AboutMe />
+              <AboutMe />
+              <AboutMe />
+              <AboutMe />
         </Carousel>      
       </AppProvider>
   );

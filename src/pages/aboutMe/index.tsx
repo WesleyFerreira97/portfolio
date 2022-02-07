@@ -1,12 +1,9 @@
 import React from 'react';
 import { PageContainer, ProjectPreview, PageText } from '../../style/componentsDefault';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
-interface AboutProps {
-    bg: string;    
-}
-
-export function AboutMe(props: AboutProps) {
-    const { bg } = props;
+export function AboutMe() {
     
     return (
         <PageContainer>
@@ -20,7 +17,7 @@ export function AboutMe(props: AboutProps) {
                 <PageText>
                     <h1 className='page-text__title'>APP Administrativo</h1>
                     <h2 className='page-text__subtitle'>React Native</h2>
-                    <p className='page-text__paragraph'>App desenvolvido para uma academia local com a finalidade de criar um melhor gerênciamento de clientes e pagamentos</p>
+                    <p className='page-text__paragraph'>App desenvolvido para uma academia local com a finalidade de criar um melhor gerênciamento de clientes e pagamentos App desenvolvido para uma academia local com a finalidade de criar um melhor gerênciamento de clientes e pagamentos</p>
                     <ul className='page-text__list'>
                         <li>TypeScript</li>
                         <li>React Native</li>
@@ -29,6 +26,10 @@ export function AboutMe(props: AboutProps) {
                         <li>Formik com Yup</li>
                         <li>Firebase</li>
                     </ul>
+                    <div className='page-text__buttons'>
+                        <Button variant="contained">Preview</Button>
+                        <Button variant="outlined">Github</Button>
+                    </div>
                 </PageText>
             </div>
         </PageContainer>

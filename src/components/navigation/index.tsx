@@ -5,11 +5,11 @@ export function Navigation() {
   return (
     <NavigationWrap>
 
-        <ul>
+        {/* <ul>
           <li>APP Administrativo</li>  
           <li>Aluracord</li>  
           <li>API de Filmes</li>  
-        </ul>   
+        </ul>    */}
     </NavigationWrap>
   );
 }

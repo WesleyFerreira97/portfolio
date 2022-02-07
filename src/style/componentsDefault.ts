@@ -1,50 +1,40 @@
 // SectionScroll style.ts
 import styled from 'styled-components';
 import { typography } from './theme/typography';
+interface PageProps {
+    bg?: string;
+}
 
 export const AppWrap = styled.div`
     display: flex;
 `;
 
-interface PageProps {
-    bg?: string;
-}
-
 export const PageContainer = styled.div<PageProps>`
-    height: 100%;
+    background: ${props => props.theme.colors.primary.c600};
+    padding: 2rem;
     white-space: normal;
-    background: ${props => props.theme.colors.primary.c400};
-    
+
     .page-container__wrap {
-        height: 100%;
-        width: 80%;
-        align-self: flex-end;
+        height: 80%;
+        
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        /* background: crimson; */
+        margin: auto 0;
     }
 
+    @media (min-width: ${props => props.theme.breakpoints.md}) {
+        .page-container__wrap {
+            width: 90%;
+        }
+    }
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
         .page-container__wrap {
-            height: 80%;
-            width: 95%;
-            flex-direction: row;
-            margin: auto 0;
+            display: flex;
         }
     }
 `;
 
 export const ProjectPreview = styled.div`
-    height: 100%;
-    /* width: 50%; */
-    order: 1;
-    /* background-color: #E9A6A6; */
-
-    @media (min-width: ${props => props.theme.breakpoints.xl}) {
-        order: 0;
-    }
+    display: none;
 
     .project-preview__wrap {
         width: 100%;
@@ -57,14 +47,17 @@ export const ProjectPreview = styled.div`
         }
     }
     
+    @media (min-width: ${props => props.theme.breakpoints.lg}) {
+        display: block;
+        height: 100%;
+        flex: 3 0 auto; 
+    }
+
 `;
 
 export const PageText = styled.div`
-    height: 100%;
-    /* background-color: ${props => props.theme.colors.primary.c800}; */
-    /* padding-left: 4rem; */
+    flex: 1 10 auto;
     
-
     .page-text {
 
         &__title {
@@ -87,10 +80,23 @@ export const PageText = styled.div`
                 margin: .5rem 0;
             }
         }
+
+        &__buttons {
+            margin: 3rem 0 0 0;
+            & > *:first-child {
+                margin-right: .75rem;
+            }
+        }
+    }
+
+    @media (min-width: ${props => props.theme.breakpoints.md}) {
+        padding-left: 2rem;
     }
 
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
-        width: 40%;
-        padding-left: 4rem;
+        .page-text {
+            &__buttons {
+            }
+        }
     }
 `;
