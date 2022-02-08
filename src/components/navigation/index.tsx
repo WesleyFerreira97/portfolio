@@ -1,15 +1,25 @@
 import React from 'react';
-import { NavigationWrap } from './style';
+import { NavigationWrap, Menu } from './style';
+import { FaReact } from "react-icons/fa";
 
 export function Navigation() {
   return (
     <NavigationWrap>
 
-        {/* <ul>
-          <li>APP Administrativo</li>  
-          <li>Aluracord</li>  
-          <li>API de Filmes</li>  
-        </ul>    */}
+        <Menu>
+          <li className='menu-item'>
+            <FaReact />
+            <span className='menu-item__title'>APP Administrativo</span>
+          </li>  
+          <li className='menu-item'>
+            <FaReact />
+            <span className='menu-item__title'>Aluracord</span>
+          </li>  
+          <li className='menu-item'>
+            <FaReact />
+            <span className='menu-item__title'>API de Filmes</span>
+          </li>  
+        </Menu>   
     </NavigationWrap>
   );
 }

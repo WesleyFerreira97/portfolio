@@ -43,7 +43,7 @@ typography.TitleMd = css`
 typography.TextMd = css`
     font-family: ${text};
     font-size: 1rem;
-    line-height: 130%;
+    line-height: 145%;
     font-weight: 400;
         
     @media (min-width: ${props => props.theme.breakpoints.lg}) {
