@@ -23,8 +23,12 @@ export const Menu = styled.ul`
         display: flex;
         align-items: center;
 
-        &:hover {	
+        &:hover, &:active {		
             background: ${props => props.theme.colors.primary.c500};
+        }
+
+        &:active {
+            background: ${props => props.theme.colors.primary.c600};
         }
         
         &__title {

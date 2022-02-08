@@ -1,16 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Section, SectionWrap } from './style';
 import { useSwipeable } from "react-swipeable";
 
 interface SectionProps {
   children: React.ReactNode;
+  newIndex: any;
 }
 
 
-export function Carousel({ children }: SectionProps) {
+export function Carousel({ children, newIndex }: SectionProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMoving, setIsMoving] = useState(false);
+  console.log(newIndex);
 
+  useEffect(() => {
+      setActiveIndex(newIndex);
+  }, [newIndex]);
+  
   const updateIndex = (newIndex: number) => {
     if (newIndex < 0) {
 

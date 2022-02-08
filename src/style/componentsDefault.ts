@@ -11,14 +11,12 @@ export const AppWrap = styled.div`
 
 export const PageContainer = styled.div<PageProps>`
     background: ${props => props.theme.colors.primary.c600};
-    padding: 2rem;
+    padding: 1rem;
     white-space: normal;
 
     .page-container__wrap {
         height: 80%;
-        
         display: flex;
-        margin: auto 0;
     }
 
     @media (min-width: ${props => props.theme.breakpoints.md}) {
@@ -27,8 +25,11 @@ export const PageContainer = styled.div<PageProps>`
         }
     }
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
+        padding: 2rem;
+
         .page-container__wrap {
             display: flex;
+            margin: auto 0;
         }
     }
 `;
@@ -85,6 +86,16 @@ export const PageText = styled.div`
             margin: 3rem 0 0 0;
             & > *:first-child {
                 margin-right: .75rem;
+            }
+        }
+    }
+
+    @media (max-width: ${props => props.theme.breakpoints.sm}) {
+        .page-text {
+
+            &__overflow {
+                overflow: scroll;
+                max-height: 75vh;
             }
         }
     }

@@ -17,18 +17,20 @@ export function AboutMe() {
                 <PageText>
                     <h1 className='page-text__title'>APP Administrativo</h1>
                     <h2 className='page-text__subtitle'>React Native</h2>
-                    <p className='page-text__paragraph'>App desenvolvido para uma academia local com a finalidade de criar um melhor gerênciamento de clientes e pagamentos App desenvolvido para uma academia local com a finalidade de criar um melhor gerênciamento de clientes e pagamentos</p>
-                    <ul className='page-text__list'>
-                        <li>TypeScript</li>
-                        <li>React Native</li>
-                        <li>React Navigation</li>
-                        <li>React Native Paper</li>
-                        <li>Formik com Yup</li>
-                        <li>Firebase</li>
-                    </ul>
-                    <div className='page-text__buttons'>
-                        <Button variant="contained">Preview</Button>
-                        <Button variant="outlined">Github</Button>
+                    <div className='page-text__overflow'>
+                        <p className='page-text__paragraph'>App desenvolvido para uma academia local com a finalidade de criar um melhor gerênciamento de clientes e pagamentos App desenvolvido para uma academia local com a finalidade de cagamentos App desenvolvido para uma academia local com a finalidade de criar um melhor gerênciamento de clientes e pagamentos</p>
+                        <ul className='page-text__list'>
+                            <li>TypeScript</li>
+                            <li>React Native</li>
+                            <li>React Navigation</li>
+                            <li>React Native Paper</li>
+                            <li>Formik com Yup</li>
+                            <li>Firebase</li>
+                        </ul>
+                        <div className='page-text__buttons'>
+                            <Button variant="contained">Preview</Button>
+                            <Button variant="outlined">Github</Button>
+                        </div>
                     </div>
                 </PageText>
             </div>
