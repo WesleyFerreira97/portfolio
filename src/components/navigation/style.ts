@@ -6,8 +6,27 @@ export const NavigationWrap = styled.div`
     background: #420884;
     box-shadow: 0 0 10px #000;
 
+
+    .portfolio-photo {
+        height: 2rem;
+        width: 2rem;
+        margin: 2rem auto;
+        
+        img {
+            border-radius: 100%;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
         width: 350px;
+
+        .portfolio-photo {
+            height: 200px;
+            width: 200px;
+        }
     }
 `;
 

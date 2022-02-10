@@ -2,39 +2,24 @@ import React from 'react';
 import { PageContainer, ProjectPreview, PageText } from '../../style/componentsDefault';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import Tag from '../../assets/icons/tag.svg';
+import { About, AboutText } from './style';
 
 export function AboutMe() {
+    // console.log(Tag);
     
     return (
-        <PageContainer>
+        <About>
             <div className='page-container__wrap'>
-                <ProjectPreview>
-                    <div className='project-preview__wrap'>
-                        <img src="https://github.com/WesleyFerreira97/siamfight-admin-react-native/raw/main/ScreenShots/Screenshot%20(1).jpg" alt="project preview" />
-                    </div>
-                </ProjectPreview>
-                
                 <PageText>
-                    <h1 className='page-text__title'>APP Administrativo</h1>
-                    <h2 className='page-text__subtitle'>React Native</h2>
+                    <h1 className='page-text__title'>Wesley Ferreira Costa</h1>
+                    <h2 className='page-text__subtitle'>Desenvolvedor Front-end</h2>
                     <div className='page-text__overflow'>
-                        <p className='page-text__paragraph'>App desenvolvido para uma academia local com a finalidade de criar um melhor gerênciamento de clientes e pagamentos App desenvolvido para uma academia local com a finalidade de cagamentos App desenvolvido para uma academia local com a finalidade de criar um melhor gerênciamento de clientes e pagamentos</p>
-                        <ul className='page-text__list'>
-                            <li>TypeScript</li>
-                            <li>React Native</li>
-                            <li>React Navigation</li>
-                            <li>React Native Paper</li>
-                            <li>Formik com Yup</li>
-                            <li>Firebase</li>
-                        </ul>
-                        <div className='page-text__buttons'>
-                            <Button variant="contained">Preview</Button>
-                            <Button variant="outlined">Github</Button>
-                        </div>
+                        <p className='page-text__paragraph'>Olá;</p>
+                        <p className='page-text__paragraph'>Me chamo Wesley, tenho 24 anos e estudo desenvolvimento Web a alguns anos, possuo um solido conhecimento nas principais tecnologias bases da Web ( HTML, CSS, JS ), aqui você encontra alguns dos projetos que desenvolvi utilizando algumas das atuais e principais tecnologias de desenvolvimento  Web no momento</p>
                     </div>
                 </PageText>
             </div>
-        </PageContainer>
+        </About>
     );
 }
-

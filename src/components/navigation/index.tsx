@@ -5,17 +5,19 @@ import { FaReact } from "react-icons/fa";
 export function Navigation({ setIndex }: any) {
   return (
     <NavigationWrap>
-
+         <div className='portfolio-photo'>
+            <img src="https://avatars.githubusercontent.com/u/7539166?v=4" alt="project preview" />
+        </div>
         <Menu>
+          <li className='menu-item' onClick={() => setIndex(0)}>
+            <FaReact />
+            <span className='menu-item__title'>APP React Native</span>
+          </li>  
           <li className='menu-item' onClick={() => setIndex(1)}>
             <FaReact />
-            <span className='menu-item__title'>APP Administrativo</span>
+            <span className='menu-item__title'>APP React Js</span>
           </li>  
           <li className='menu-item' onClick={() => setIndex(2)}>
-            <FaReact />
-            <span className='menu-item__title'>Aluracord</span>
-          </li>  
-          <li className='menu-item' onClick={() => setIndex(3)}>
             <FaReact />
             <span className='menu-item__title'>API de Filmes</span>
           </li>  

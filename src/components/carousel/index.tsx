@@ -7,7 +7,6 @@ interface SectionProps {
   newIndex: any;
 }
 
-
 export function Carousel({ children, newIndex }: SectionProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMoving, setIsMoving] = useState(false);
@@ -68,9 +67,6 @@ export function Carousel({ children, newIndex }: SectionProps) {
           </SectionWrap>
         </div>
       </Section>
-
-
-
     </>
   );
 }

@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const title = 'Bebas Neue, sans-serif';
+const title = 'Montserrat, sans-serif';
 const text = 'Raleway, sans-serif';
 
 export const typography: any = {};
@@ -9,7 +9,7 @@ typography.TitleXl = css`
     font-family: ${title};
     font-size: 2.5rem;
     line-height: 125%;
-    font-weight: 400;
+    font-weight: 600;
     
     @media (min-width: ${props => props.theme.breakpoints.sm}) {
         font-size: 3rem;

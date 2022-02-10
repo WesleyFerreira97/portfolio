@@ -3,6 +3,9 @@ import { useState, useEffect } from 'react'
 import { Carousel } from './components/carousel/index';
 import { Navigation } from './components/navigation/index';
 import { AboutMe } from './pages/aboutMe/index';
+import { Siam } from './pages/siam/index';
+import { AluraCord } from './pages/aluracord/index';
+import { AppFilmes } from './pages/appfilmes/index';
 import { AppProvider } from './providers/AppProvider';
 
 function App() {
@@ -12,10 +15,9 @@ function App() {
       <AppProvider>
         <Navigation setIndex={setIndex}/>
         <Carousel newIndex={index}>
-              <AboutMe />
-              <AboutMe />
-              <AboutMe />
-              <AboutMe />
+              <Siam />
+              <AluraCord />
+              <AppFilmes />
         </Carousel>      
       </AppProvider>
   );
