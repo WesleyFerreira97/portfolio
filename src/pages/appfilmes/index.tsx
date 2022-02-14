@@ -24,9 +24,7 @@ export function AppFilmes() {
                         <ul className='page-text__list'>
                             <li>React</li>
                             <li>TMDB APi</li>
-                            <li>API Github</li>
                             <li>Styled-components</li>
-                            <li>Typescript</li>
                         </ul>
                         <div className='page-text__buttons'>
                             {/* <Button variant="contained" href="https://imersao-alura-react-c80bkgo5b-wesleyferreira97.vercel.app/" target="_blank">Preview</Button> */}
