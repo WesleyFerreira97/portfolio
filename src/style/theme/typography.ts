@@ -10,18 +10,6 @@ typography.TitleXl = css`
     font-size: 2.5rem;
     line-height: 125%;
     font-weight: 600;
-    
-    @media (min-width: ${props => props.theme.breakpoints.sm}) {
-        font-size: 3rem;
-    }
-    
-    @media (min-width: ${props => props.theme.breakpoints.xl}) {
-        font-size: 3rem;
-        letter-spacing: 0.1rem;
-    }
-    @media (min-width: ${props => props.theme.breakpoints.xxl}) {
-        font-size: 3rem;
-    }
 `;
 
 typography.TitleMd = css`

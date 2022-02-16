@@ -3,7 +3,7 @@ import { typography } from "../../style/theme/typography";
 export const NavigationWrap = styled.div`
     height: 100vh;
     width: 50px;
-    background: #420884;
+    background: ${props => props.theme.colors.primaryAlt};
     box-shadow: 0 0 10px #000;
 
 
@@ -43,22 +43,22 @@ export const Menu = styled.ul`
         align-items: center;
 
         &:hover, &:active {		
-            background: ${props => props.theme.colors.primary.c500};
+            background: ${props => props.theme.colors.primary};
         }
 
         &:active {
-            background: ${props => props.theme.colors.primary.c600};
+            background: ${props => props.theme.colors.primary};
         }
         
         &__title {
             display: none;
             margin-left: 1rem;
-            color: ${props => props.theme.colors.neutral.c100};
+            color: ${props => props.theme.colors.neutral};
             ${typography.TextSm};
         }
         
         svg {
-            fill: ${props => props.theme.colors.neutral.c000};
+            fill: ${props => props.theme.colors.neutral};
             font-size: 1.5rem;
         }
     }

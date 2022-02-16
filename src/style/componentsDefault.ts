@@ -10,7 +10,7 @@ export const AppWrap = styled.div`
 `;
 
 export const PageContainer = styled.div<PageProps>`
-    background: ${props => props.theme.colors.primary.c600};
+    background: ${props => props.theme.colors.primary};
     padding: 1rem;
     white-space: normal;
 
@@ -63,17 +63,17 @@ export const PageText = styled.div`
 
         &__title {
             ${typography.TitleXl}
-            color: ${props => props.theme.colors.neutral.c100};
+            color: ${props => props.theme.colors.neutral};
         }
         
         &__subtitle {
-            color: ${props => props.theme.colors.neutral.c900};
+            color: ${props => props.theme.colors.neutral};
             margin: .5rem 0 2rem 0;
             ${typography.TitleMd}
         }
         
         &__paragraph, &__list {
-            color: ${props => props.theme.colors.neutral.c100};
+            color: ${props => props.theme.colors.neutral};
             ${typography.TextMd}
             margin: ${props => props.theme.spacing.sm} 0;
 
