@@ -1,7 +1,7 @@
 import React from 'react';
-import { ProjectPreview, PageText } from '../../style/componentsDefault';
 import { PageContainer, PageContainerInner } from '../../components/PageBehavior';
-import Stack from '@mui/material/Stack';
+import { PageGallery } from '../../components/PageGallery';
+import { PageInfo } from '../../components/PageInfo';
 import Button from '@mui/material/Button';
 
 export function Siam() {
@@ -9,19 +9,19 @@ export function Siam() {
     return (
         <PageContainer>
             <PageContainerInner>
-                <ProjectPreview>
+                <PageGallery>
                     <div className='project-preview__wrap'>
                         <img src="https://github.com/WesleyFerreira97/siamfight-admin-react-native/raw/main/ScreenShots/Screenshot%20(1).jpg" alt="project preview" />
                     </div>
-                </ProjectPreview>
+                </PageGallery>
 
-                <PageText>
-                    <h1 className='page-text__title'>APP Administrativo</h1>
-                    <h2 className='page-text__subtitle'>React Native</h2>
-                    <div className='page-text__overflow'>
-                        <p className='page-text__paragraph'>App desenvolvido para uma academia local com a finalidade de criar um melhor gerenciamento de clientes e pagamentos</p>
-                        <h2 className='page-text__subtitle' style={{ marginTop: '3rem' }}>Tecnologias Utilizadas</h2>
-                        <ul className='page-text__list'>
+                <PageInfo>
+                    <h1 className='page-info__title'>APP Administrativo</h1>
+                    <h2 className='page-info__subtitle'>React Native</h2>
+                    <div className='page-info__overflow'>
+                        <p className='page-info__paragraph'>App desenvolvido para uma academia local com a finalidade de criar um melhor gerenciamento de clientes e pagamentos</p>
+                        <h2 className='page-info__subtitle' style={{ marginTop: '3rem' }}>Tecnologias Utilizadas</h2>
+                        <ul className='page-info__list'>
                             <li>TypeScript</li>
                             <li>React Native</li>
                             <li>React Navigation</li>
@@ -29,12 +29,12 @@ export function Siam() {
                             <li>Formik com Yup</li>
                             <li>Firebase</li>
                         </ul>
-                        <div className='page-text__buttons'>
+                        <div className='page-info__buttons'>
                             {/* <Button variant="contained" href="google.com">Preview</Button> */}
                             <Button variant="outlined" href="https://github.com/WesleyFerreira97/siamfight-admin-react-native" target="_blank">Github</Button>
                         </div>
                     </div>
-                </PageText>
+                </PageInfo>
             </PageContainerInner>
         </PageContainer>
     );
