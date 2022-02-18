@@ -8,6 +8,7 @@ import { AluraCord } from './pages/aluracord/index';
 import { AppFilmes } from './pages/appfilmes/index';
 import { AppProvider } from './providers/AppProvider';
 import { GlobalStyle } from './style/global';
+import { FinalPage } from './pages/FinalPage';
 
 function App() {
   const [index, setIndex] = useState(0);
@@ -17,7 +18,7 @@ function App() {
       <GlobalStyle />
       <Navigation setIndex={setIndex} />
       <Carousel newIndex={index}>
-        <AboutMe />
+        <FinalPage />
         <Siam />
         <AluraCord />
         <AppFilmes />

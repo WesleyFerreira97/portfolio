@@ -8,7 +8,11 @@ export function AboutMe(props: any) {
     return (
         <PageContainer>
             <PageContainerInner>
-                <PageGallery>asdadlkj</PageGallery>
+                <PageGallery>
+                    <div className='project-preview__wrap'>
+                        <img src="https://user-images.githubusercontent.com/7539166/151868022-30dfdcca-6542-4350-9688-56950a501235.png" alt="project preview" />
+                    </div>
+                </PageGallery>
                 <About>
                     <div className='page-container__wrap'>
                         <PageInfo>

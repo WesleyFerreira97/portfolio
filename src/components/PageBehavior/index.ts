@@ -6,7 +6,7 @@ interface PageProps {
 
 export const PageContainer = styled.div<PageProps>`
     background: ${props => props.theme.colors.primary};
-    padding: 1rem;
+    /* padding: 1rem; */
     white-space: normal;
     height: 100vh;
     
@@ -17,7 +17,7 @@ export const PageContainer = styled.div<PageProps>`
 
 export const PageContainerInner = styled.div`
         height: 80%;
-        display: flex;
+        display: none;
 
     @media (min-width: ${props => props.theme.breakpoints.md}) {
             width: 90%;
