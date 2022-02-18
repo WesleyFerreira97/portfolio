@@ -13,9 +13,9 @@ export function Carousel({ children, newIndex }: SectionProps) {
   console.log(newIndex);
 
   useEffect(() => {
-      setActiveIndex(newIndex);
+    setActiveIndex(newIndex);
   }, [newIndex]);
-  
+
   const updateIndex = (newIndex: number) => {
     if (newIndex < 0) {
 
@@ -43,7 +43,7 @@ export function Carousel({ children, newIndex }: SectionProps) {
   }
 
   const scrollWheel = (key: React.WheelEvent<HTMLDivElement>) => {
-    
+
     if (isMoving) return
     disableInteraction();
 
@@ -59,13 +59,13 @@ export function Carousel({ children, newIndex }: SectionProps) {
   return (
     <>
       <Section {...handlers}>
-        <div onWheel={(e) => scrollWheel(e)}>
-          <SectionWrap style={{ transform: `translateX(-${activeIndex * 100}% )` }}>
-            {React.Children.map(children, (child: any, index) => {
-                return React.cloneElement(child)
-            })}
-          </SectionWrap>
-        </div>
+        {/* <div onWheel={(e) => scrollWheel(e)}> */}
+        <SectionWrap style={{ transform: `translateX(-${activeIndex * 100}% )` }}>
+          {React.Children.map(children, (child: any, index) => {
+            return React.cloneElement(child, { width: "100%" })
+          })}
+        </SectionWrap>
+        {/* </div> */}
       </Section>
     </>
   );
@@ -73,5 +73,5 @@ export function Carousel({ children, newIndex }: SectionProps) {
 
 
 
-// Update futuro : Forçar elemento filho do map a ter propriedades fixas css e evitar bugs 
+// Update futuro : Forçar elemento filho do map a ter propriedades fixas css e evitar bugs
 // Update futuro : Possibiltiar que o scrol seja tanto vertical quando horizontal

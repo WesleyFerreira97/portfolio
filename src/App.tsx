@@ -12,17 +12,17 @@ import { GlobalStyle } from './style/global';
 function App() {
   const [index, setIndex] = useState(0);
 
-  return ( 
-      <AppProvider>
-        <GlobalStyle />
-        <Navigation setIndex={setIndex}/>
-        <Carousel newIndex={index}>
-              <AboutMe />
-              <Siam />
-              <AluraCord />
-              <AppFilmes />
-        </Carousel>      
-      </AppProvider>
+  return (
+    <AppProvider>
+      <GlobalStyle />
+      <Navigation setIndex={setIndex} />
+      <Carousel newIndex={index}>
+        <AboutMe />
+        <Siam />
+        <AluraCord />
+        <AppFilmes />
+      </Carousel>
+    </AppProvider>
   );
 }
 

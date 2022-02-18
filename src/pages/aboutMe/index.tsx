@@ -1,12 +1,14 @@
 import { PageInfo } from '../../components/PageInfo';
 import { About } from './style';
 import { PageContainer, PageContainerInner } from '../../components/PageBehavior';
+import { PageGallery } from '../../components/PageGallery';
 
 export function AboutMe(props: any) {
     console.log(props)
     return (
         <PageContainer>
             <PageContainerInner>
+                <PageGallery>asdadlkj</PageGallery>
                 <About>
                     <div className='page-container__wrap'>
                         <PageInfo>

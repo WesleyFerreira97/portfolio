@@ -8,6 +8,7 @@ export const PageContainer = styled.div<PageProps>`
     background: ${props => props.theme.colors.primary};
     padding: 1rem;
     white-space: normal;
+    height: 100vh;
     
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
         padding: 2rem;
