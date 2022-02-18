@@ -58,14 +58,10 @@ export function Carousel({ children, newIndex }: SectionProps) {
 
   return (
     <>
-      <Section {...handlers}>
-        <div onWheel={(e) => scrollWheel(e)}>
-          <SectionWrap style={{ transform: `translateX(-${activeIndex * 100}% )` }}>
-            {React.Children.map(children, (child: any, index) => {
-              return React.cloneElement(child, { width: "100%" })
-            })}
-          </SectionWrap>
-        </div>
+      <Section {...handlers} onWheel={(e) => scrollWheel(e)}>
+        <SectionWrap style={{ transform: `translateY(-${activeIndex * 100}% )` }}>
+          {children}
+        </SectionWrap>
       </Section>
     </>
   );

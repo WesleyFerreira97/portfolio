@@ -6,17 +6,16 @@ interface PageProps {
 
 export const PageContainer = styled.div<PageProps>`
     background: ${props => props.theme.colors.primary};
-    /* padding: 1rem; */
-    white-space: normal;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
     
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
-        padding: 2rem;
     }
 `;
 
 export const PageContainerInner = styled.div`
-        height: 80%;
+        height: 100%;
         display: none;
 
     @media (min-width: ${props => props.theme.breakpoints.md}) {
