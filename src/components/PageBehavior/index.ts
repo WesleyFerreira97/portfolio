@@ -1,11 +1,12 @@
 import styled from "styled-components";
-
+import Bg from '../../assets/bg.jpg';
 interface PageProps {
     bg?: string;
 }
 
 export const PageContainer = styled.div<PageProps>`
     background: ${props => props.theme.colors.primary};
+    background-image: ${Bg};
     height: 100%;
     width: 100%;
     /* overflow: hidden; */
@@ -16,6 +17,7 @@ export const PageContainer = styled.div<PageProps>`
 
 export const PageContainerInner = styled.div`
         height: 100%;
+        width: 100%;
         display: none;
 
     @media (min-width: ${props => props.theme.breakpoints.md}) {
