@@ -1,6 +1,7 @@
 import React from 'react';
-import { NavigationWrap, Menu } from './style';
+import { NavigationWrap, Menu, OpenMenu } from './style';
 import { FaReact } from "react-icons/fa";
+import { BsBoxArrowRight } from "react-icons/bs";
 
 export function Navigation({ setIndex }: any) {
   return (
@@ -21,7 +22,19 @@ export function Navigation({ setIndex }: any) {
             <FaReact />
             <span className='menu-item__title'>API de Filmes</span>
           </li>  
-        </Menu>   
+          <li className='menu-item' onClick={() => setIndex(3)}>
+            <FaReact />
+            <span className='menu-item__title'>API de Filmes</span>
+          </li>  
+        </Menu>  
+
+        <OpenMenu onClick={() => setIndex(3)}>
+          <BsBoxArrowRight /> 
+        </OpenMenu>
     </NavigationWrap>
   );
 }
+
+ 
+
+  

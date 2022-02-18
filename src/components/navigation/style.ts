@@ -1,16 +1,20 @@
 import styled from "styled-components";
 import { typography } from "../../style/theme/typography";
+ 
 export const NavigationWrap = styled.div`
     height: 100vh;
     width: 50px;
     background: ${props => props.theme.colors.primaryAlt};
     box-shadow: 0 0 10px #000;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 1rem 0;
 
     .portfolio-photo {
         height: 2rem;
-        width: 2rem;
-        margin: 2rem auto;
+        width: 2rem; 
+        margin: 2rem auto; 
         
         img {
             border-radius: 100%;
@@ -20,16 +24,15 @@ export const NavigationWrap = styled.div`
         }
     }
 
-    @media (min-width: ${props => props.theme.breakpoints.xl}) {
+    /* @media (min-width: ${props => props.theme.breakpoints.xl}) {
         width: 350px;
 
         .portfolio-photo {
             height: 200px;
             width: 200px;
         }
-    }
+    } */
 `;
-
 
 export const Menu = styled.ul`
     display: flex;
@@ -63,7 +66,7 @@ export const Menu = styled.ul`
         }
     }
 
-    @media (min-width: ${props => props.theme.breakpoints.xl}) {
+    /* @media (min-width: ${props => props.theme.breakpoints.xl}) {
         .menu-item {
             width: 100%;
 
@@ -71,5 +74,12 @@ export const Menu = styled.ul`
                 display: block;
             }
         }
-    }
+    } */
+`;
+
+export const OpenMenu = styled.div`
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: ${props => props.theme.colors.neutral};
 `;

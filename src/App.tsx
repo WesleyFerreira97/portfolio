@@ -2,7 +2,7 @@ import './style/fonts.css'
 import { useState } from 'react'
 import { Carousel } from './components/carousel/index';
 import { Navigation } from './components/navigation/index';
-// import { AboutMe } from './pages/aboutMe/index';
+import { AboutMe } from './pages/aboutMe/index';
 import { Siam } from './pages/siam/index';
 import { AluraCord } from './pages/aluracord/index';
 import { AppFilmes } from './pages/appfilmes/index';
@@ -17,6 +17,7 @@ function App() {
         <GlobalStyle />
         <Navigation setIndex={setIndex}/>
         <Carousel newIndex={index}>
+              <AboutMe />
               <Siam />
               <AluraCord />
               <AppFilmes />

@@ -62,7 +62,7 @@ export function Carousel({ children, newIndex }: SectionProps) {
         <div onWheel={(e) => scrollWheel(e)}>
           <SectionWrap style={{ transform: `translateX(-${activeIndex * 100}% )` }}>
             {React.Children.map(children, (child: any, index) => {
-              return React.cloneElement(child, { width: "100%" });
+                return React.cloneElement(child)
             })}
           </SectionWrap>
         </div>
@@ -71,3 +71,7 @@ export function Carousel({ children, newIndex }: SectionProps) {
   );
 }
 
+
+
+// Update futuro : Forçar elemento filho do map a ter propriedades fixas css e evitar bugs 
+// Update futuro : Possibiltiar que o scrol seja tanto vertical quando horizontal
