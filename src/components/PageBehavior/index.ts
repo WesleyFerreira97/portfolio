@@ -20,17 +20,14 @@ export const PageContainer = styled.div<PageProps>`
 export const PageContainerInner = styled.div`
     height: 100%;
     width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    padding: 2rem;
 
     & > * {
         height: 100%;
     }
-
-    @media (min-width: ${props => props.theme.breakpoints.md}) {
-        width: 90%;
-    }
     
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
         display: flex;
-        margin: auto 0;
     }
 `;
