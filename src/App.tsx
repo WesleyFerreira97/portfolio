@@ -18,10 +18,10 @@ function App() {
       <GlobalStyle />
       <Navigation setIndex={setIndex} />
       <Carousel newIndex={index}>
-        <FinalPage />
         <Siam />
         <AluraCord />
         <AppFilmes />
+        {/* <FinalPage /> */}
       </Carousel>
     </AppProvider>
   );

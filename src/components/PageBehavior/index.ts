@@ -16,15 +16,19 @@ export const PageContainer = styled.div<PageProps>`
 `;
 
 export const PageContainerInner = styled.div`
+    height: 100%;
+    width: 100%;
+
+    & > * {
         height: 100%;
-        width: 100%;
-        display: none;
+    }
 
     @media (min-width: ${props => props.theme.breakpoints.md}) {
-            width: 90%;
+        /* width: 90%; */
     }
+    
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
-            display: flex;
-            margin: auto 0;
+        display: flex;
+        margin: auto 0;
     }
 `;
