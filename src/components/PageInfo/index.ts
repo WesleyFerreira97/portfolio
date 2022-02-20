@@ -2,7 +2,11 @@ import styled from "styled-components";
 import { typography } from "../../style/theme/typography";
 
 export const PageInfo = styled.div`
-    background-color: ${props => props.theme.colors.primaryAlt};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 1.25rem;
 
     .page-info {
         
