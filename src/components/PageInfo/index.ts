@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { typography } from "../../style/theme/typography";
 
 export const PageInfo = styled.div`
-    flex: 2 1 auto;
+    flex: 2 1 0;
     display: flex;
     flex-direction: column;
     justify-content: center;

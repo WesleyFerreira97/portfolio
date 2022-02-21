@@ -5,23 +5,17 @@ interface PageProps {
 }
 
 export const PageContainer = styled.div<PageProps>`
+    height: 100%;
+    width: 100%;
     background: ${props => props.theme.colors.primary};
     background-image: url(${Bg});
     background-size: cover;
-    height: 100%;
-    width: 100%;
-    /* overflow: hidden; */
-
-    
-    @media (min-width: ${props => props.theme.breakpoints.xl}) {
-    }
 `;
 
 export const PageContainerInner = styled.div`
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.7);
-    padding: 2rem;
+    background-color: rgba(0,0,0,0.5);
 
     & > * {
         height: 100%;
@@ -29,5 +23,6 @@ export const PageContainerInner = styled.div`
     
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
         display: flex;
+        padding: 4rem;
     }
 `;
