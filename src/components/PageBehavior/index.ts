@@ -8,21 +8,27 @@ export const PageContainer = styled.div<PageProps>`
     height: 100%;
     width: 100%;
     background: ${props => props.theme.colors.primary};
-    background-image: url(${Bg});
-    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const PageContainerInner = styled.div`
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.5);
+    /* background-color: #16213E; */
 
     & > * {
         height: 100%;
     }
     
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
+        height: 80%;
+        width: 90%;
         display: flex;
-        padding: 4rem;
+    }
+
+    @media (min-width: ${props => props.theme.breakpoints.xxl}) {
+        width: 80%;
     }
 `;

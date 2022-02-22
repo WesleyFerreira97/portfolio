@@ -6,24 +6,34 @@ export const PageInfo = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     padding: 1.25rem;
+
+    @media (min-width: ${props => props.theme.breakpoints.xl}) {
+        padding: 2.5rem;
+    }
 
     .page-info {
         
         &__title {
             ${typography.TitleXl}
             color: ${props => props.theme.colors.neutral};
+            text-transform: uppercase;
         }
 
         &__subtitle {
             ${typography.TitleMd}
             color: ${props => props.theme.colors.neutral};
+            margin: 1rem 0;
         }
 
-        &__paragraph, &__list {
+        &__paragraph, &__list li{
             ${typography.TextMd}
             color: ${props => props.theme.colors.neutral};
+            margin: .4rem 0;
+        }
+
+        &__buttons { 
+            margin: 1rem 0;
         }
     }
 `;

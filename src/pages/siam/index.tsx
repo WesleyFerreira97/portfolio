@@ -20,7 +20,7 @@ export function Siam() {
                     <h2 className='page-info__subtitle'>React Native</h2>
                     <div className='page-info__overflow'>
                         <p className='page-info__paragraph'>App desenvolvido para uma academia local com a finalidade de criar um melhor gerenciamento de clientes e pagamentos</p>
-                        <h2 className='page-info__subtitle' style={{ marginTop: '3rem' }}>Tecnologias Utilizadas</h2>
+                        <h2 className='page-info__subtitle'>Tecnologias Utilizadas</h2>
                         <ul className='page-info__list'>
                             <li>TypeScript</li>
                             <li>React Native</li>
