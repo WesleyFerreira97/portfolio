@@ -7,10 +7,11 @@ interface PageProps {
 export const PageContainer = styled.div<PageProps>`
     height: 100%;
     width: 100%;
-    background: ${props => props.theme.colors.primary};
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: ${props => props.theme.colors.primary};
 `;
 
 export const PageContainerInner = styled.div`

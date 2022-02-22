@@ -11,7 +11,7 @@ export function Siam() {
             <PageContainerInner>
                 <PageGallery>
                     <div className='project-preview__wrap'>
-                        <img src="https://github.com/WesleyFerreira97/siamfight-admin-react-native/raw/main/ScreenShots/Screenshot%20(1).jpg" alt="project preview" />
+                        <img src="https://seotactica.com/wp-content/uploads/2020/04/appstock2.png" alt="project preview" />
                     </div>
                 </PageGallery>
 
