@@ -11,12 +11,6 @@ export function AppFilmes() {
     return (
         <PageContainer>
             <PageContainerInner>
-                <PageGallery>
-                    <div className='project-preview__wrap'>
-                        <img src={moviesList} alt="project preview" />
-                    </div>
-                </PageGallery>
-
                 <PageInfo>
                     <h1 className='page-info__title'>Site de Filmes</h1>
                     <h2 className='page-info__subtitle'>React Js</h2>
@@ -34,6 +28,11 @@ export function AppFilmes() {
                         </div>
                     </div>
                 </PageInfo>
+                <PageGallery>
+                    <div className='project-preview__wrap'>
+                        <img src={moviesList} alt="project preview" />
+                    </div>
+                </PageGallery>
             </PageContainerInner>
         </PageContainer>
     );

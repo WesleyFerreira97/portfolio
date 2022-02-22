@@ -9,12 +9,6 @@ export function Siam() {
     return (
         <PageContainer>
             <PageContainerInner>
-                <PageGallery>
-                    <div className='project-preview__wrap'>
-                        <img src="https://seotactica.com/wp-content/uploads/2020/04/appstock2.png" alt="project preview" />
-                    </div>
-                </PageGallery>
-
                 <PageInfo>
                     <h1 className='page-info__title'>APP Administrativo</h1>
                     <h2 className='page-info__subtitle'>React Native</h2>
@@ -35,6 +29,11 @@ export function Siam() {
                         </div>
                     </div>
                 </PageInfo>
+                <PageGallery>
+                    <div className='project-preview__wrap'>
+                        <img src="https://seotactica.com/wp-content/uploads/2020/04/appstock2.png" alt="project preview" />
+                    </div>
+                </PageGallery>
             </PageContainerInner>
         </PageContainer>
     );

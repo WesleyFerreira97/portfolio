@@ -7,7 +7,7 @@ export const typography: any = {};
 
 typography.TitleXl = css`
     font-family: ${title};
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 125%;
     font-weight: 900;
 

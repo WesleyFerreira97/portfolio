@@ -9,12 +9,6 @@ export function AluraCord() {
     return (
         <PageContainer>
             <PageContainerInner>
-                <PageGallery>
-                    <div className='project-preview__wrap'>
-                        <img src="https://user-images.githubusercontent.com/7539166/151868022-30dfdcca-6542-4350-9688-56950a501235.png" alt="project preview" />
-                    </div>
-                </PageGallery>
-
                 <PageInfo>
                     <h1 className='page-info__title'>Aluracord</h1>
                     <h2 className='page-info__subtitle'>React Js</h2>
@@ -34,6 +28,11 @@ export function AluraCord() {
                         </div>
                     </div>
                 </PageInfo>
+                <PageGallery>
+                    <div className='project-preview__wrap'>
+                        <img src="https://user-images.githubusercontent.com/7539166/151868022-30dfdcca-6542-4350-9688-56950a501235.png" alt="project preview" />
+                    </div>
+                </PageGallery>
             </PageContainerInner>
         </PageContainer>
     );

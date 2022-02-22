@@ -2,17 +2,19 @@ import styled from "styled-components";
 
 export const PageGallery = styled.div`
     height: 100%;
-    display: none;
-    order: 2;
+    /* display: none; */
 
     &::before {
         content: '';
         background-color: #0037df;
+        /* background-color: ${props => props.theme.colors.tertiary}; */
+        /* background: #D81E5B; */
         height: 100%;
         width: 29%;
         position: absolute;
         top: 0;
         right: 0;
+        display: none;
     }
 
     .project-preview__wrap {
@@ -31,5 +33,9 @@ export const PageGallery = styled.div`
 
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
         display: block;
+
+        &::before {
+            display: block;
+        }
     }
 `;
