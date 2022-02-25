@@ -3,6 +3,7 @@ import { PageInfo } from '../../components/PageInfo';
 import { PageContainer, PageContainerInner } from '../../components/PageBehavior';
 import { PageGallery } from '../../components/PageGallery';
 import Button from '@mui/material/Button';
+import MockupImage from '../../assets/aluracord.png'
 
 export function AluraCord() {
 
@@ -30,7 +31,8 @@ export function AluraCord() {
                 </PageInfo>
                 <PageGallery>
                     <div className='project-preview__wrap'>
-                        <img src="https://user-images.githubusercontent.com/7539166/151868022-30dfdcca-6542-4350-9688-56950a501235.png" alt="project preview" />
+                        {/* <img src="https://user-images.githubusercontent.com/7539166/151868022-30dfdcca-6542-4350-9688-56950a501235.png" alt="project preview" /> */}
+                        <img src={MockupImage} alt="project preview" />
                     </div>
                 </PageGallery>
             </PageContainerInner>

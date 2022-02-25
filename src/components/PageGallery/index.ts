@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PageGallery = styled.div`
     height: 100%;
-    /* display: none; */
+    display: none;
 
     &::before {
         content: '';
@@ -10,7 +10,7 @@ export const PageGallery = styled.div`
         /* background-color: ${props => props.theme.colors.tertiary}; */
         /* background: #D81E5B; */
         height: 100%;
-        width: 29%;
+        width: 24%;
         position: absolute;
         top: 0;
         right: 0;
@@ -18,7 +18,7 @@ export const PageGallery = styled.div`
     }
 
     .project-preview__wrap {
-        height: 100%;
+        height: 70%;
         position: relative;
         display: flex;
         align-items: center;
@@ -26,16 +26,30 @@ export const PageGallery = styled.div`
     }
     
     img {
-        height: 95%;
+        height: 85%;
         z-index: 2;
-        margin-left: 1rem;
     }
 
     @media (min-width: ${props => props.theme.breakpoints.xl}) {
-        display: block;
+        display: flex;
+        align-items: center;
 
         &::before {
             display: block;
         }
+
+        .project-preview__wrap { 
+            height: 90%;
+        }
     }
-`;
+
+    @media (min-width: ${props => props.theme.breakpoints.xxl}) {
+        
+        &::before {
+            width: 29%;
+        }
+        img {
+            height: 100%;
+        }
+    }
+    `;

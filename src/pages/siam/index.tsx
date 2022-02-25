@@ -3,6 +3,7 @@ import { PageContainer, PageContainerInner } from '../../components/PageBehavior
 import { PageGallery } from '../../components/PageGallery';
 import { PageInfo } from '../../components/PageInfo';
 import Button from '@mui/material/Button';
+import MockupImage from '../../assets/aluracord.png'
 
 export function Siam() {
 
@@ -31,7 +32,8 @@ export function Siam() {
                 </PageInfo>
                 <PageGallery>
                     <div className='project-preview__wrap'>
-                        <img src="https://seotactica.com/wp-content/uploads/2020/04/appstock2.png" alt="project preview" />
+                        {/* <img src="https://seotactica.com/wp-content/uploads/2020/04/appstock2.png" alt="project preview" /> */}
+                        <img src={MockupImage} alt="project preview" />
                     </div>
                 </PageGallery>
             </PageContainerInner>
