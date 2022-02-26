@@ -3,7 +3,7 @@ import { PageContainer, PageContainerInner } from '../../components/PageBehavior
 import { PageGallery } from '../../components/PageGallery';
 import { PageInfo } from '../../components/PageInfo';
 import Button from '@mui/material/Button';
-import MockupImage from '../../assets/aluracord.png'
+import MockupImage from '../../assets/SiamMockup.png'
 
 export function Siam() {
 
