@@ -10,7 +10,6 @@ interface SectionProps {
 export function Carousel({ children, newIndex }: SectionProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMoving, setIsMoving] = useState(false);
-  console.log(newIndex);
 
   useEffect(() => {
     setActiveIndex(newIndex);
@@ -30,8 +29,6 @@ export function Carousel({ children, newIndex }: SectionProps) {
   const handlers = useSwipeable({
     onSwipedUp: () => updateIndex(activeIndex + 1),
     onSwipedDown: () => updateIndex(activeIndex - 1),
-    // Add Swipe top and bottom 
-    // Add Control by Arrows 
   });
 
   const disableInteraction = () => {
@@ -55,10 +52,19 @@ export function Carousel({ children, newIndex }: SectionProps) {
     updateIndex(activeIndex - 1)
   }
 
+  document.addEventListener('keydown', function(event){
+    if(event.key === 'ArrowUp' || event.key === 'PageUp') {
+      updateIndex(activeIndex - 1)
+    } 
+    if (event.key === 'ArrowDown' || event.key === 'PageDown') {
+      updateIndex(activeIndex + 1)
+    }
+  });
+
 
   return (
-    <>
-      <Section {...handlers} onWheel={(e) => scrollWheel(e)}>
+    <> 
+      <Section {...handlers} onWheel={(e) => scrollWheel(e)} >
         <SectionWrap style={{ transform: `translateY(-${activeIndex * 100}% )` }}>
           {children}
         </SectionWrap>
