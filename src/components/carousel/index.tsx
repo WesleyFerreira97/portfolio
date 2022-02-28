@@ -28,8 +28,8 @@ export function Carousel({ children, newIndex }: SectionProps) {
   }
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => updateIndex(activeIndex + 1),
-    onSwipedRight: () => updateIndex(activeIndex - 1),
+    onSwipedUp: () => updateIndex(activeIndex + 1),
+    onSwipedDown: () => updateIndex(activeIndex - 1),
     // Add Swipe top and bottom 
     // Add Control by Arrows 
   });
@@ -68,6 +68,3 @@ export function Carousel({ children, newIndex }: SectionProps) {
 }
 
 
-
-// Update futuro : Forçar elemento filho do map a ter propriedades fixas css e evitar bugs
-// Update futuro : Possibiltiar que o scrol seja tanto vertical quando horizontal

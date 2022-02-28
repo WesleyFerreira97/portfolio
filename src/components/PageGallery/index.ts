@@ -10,7 +10,7 @@ export const PageGallery = styled.div`
         /* background-color: ${props => props.theme.colors.tertiary}; */
         /* background: #D81E5B; */
         height: 100%;
-        width: 24%;
+        width: 20%;
         position: absolute;
         top: 0;
         right: 0;
@@ -19,10 +19,10 @@ export const PageGallery = styled.div`
 
     .project-preview__wrap {
         height: 70%;
+        width: 10%;
         position: relative;
         display: flex;
         align-items: center;
-
     }
     
     img {
@@ -38,16 +38,18 @@ export const PageGallery = styled.div`
             display: block;
         }
 
-        .project-preview__wrap { 
-            height: 90%;
-        }
     }
 
     @media (min-width: ${props => props.theme.breakpoints.xxl}) {
         
         &::before {
-            width: 29%;
+            width: 25%;
         }
+        
+        .project-preview__wrap { 
+            height: 80%;
+        }
+
         img {
             height: 100%;
         }
