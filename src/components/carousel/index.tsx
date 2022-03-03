@@ -52,15 +52,17 @@ export function Carousel({ children, newIndex }: SectionProps) {
     updateIndex(activeIndex - 1)
   }
 
-  document.addEventListener('keydown', function(event){
-    if(event.key === 'ArrowUp' || event.key === 'PageUp') {
-      updateIndex(activeIndex - 1)
-    } 
-    if (event.key === 'ArrowDown' || event.key === 'PageDown') {
-      updateIndex(activeIndex + 1)
-    }
-  });
+  // useEffect(() => {
 
+  //   document.addEventListener('keydown', function(event){
+  //     if(event.key === 'ArrowUp' || event.key === 'PageUp') {
+  //       updateIndex(activeIndex - 1)
+  //     } 
+  //     if (event.key === 'ArrowDown' || event.key === 'PageDown') {
+  //       updateIndex(activeIndex + 1)
+  //     }
+  //   });
+  // }, [activeIndex, updateIndex]);
 
   return (
     <> 

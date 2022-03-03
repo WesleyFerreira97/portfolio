@@ -40,10 +40,11 @@ typography.TextMd = css`
     font-family: ${text};
     font-size: 1rem;
     line-height: 135%;
-    font-weight: 200;
+    font-weight: 300;
         
     @media (min-width: ${props => props.theme.breakpoints.lg}) {
         font-size: 1.2rem;
+        font-weight: 200;
     }
 `;
 
