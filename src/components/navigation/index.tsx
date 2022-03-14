@@ -24,7 +24,7 @@ export function Navigation({ setIndex }: any) {
         </li>
       </Menu>
 
-      <OpenMenu onClick={() => setIndex(3)}>
+      <OpenMenu>
         <BsBoxArrowRight />
       </OpenMenu>
     </NavigationWrap>
