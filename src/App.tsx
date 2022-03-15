@@ -18,6 +18,7 @@ function App() {
       <GlobalStyle />
       <Navigation setIndex={setIndex} />
       <Carousel newIndex={index}>
+        {/* <AboutMe /> */}
         <Siam />
         <AluraCord />
         <AppFilmes />

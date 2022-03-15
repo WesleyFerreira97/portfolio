@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { typography } from "../../style/theme/typography";
+import styled from 'styled-components'
+import { typography } from '../../style/theme/typography'
 
 export const PageInfo = styled.div`
     flex: 2 1 0;
@@ -36,4 +36,4 @@ export const PageInfo = styled.div`
             margin: 1rem 0;
         }
     }
-`;
+`
