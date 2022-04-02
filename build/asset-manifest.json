@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.7fa29da6.css",
+    "main.js": "/portfolio/static/js/main.0a8d658b.js",
+    "static/media/aluracord.png": "/portfolio/static/media/aluracord.5e9e95b902f429b810b1.png",
+    "static/media/SiamMockup.png": "/portfolio/static/media/SiamMockup.d85b144bc30017d19957.png",
+    "static/media/mobilefilmes.png": "/portfolio/static/media/mobilefilmes.744fce2435d3aa942740.png",
+    "index.html": "/portfolio/index.html",
+    "main.0a8d658b.js.map": "/portfolio/static/js/main.0a8d658b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7fa29da6.css",
+    "static/js/main.0a8d658b.js"
+  ]
+}
