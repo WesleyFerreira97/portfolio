@@ -1,6 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from './theme'
+import { theme } from '../../style/theme'
 
 export const AppProvider = ({ children }: any) => {
 	return (

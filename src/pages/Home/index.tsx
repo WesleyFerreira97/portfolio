@@ -4,7 +4,7 @@ import { About } from './style'
 import { PageContainer, PageContainerInner } from '../../components/PageBehavior'
 import { PageGallery } from '../../components/PageGallery'
 
-export function AboutMe(props: any) {
+export function Home(props: any) {
 	console.log(props)
 	return (
 		<PageContainer>
