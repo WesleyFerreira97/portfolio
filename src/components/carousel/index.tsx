@@ -3,8 +3,8 @@ import { Section, SectionWrap } from './style'
 import { useSwipeable } from 'react-swipeable'
 
 interface SectionProps {
-  children: React.ReactNode;
-  newIndex: any;
+	children: React.ReactNode;
+	newIndex: number;
 }
 
 export function Carousel({ children, newIndex }: SectionProps) {
@@ -19,6 +19,8 @@ export function Carousel({ children, newIndex }: SectionProps) {
 		if (newIndex < 0) {
 
 			newIndex = React.Children.count(children) - 1
+			console.log(React.Children)
+
 		} else if (newIndex >= React.Children.count(children)) {
 
 			newIndex = 0
@@ -26,7 +28,7 @@ export function Carousel({ children, newIndex }: SectionProps) {
 		setActiveIndex(newIndex)
 	}
 
-	const handlers = useSwipeable({
+	const swipeTouchScreen = useSwipeable({
 		onSwipedUp: () => updateIndex(activeIndex + 1),
 		onSwipedDown: () => updateIndex(activeIndex - 1),
 	})
@@ -52,21 +54,26 @@ export function Carousel({ children, newIndex }: SectionProps) {
 		updateIndex(activeIndex - 1)
 	}
 
-	// useEffect(() => {
+	const arrowNavigation = (eventKey: React.KeyboardEvent<HTMLDivElement>) => {
+		if (isMoving) return
+		disableInteraction()
 
-	//   document.addEventListener('keydown', function(event){
-	//     if(event.key === 'ArrowUp' || event.key === 'PageUp') {
-	//       updateIndex(activeIndex - 1)
-	//     } 
-	//     if (event.key === 'ArrowDown' || event.key === 'PageDown') {
-	//       updateIndex(activeIndex + 1)
-	//     }
-	//   });
-	// }, [activeIndex, updateIndex]);
+		if (eventKey.key === 'ArrowUp' || eventKey.key === 'PageUp') {
+			updateIndex(activeIndex - 1)
+		}
+		if (eventKey.key === 'ArrowDown' || eventKey.key === 'PageDown') {
+			updateIndex(activeIndex + 1)
+		}
+	}
 
 	return (
-		<> 
-			<Section {...handlers} onWheel={(e) => scrollWheel(e)} >
+		<>
+			<Section
+				{...swipeTouchScreen}
+				onWheel={(e) => scrollWheel(e)}
+				onKeyDown={(e) => arrowNavigation(e)}
+				tabIndex={0}
+			>
 				<SectionWrap style={{ transform: `translateY(-${activeIndex * 100}% )` }}>
 					{children}
 				</SectionWrap>

@@ -3,7 +3,11 @@ import { NavigationWrap, Menu, OpenMenu } from './style'
 import { FaReact } from 'react-icons/fa'
 import { BsBoxArrowRight } from 'react-icons/bs'
 
-export function Navigation({ setIndex }: any) {
+interface NavigationProps {
+	setIndex: (index: number) => void;
+}
+
+export function Navigation({ setIndex }: NavigationProps) {
 	return (
 		<NavigationWrap>
 			<div className='portfolio-photo'>
