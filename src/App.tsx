@@ -9,11 +9,12 @@ import { Home } from "./pages/Home/index";
 
 function App() {
 	const [index, setIndex] = useState(0);
+	console.log(index);
 
 	return (
 		<AppProvider>
 			<Navigation setIndex={setIndex} />
-			<Carousel newIndex={index}>
+			<Carousel setIndex={setIndex} newIndex={index}>
 				<Home />
 				<Home />
 			</Carousel>

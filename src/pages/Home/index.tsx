@@ -5,7 +5,7 @@ import { PageContainer, PageContainerInner } from "../../components/PageBehavior
 import { PageGallery } from "../../components/PageGallery";
 
 export function Home(props: any) {
-	console.log(props);
+
 	return (
 		<PageContainer>
 			<PageContainerInner>

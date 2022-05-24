@@ -1,33 +1,33 @@
 import React, { useEffect, useState } from "react";
 import { Section, SectionWrap } from "./style";
 import { useSwipeable } from "react-swipeable";
-import { useDisableInteraction } from "../../hooks/DisableInteraction";
+import { useDisableInteraction } from "../../hooks/useDisableInteraction";
 
 interface SectionProps {
 	children: React.ReactNode;
 	newIndex: number;
+	setIndex: (index: number) => void;
 }
 
-
-export function Carousel({ children, newIndex }: SectionProps) {
+export function Carousel({ children, newIndex, setIndex }: SectionProps) {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const { isDisable, disableInteraction } = useDisableInteraction(1000);
-	console.log(disableInteraction);
 
 	useEffect(() => {
 		setActiveIndex(newIndex);
 	}, [newIndex]);
 
 	const updateIndex = (newIndex: number) => {
+
 		if (newIndex < 0) {
 
 			newIndex = React.Children.count(children) - 1;
-			console.log(React.Children);
-
 		} else if (newIndex >= React.Children.count(children)) {
 
 			newIndex = 0;
 		}
+
+		setIndex(newIndex);
 		setActiveIndex(newIndex);
 	};
 
@@ -35,8 +35,6 @@ export function Carousel({ children, newIndex }: SectionProps) {
 		onSwipedUp: () => updateIndex(activeIndex + 1),
 		onSwipedDown: () => updateIndex(activeIndex - 1),
 	});
-
-
 
 	const scrollWheel = (key: React.WheelEvent<HTMLDivElement>) => {
 
@@ -78,5 +76,4 @@ export function Carousel({ children, newIndex }: SectionProps) {
 		</>
 	);
 }
-
 
