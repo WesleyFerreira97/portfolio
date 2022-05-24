@@ -1,11 +1,11 @@
-import React from 'react'
-import { PageInfo } from '../../components/PageInfo'
-import { About } from './style'
-import { PageContainer, PageContainerInner } from '../../components/PageBehavior'
-import { PageGallery } from '../../components/PageGallery'
+import React from "react";
+import { PageInfo } from "../../components/PageInfo";
+import { About } from "./style";
+import { PageContainer, PageContainerInner } from "../../components/PageBehavior";
+import { PageGallery } from "../../components/PageGallery";
 
 export function Home(props: any) {
-	console.log(props)
+	console.log(props);
 	return (
 		<PageContainer>
 			<PageContainerInner>
@@ -22,5 +22,5 @@ export function Home(props: any) {
 				</About>
 			</PageContainerInner>
 		</PageContainer>
-	)
+	);
 }

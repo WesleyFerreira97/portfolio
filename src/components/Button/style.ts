@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { typography } from '../../style/theme/typography'
+import styled from "styled-components";
+import { typography } from "../../style/theme/typography";
 
 export const ButtonStyled = styled.button`
     color: #fff;
@@ -20,4 +20,4 @@ export const ButtonStyled = styled.button`
         transform: scale(.98);
         background-color: ${props => props.theme.colors.tertiary};
     }
-`
+`;

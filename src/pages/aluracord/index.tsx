@@ -1,9 +1,9 @@
-import React from 'react'
-import { PageInfo } from '../../components/PageInfo'
-import { PageContainer, PageContainerInner } from '../../components/PageBehavior'
-import { PageGallery } from '../../components/PageGallery'
-import { Button } from '../../components/Button'
-import MockupImage from '../../assets/aluracord.png'
+import React from "react";
+import { PageInfo } from "../../components/PageInfo";
+import { PageContainer, PageContainerInner } from "../../components/PageBehavior";
+import { PageGallery } from "../../components/PageGallery";
+import { Button } from "../../components/Button";
+import MockupImage from "../../assets/aluracord.png";
 
 export function AluraCord() {
 
@@ -15,7 +15,7 @@ export function AluraCord() {
 					<h2 className='page-info__subtitle'>React Js</h2>
 					<div className='page-info__overflow'>
 						<p className='page-info__paragraph'>App desenvolvido em 6 dias durante a semana de imersão React da plataforma de cursos Alura, entre as funcionalidades foi desenvolvido um Chat em tempo real utilizando uma plataforma de Backend as a Service para a criação e no login uma busca por perfis na API do Github</p>
-						<h2 className='page-info__subtitle' style={{ marginTop: '3rem' }}>Tecnologias Utilizadas</h2>
+						<h2 className='page-info__subtitle' style={{ marginTop: "3rem" }}>Tecnologias Utilizadas</h2>
 						<ul className='page-info__list'>
 							<li>React (Next Js)</li>
 							<li>SupaBase</li>
@@ -37,5 +37,5 @@ export function AluraCord() {
 				</PageGallery>
 			</PageContainerInner>
 		</PageContainer>
-	)
+	);
 }

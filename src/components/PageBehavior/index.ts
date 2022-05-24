@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import Bg from '../../assets/bg.jpg'
+import styled from "styled-components";
+import Bg from "../../assets/bg.jpg";
 
 interface PageProps {
     bg?: string;
@@ -13,7 +13,7 @@ export const PageContainer = styled.div<PageProps>`
     justify-content: center;
     align-items: center;
     background: ${props => props.theme.colors.primary};
-`
+`;
 
 export const PageContainerInner = styled.div`
     height: 100%;
@@ -29,4 +29,4 @@ export const PageContainerInner = styled.div`
         display: flex;
         align-items: center;
     }
-`
+`;

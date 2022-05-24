@@ -1,9 +1,9 @@
-import { css } from 'styled-components'
+import { css } from "styled-components";
 
-const title = 'Varela, sans-serif'
-const text = 'Raleway, sans-serif'
+const title = "Varela, sans-serif";
+const text = "Raleway, sans-serif";
 
-export const typography: any = {}
+export const typography: any = {};
 
 typography.TitleXl = css`
     font-family: ${title};
@@ -18,7 +18,7 @@ typography.TitleXl = css`
     @media (min-width: ${props => props.theme.breakpoints.xxl}) {
         font-size: 3.5rem;
     }
-`
+`;
 
 typography.TitleMd = css`
     font-family: ${title};
@@ -34,7 +34,7 @@ typography.TitleMd = css`
         font-size: 2rem;
         letter-spacing: 0.1rem;
     }
-`
+`;
 
 typography.TextMd = css`
     font-family: ${text};
@@ -46,13 +46,13 @@ typography.TextMd = css`
         font-size: 1.2rem;
         font-weight: 200;
     }
-`
+`;
 
 typography.TextSm = css`
     font-family: ${text};
     font-size: .9rem;
     line-height: 125%;
-`
+`;
 
 
 

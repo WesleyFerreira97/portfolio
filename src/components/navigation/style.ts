@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { typography } from '../../style/theme/typography'
- 
+import styled from "styled-components";
+import { typography } from "../../style/theme/typography";
+
 export const NavigationWrap = styled.div`
     height: 100vh;
     width: 50px;
@@ -32,7 +32,7 @@ export const NavigationWrap = styled.div`
             width: 200px;
         }
     } */
-`
+`;
 
 export const Menu = styled.ul`
     display: flex;
@@ -75,11 +75,11 @@ export const Menu = styled.ul`
             }
         }
     } */
-`
+`;
 
 export const OpenMenu = styled.div`
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
   color: ${props => props.theme.colors.neutral};
-`
+`;
