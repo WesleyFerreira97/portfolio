@@ -1,61 +1,37 @@
 {
   "name": "portfolio-react",
-  "version": "0.1.0",
   "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "jest",
+    "deploy": "gh-pages -d build"
+  },
+  "homepage": "https://wesleyferreira97.github.io/portfolio/",
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "@reduxjs/toolkit": "^1.8.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-redux": "^8.0.2",
     "react-icons": "^4.3.1",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.0",
     "react-swipeable": "^6.2.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.4.0",
-    "@types/node": "^16.11.21",
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
+    "@types/jest": "^27.5.1",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "@types/react-icons": "^3.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
     "@types/styled-components": "^5.1.21",
-    "@typescript-eslint/eslint-plugin": "^5.25.0",
-    "@typescript-eslint/parser": "^5.25.0",
-    "eslint": "^8.11.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-react": "^7.30.0",
+    "jest": "^28.1.0",
+    "sass": "^1.52.1",
+    "ts-jest": "^28.0.3",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9",
     "gh-pages": "^3.2.3",
-    "styled-components": "^5.3.3",
-    "typescript": "^4.5.5"
-  },
-  "homepage": "https://wesleyferreira97.github.io/portfolio/",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint src --ext .ts",
-    "lint:fix": "npm run lint -- --fix"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "styled-components": "^5.3.3"
   }
 }
+
