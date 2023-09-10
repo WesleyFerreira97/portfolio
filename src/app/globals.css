@@ -2,26 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.my-fodase {
+  background: url("../../public/images/mainBg.png") no-repeat center fixed;
+  /* background-size: cover;   */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes slideInLeft {
+  0% {
+    transform: translate3d(0%, 0, 0)
   }
+  100% {
+    transform: translate3d(-45%, 0, 0)
+  }
+};
+
+@keyframes slideInRight {
+  0% {
+    transform: translate3d(80%, 0, 0)
+  }
+  100% {
+    transform: translate3d(45%, 0, 0)
+  }
+};
+
+*, body, html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-family: Open-Sans, Helvetica, Sans-Serif;
+  box-sizing: border-box;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+a {
+  color: inherit;
+  text-decoration: none;
 }
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+.animation-homeSlideInLeft {
+  animation: slideInLeft 1s ease 1s forwards;
+};
+
+.animation-homeSlideInRight {
+  display: none;
+  /* animation: slideInRight 1s ease 1s forwards; */
+};
+
+.fodase {
+  display: none;
+}
+

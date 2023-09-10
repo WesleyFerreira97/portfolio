@@ -1,0 +1,35 @@
+.loading_container {
+    height: 50%;
+    width: 50%;
+    position: relative;
+    flex-grow: 1;
+    font-size: 5rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loading_container svg {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    /* position: relative !important; */
+}
+
+@keyframes fillLogo {
+    from {
+        height: 100%;
+        
+    }
+    to {
+        height: 0%;
+    }
+  }
+  
+  .cp1 {
+    animation: fillLogo 8s forwards ease-in-out;
+    transform-origin: bottom left;
+    animation-iteration-count: 1;
+  }
