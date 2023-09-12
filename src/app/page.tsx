@@ -8,7 +8,9 @@ export default function Home() {
     return (
         <div className='flex min-h-screen bg-cover overflow-hidden bg-[#0c0c30] my-fodasea justify-center items-center flex-col'>
             <div className={styles.loading_container}>
-                <span className={styles.loader}>
+                <span className={styles.logoCircle}>
+                    {/* <div className={styles.logoCircle}> */}
+                    {/* <div style={{ background: "green", width: "500px", height: "50px" }}></div> */}
                     <svg width="762" height="762" viewBox="0 0 762 762" fill="transparent" xmlns="http://www.w3.org/2000/svg"
                         style={{ zIndex: 100 }}
                     >
@@ -28,6 +30,7 @@ export default function Home() {
                             clipPath='url(#logoW)'
                         />
                     </svg>
+                    {/* </div> */}
                 </span>
             </div>
         </div>
