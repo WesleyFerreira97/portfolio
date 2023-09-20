@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 
-.my-fodase {
-  background: url("../../public/images/mainBg.png") no-repeat center fixed;
-  /* background-size: cover;   */
+.BgTheme {
+  background: url("../../public/images/bg.png") no-repeat center fixed;
+  background-size: cover;  
 }
 
 @keyframes slideInLeft {
