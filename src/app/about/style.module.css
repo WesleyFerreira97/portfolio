@@ -1,0 +1,53 @@
+/* This CSS will be converted to tailwind CSS */
+
+.pageContainer {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Component Video Background */
+.bgContainer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0e0e1d;
+    opacity: .5;
+}
+/* End - Component Video Background */
+
+.pageElements {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 8rem;
+    color: #fff;
+}
