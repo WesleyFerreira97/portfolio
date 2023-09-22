@@ -16,8 +16,22 @@ export default function About() {
     return (
         <div className={S.pageContainer}>
             <VideoBg />
+            {/* Animação inicial será aplicada ao page elements, com alguma transição para o videoBg */}
             <div className={S.pageElements}>
+                <div className={S.mainNavbar}>
+                    <span className={S.logo}>
+                        W
+                    </span>
+                    <ul className={S.mainMenu}>
+                        <li>Inicio</li>
+                        <li>Quem sou eu</li>
+                        <li>Projetos</li>
+                        <li>Artigos</li>
+                        <li>Contato</li>
+                    </ul>
+                </div>
                 <h1 className={S.title}>Wesley Ferreira</h1>
+                <span className={S.subtitle}>Desenvolvedor FrontEnd</span>
             </div>
         </div>
     )
