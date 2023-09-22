@@ -32,8 +32,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #0e0e1d;
-    opacity: .5;
+    /* background-color: #0e0e1d; */
+    background-color: rgba(0, 0, 0, .4);
+    /* opacity: .5; */
 }
 /* End - Component Video Background */
 
@@ -54,6 +55,7 @@
 
 .mainNavbar {
     height: 80px;
+    /* height: 100%; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -62,7 +64,12 @@
     color: #fff;
     position: absolute;
     top: 0;
-    background-color: rgba(0, 0, 0, .3);
+    /* background-color: rgba(0, 0, 0, .3); */
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 .mainMenu {
@@ -80,8 +87,53 @@
 }
 
 .subtitle {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #fff;
     font-weight: 400;
     font-family: var(--secondary-font);
+    background: #ed1755;
+    padding: 0.4rem 1rem;
+    border-radius: 0.3rem;
+}
+
+/* Component About Me */
+.aboutMeContainer {
+    display: flex;
+    gap: 2.5rem;
+    padding: 8rem 100px 1rem;
+    background-color: #E4DCCF;
+}
+
+.aboutMeThumb {
+    position: relative;
+    width: 45%;
+    aspect-ratio: 9/10;
+    max-height: 500px;
+    border-radius: .6rem;
+    overflow: hidden;
+}
+
+.aboutMeThumb img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.aboutMeInfo {
+    width: 100%;
+}
+
+.aboutMeTitle {
+    font-family: var(--primary-font);
+    font-size: 2.3rem;
+    color: #141414;
+    margin-bottom: 1.5rem;
+}
+
+.aboutMeParagraph {
+    font-family: var(--secondary-font);
+    font-size: 1.2rem;
+    color: #303030;
+    margin-bottom: .5rem;
+    line-height: 160%;
 }
