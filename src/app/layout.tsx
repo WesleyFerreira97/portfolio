@@ -4,7 +4,7 @@ import { Inter, Titillium_Web, Raleway } from 'next/font/google'
 import Link from 'next/link'
 
 const primary = Raleway({
-  weight: ['800'],
+  weight: ['800', "900"],
   subsets: ['latin'],
   variable: "--primary-font"
 })

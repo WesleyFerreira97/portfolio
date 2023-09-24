@@ -1,44 +1,13 @@
 /* This CSS will be converted to tailwind CSS */
 
-.pageContainer {
+.mainContent {
     position: relative;
     height: 100vh;
     width: 100%;
     overflow: hidden;
 }
 
-/* Component Video Background */
-.bgContainer {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-}
-
-.video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.overlay {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* background-color: #0e0e1d; */
-    background-color: rgba(0, 0, 0, .4);
-    /* opacity: .5; */
-}
-/* End - Component Video Background */
-
-.pageElements {
+.mainContentWrap {
     height: 100%;
     width: 100%;
     position: relative;
@@ -48,52 +17,70 @@
     align-items: center;
     flex-direction: column;
     /* background-color: #FF6969; */
-    background-color: #ED1755;
+    /* background-color: #ED1755; */
     /* background: rgb(237,23,85); */
     /* background: linear-gradient(90deg, rgba(237,23,85,.6) 0%, rgba(237,23,85,.6) 35%, rgba(237,23,85,0.6) 90%); */
 }
 
-.mainNavbar {
-    height: 80px;
-    /* height: 100%; */
-    width: 100%;
+.homeNameContainer {
+    /* background-color: #303030; */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 100px;
+    flex-direction: column;
+    gap: .5px;
+}
+
+.barDetail {
+    height: 10px;
+    width: 39%;
+    background-color: #ed1755;
+    display: block;
+    margin-bottom: .8rem;
+    display: block;
+}
+
+.title, .title2 {
+    font-size: 12rem;
     color: #fff;
-    position: absolute;
-    top: 0;
-    /* background-color: rgba(0, 0, 0, .3); */
-}
-
-.logo {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-.mainMenu {
-    display: flex;
-    gap: 1.8rem;
-}
-.mainMenu li{
-    
+    font-family: var(--primary-font);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 90%;
 }
 
 .title {
-    font-size: 7rem;
-    color: #fff;
-    font-family: var(--primary-font);
+    letter-spacing: .3rem;
+    opacity: .85;
+}
+
+.surNameContainer {
+     /* background-color: aqua; */
+     display: flex;
+     justify-content: flex-end;
+     width: 96.5%;
+}
+
+.title2 {
+    font-size: 5rem;
+    opacity: .55;
+    letter-spacing: .3rem;
 }
 
 .subtitle {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     color: #fff;
     font-weight: 400;
     font-family: var(--secondary-font);
-    background: #ed1755;
     padding: 0.4rem 1rem;
     border-radius: 0.3rem;
+    position: absolute;
+    bottom: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+.subtitleColor2 {
+    color: #ed1755;
 }
 
 /* Component About Me */

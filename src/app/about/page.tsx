@@ -2,46 +2,65 @@ import React, { useState } from 'react'
 import S from './style.module.css'
 import { relative } from 'path'
 import ProfilePic from '../../../public/images/profilePic.jpeg'
+import LogoSVG from '../../../public/images/logo.svg'
 import Image from 'next/image'
+import { } from "@/components/random"
+import { HomeVideoBg } from '@/components/HomeVideoBg'
+import MainNavbar from '@/components/MainNavbar'
 
-const VideoBg = () => {
-    return (
-        <div className={S.bgContainer}>
-            <video className={S.video} autoPlay loop muted>
-                <source src="/videos/bg2.mp4" type='video/mp4' />
-            </video>
-            <div className={S.overlay} />
-        </div>
-    )
-}
 export default function About() {
     return (
         <>
-            <div className={S.pageContainer}>
-                <VideoBg />
-                {/* Animação inicial será aplicada ao page elements, com alguma transição para o videoBg */}
-                <div className={S.pageElements}>
-                    <div className={S.mainNavbar}>
-                        <span className={S.logo}>
-                            W
+            <div className={S.mainContent}>
+                <HomeVideoBg />
+
+                <div className={S.mainContentWrap}>
+                    <MainNavbar />
+                    |
+                    <div className={S.homeNameContainer}>
+                        <span className={S.barDetail} />
+                        <h1 className={S.title}>Wesley</h1>
+                        <span className={S.surNameContainer}>
+                            <h1 className={S.title2}>Ferreira</h1>
                         </span>
-                        <ul className={S.mainMenu}>
-                            <li>Inicio</li>
-                            <li>Quem sou eu</li>
-                            <li>Projetos</li>
-                            <li>Artigos</li>
-                            <li>Contato</li>
-                        </ul>
                     </div>
-                    <h1 className={S.title}>Wesley Ferreira</h1>
-                    <span className={S.subtitle}>Desenvolvedor FrontEnd</span>
+
+                    <p className={S.subtitle}>Desenvolvedor
+                        <span className={S.subtitleColor2}> FrontEnd</span>
+                    </p>
                 </div>
             </div>
 
-            <AboutMe />
+            {/* <AboutMe /> */}
         </>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const AboutMe = () => {

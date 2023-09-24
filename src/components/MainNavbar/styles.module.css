@@ -1,0 +1,38 @@
+.mainNavbar {
+    /* height: 80px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    padding: 0 100px;
+    color: #fff;
+    padding-top: 1rem;
+}
+
+.logo {
+    height: 80px;
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--primary-font);
+    margin-right: 30px;
+}
+
+.logo img {
+    max-height: 100%;
+}
+
+.mainMenu {
+    gap: 1.8rem;
+    display: flex;
+}
+
+.mainMenu li{
+    font-family: var(--secondary-font);
+    font-weight: 300;
+}
