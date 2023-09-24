@@ -79,9 +79,21 @@
     letter-spacing: .3rem;
 }
 
-.subtitleColor2 {
+.subtitleTransition {
     color: #ed1755;
 }
+
+.subtitleTransition::after {
+    content: "|";
+    margin-left: .1rem;
+    color: #ed1755;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
 
 
 

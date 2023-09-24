@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+"use client"
+import React, { useState, useRef } from 'react'
 import S from './style.module.css'
 import { relative } from 'path'
 import ProfilePic from '../../../public/images/profilePic.jpeg'
@@ -9,6 +10,16 @@ import { HomeVideoBg } from '@/components/HomeVideoBg'
 import MainNavbar from '@/components/MainNavbar'
 
 export default function About() {
+    const skills = useRef(null)
+
+    const ex = () => {
+        setTimeout(() => {
+            console.log("Executou");
+
+        }, 1000)
+    }
+    ex()
+
     return (
         <>
             <div className={S.mainContent}>
@@ -26,7 +37,11 @@ export default function About() {
                     </div>
 
                     <p className={S.subtitle}>Desenvolvedor
-                        <span className={S.subtitleColor2}> FrontEnd</span>
+                        <span className={S.subtitleTransition}
+                            ref={skills} on
+                        >
+                            FrontEnd
+                        </span>
                     </p>
                 </div>
             </div>
