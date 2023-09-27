@@ -1,24 +1,13 @@
 "use client"
-import React, { useState, useRef } from 'react'
+import React from 'react'
 import S from './style.module.css'
-import { relative } from 'path'
 import ProfilePic from '../../../public/images/profilePic.jpeg'
-import LogoSVG from '../../../public/images/logo.svg'
 import Image from 'next/image'
-import { } from "@/components/random"
 import { HomeVideoBg } from '@/components/HomeVideoBg'
 import MainNavbar from '@/components/MainNavbar'
+import { TypeWriter } from '@/components/TypeWriter'
 
 export default function About() {
-    const skills = useRef(null)
-
-    const ex = () => {
-        setTimeout(() => {
-            console.log("Executou");
-
-        }, 1000)
-    }
-    ex()
 
     return (
         <>
@@ -37,10 +26,11 @@ export default function About() {
                     </div>
 
                     <p className={S.subtitle}>Desenvolvedor
-                        <span className={S.subtitleTransition}
-                            ref={skills} on
-                        >
-                            FrontEnd
+                        <span className={S.subtitleTransition} >
+                            <TypeWriter
+                                strings={["Front-End", "Mobile"]}
+
+                            />
                         </span>
                     </p>
                 </div>
