@@ -1,25 +1,48 @@
-import React, { useEffect, useRef } from 'react'
+import React, { use, useCallback, useEffect, useRef } from 'react'
 
 type TypeWriterProps = {
-    strings: string[]
+    textArray: string[]
 }
 
-export function TypeWriter({ strings }: TypeWriterProps) {
+export function TypeWriter({ textArray }: TypeWriterProps) {
     const writerRef = useRef<HTMLSpanElement | null>(null);
-    const stringsToWriter = [];
-    const finalStrings = splitStrings(strings);
+    let textArrayIndex = 0;
+    let charIndex = 0;
 
-    function splitStrings(stringsArr: string[]) {
-        const convertedStrings = stringsArr.map(item => {
-            return item.split("")
-        })
+    const typeAndErase = useCallback(() => {
 
-        return convertedStrings
-    }
+        const type = () => {
+            if (charIndex < textArray[textArrayIndex].length) {
+                const currentTextTyped = writerRef.current;
 
-    stringsToWriter.push(...finalStrings)
+                if (currentTextTyped) {
+                    currentTextTyped.textContent += textArray[textArrayIndex].charAt(charIndex)
+                    console.log(textArray[textArrayIndex].charAt(charIndex), "log aqui");
+
+                    charIndex++
+                    setTimeout(type, 400)
+                }
+            } else {
+                setTimeout(erase, 400)
+            }
+        }
+
+        const erase = () => {
+            console.log("bateuAqui");
+
+        }
+
+        type()
+    }, [charIndex, textArray, textArrayIndex])
+
+
+    useEffect(() => {
+        typeAndErase()
+    }, [typeAndErase])
 
     return (
-        <span ref={writerRef}>{stringsToWriter[0]}</span>
+        <>
+            <span ref={writerRef}>{ }</span>
+        </>
     )
 }

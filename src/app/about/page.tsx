@@ -16,7 +16,7 @@ export default function About() {
 
                 <div className={S.mainContentWrap}>
                     <MainNavbar />
-                    |
+
                     <div className={S.homeNameContainer}>
                         <span className={S.barDetail} />
                         <h1 className={S.title}>Wesley</h1>
@@ -28,7 +28,7 @@ export default function About() {
                     <p className={S.subtitle}>Desenvolvedor
                         <span className={S.subtitleTransition} >
                             <TypeWriter
-                                strings={["Front-End", "Mobile"]}
+                                textArray={["Front-End", "Mobile"]}
 
                             />
                         </span>
