@@ -4,53 +4,33 @@ type TypeWriterProps = {
 }
 
 export function TypeWriter({ textArray }: TypeWriterProps) {
-    const writerRef = useRef<HTMLSpanElement | null>(null);
-    const [isErase, setIsErase] = useState<Boolean>(false)
+    const [currentText, setCurrentText] = useState("")
     let textArrayIndex = 0;
-    let charIndex = 0;
-
-    const typeAndErase = useCallback(() => {
-        const currentTextTyped = writerRef.current;
-
-        const type = () => {
-            if (charIndex < textArray[textArrayIndex].length) {
-
-                if (currentTextTyped) {
-                    currentTextTyped.textContent += textArray[textArrayIndex].charAt(charIndex)
-
-                    charIndex++
-                    setTimeout(typeAndErase, 400)
-                }
-            } else {
-
-                setTimeout(erase, 2400)
-                setIsErase(true)
-
-            }
-        }
-
-        const erase = () => {
-            console.log("bateuAqui");
-
-            if (charIndex > 0 && currentTextTyped) {
-                currentTextTyped.textContent = textArray[textArrayIndex].substring(0, charIndex - 1)
-                charIndex--
-                setTimeout(erase, 400)
-            }
-        }
-
-        type()
-    }, [charIndex, textArray, textArrayIndex])
+    let [charIndex, setCharIndex] = useState(0);
 
     useEffect(() => {
-        if (!isErase) {
-            typeAndErase();
+        let timeout: NodeJS.Timeout;
+
+        if (charIndex <= textArray[textArrayIndex].length) {
+            timeout = setTimeout(() => {
+                const currentArrayEl = textArray[textArrayIndex]
+                setCurrentText(prevState => prevState + currentArrayEl.charAt(charIndex))
+
+                setCharIndex(prevState => prevState + 1)
+            }, 300)
+        } else {
+            console.log("bateu aqui");
         }
-    }, [typeAndErase, isErase])
+
+        return () => {
+            clearTimeout(timeout)
+        }
+
+    }, [charIndex, textArray, textArrayIndex])
 
     return (
         <>
-            <span ref={writerRef}></span>
+            <span>{currentText}</span>
         </>
     )
 }
