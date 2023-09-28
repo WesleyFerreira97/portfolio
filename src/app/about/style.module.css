@@ -77,11 +77,14 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .3rem;
+    min-width: 480px;
 }
 
 .subtitleTransition {
     margin-left: .6rem;
     color: #ed1755;
+    position: absolute;
+    width: 100%;
 }
 
 .subtitleTransition::after {
