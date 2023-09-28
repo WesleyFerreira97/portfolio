@@ -22,6 +22,10 @@
     /* background: linear-gradient(90deg, rgba(237,23,85,.6) 0%, rgba(237,23,85,.6) 35%, rgba(237,23,85,0.6) 90%); */
 }
 
+.mainNavbar {
+    width: 100%;
+}
+
 .homeNameContainer {
     /* background-color: #303030; */
     display: flex;
@@ -66,18 +70,18 @@
 }
 
 .subtitle {
-    font-size: 1.8rem;
+    min-width: 480px;
+    position: absolute;
+    bottom: 3rem;
+    border-radius: 0.3rem;
+    padding: 0.4rem 1rem;
     color: #fff;
     font-weight: 400;
     font-family: var(--secondary-font);
-    padding: 0.4rem 1rem;
-    border-radius: 0.3rem;
-    position: absolute;
-    bottom: 3rem;
+    font-size: 1.8rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .3rem;
-    min-width: 480px;
 }
 
 .subtitleTransition {

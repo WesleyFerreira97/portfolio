@@ -15,8 +15,9 @@ export default function About() {
                 <HomeVideoBg />
 
                 <div className={S.mainContentWrap}>
-                    <MainNavbar />
-
+                    <div className={S.mainNavbar}>
+                        <MainNavbar />
+                    </div>
                     <div className={S.homeNameContainer}>
                         <span className={S.barDetail} />
                         <h1 className={S.title}>Wesley</h1>
