@@ -106,7 +106,23 @@
 
 
 
+/* Home Animation */
+@keyframes homeAnimation {
+    from {
+       /* visibility: hidden; */
+       display: none;
+    }
+    to {
+       /* visibility: visible; */
+       display: block;
+    }
+}
 
+.videoBg, .homeNameContainer, .subtitle, .mainNavbar {
+    /* visibility: hidden; */
+    display: none;
+    animation: homeAnimation 2s linear forwards;
+}
 
 
 

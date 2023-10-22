@@ -11,13 +11,16 @@ export default function About() {
 
     return (
         <>
-            <div className={S.mainContent}>
-                <HomeVideoBg />
+            <div className={S.mainContent} style={{ background: "#C70039" }}>
+                <div className={S.videoBg}>
+                    <HomeVideoBg />
+                </div>
 
                 <div className={S.mainContentWrap}>
                     <div className={S.mainNavbar}>
                         <MainNavbar />
                     </div>
+
                     <div className={S.homeNameContainer}>
                         <span className={S.barDetail} />
                         <h1 className={S.title}>Wesley</h1>
