@@ -1,10 +1,9 @@
-/* This CSS will be converted to tailwind CSS */
-
 .mainContent {
     position: relative;
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    background: #242424;
 }
 
 .mainContentWrap {
@@ -31,6 +30,7 @@
     display: flex;
     flex-direction: column;
     gap: .5px;
+    position: relative;
 }
 
 .barDetail {
@@ -51,9 +51,39 @@
     line-height: 90%;
 }
 
+.titleContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* background: blue; */
+}
+
+.animationBlock {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background: #3F51B5;
+    z-index: 22;
+    border-radius: .2rem;
+    animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+}
+
+.animationBlock2 {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background: #E94560;
+    z-index: 22;
+    border-radius: .2rem;
+    animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    animation-delay: 2s;
+}
+
 .title {
     letter-spacing: .3rem;
-    opacity: .85;
+    opacity: 0;
+    animation:  fadeIn 2s forwards;
+    animation-delay: 1.5s;
 }
 
 .surNameContainer {
@@ -61,12 +91,16 @@
      display: flex;
      justify-content: flex-end;
      width: 96.5%;
+     position: relative;
 }
 
 .title2 {
     font-size: 5rem;
     opacity: .55;
     letter-spacing: .3rem;
+    animation:  fadeIn 2s forwards;
+    animation-delay: 3.5s;
+    zIndex: -1;
 }
 
 .subtitle {
@@ -101,27 +135,37 @@
 @keyframes blink {
     0% { opacity: 1; }
     100% { opacity: 0; }
-  }
+}
 
 
+/* Temporario */
+.videoBg, .subtitle, .mainNavbar, .barDetail, .title2 {
+    opacity: 0;
+}
 
 
-/* Home Animation */
-@keyframes homeAnimation {
-    from {
-       /* visibility: hidden; */
-       display: none;
+@keyframes mainBlock {
+    0% {
+        width: 0;
+        left: 0;
     }
-    to {
-       /* visibility: visible; */
-       display: block;
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0%;
+        left: 100%;
     }
 }
 
-.videoBg, .homeNameContainer, .subtitle, .mainNavbar {
-    /* visibility: hidden; */
-    display: none;
-    animation: homeAnimation 2s linear forwards;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 

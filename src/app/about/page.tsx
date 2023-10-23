@@ -11,24 +11,36 @@ export default function About() {
 
     return (
         <>
-            <div className={S.mainContent} style={{ background: "#C70039" }}>
+            {/* <div className={S.mainContent} style={{ background: "#C70039" }}> */}
+            <div className={S.mainContent} >
                 <div className={S.videoBg}>
                     <HomeVideoBg />
                 </div>
 
                 <div className={S.mainContentWrap}>
+
                     <div className={S.mainNavbar}>
                         <MainNavbar />
                     </div>
 
                     <div className={S.homeNameContainer}>
+                        {/* Ultimo Elemento */}
                         <span className={S.barDetail} />
-                        <h1 className={S.title}>Wesley</h1>
+
+                        {/* Primeiro Elemento  */}
+                        <div className={S.titleContainer}>
+                            <span className={S.animationBlock}></span>
+                            <h1 className={S.title}>Wesley</h1>
+                        </div>
+
+                        {/* Segundo Elemento */}
                         <span className={S.surNameContainer}>
+                            <span className={S.animationBlock2}></span>
                             <h1 className={S.title2}>Ferreira</h1>
                         </span>
                     </div>
 
+                    {/* Terceiro Elemento */}
                     <p className={S.subtitle}>Desenvolvedor
                         <span className={S.subtitleTransition} >
                             <TypeWriter
