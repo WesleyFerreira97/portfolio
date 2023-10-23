@@ -100,13 +100,14 @@
     letter-spacing: .3rem;
     animation:  fadeIn 2s forwards;
     animation-delay: 3.5s;
-    zIndex: -1;
+    z-index: -1;
 }
 
-.subtitle {
+.subtitleContainer {
     min-width: 480px;
     position: absolute;
-    bottom: 3rem;
+    /* bottom: 3rem; */
+    bottom: 0;
     border-radius: 0.3rem;
     padding: 0.4rem 1rem;
     color: #fff;
@@ -116,6 +117,28 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .3rem;
+    line-height: 100%;
+}
+
+.subtitle {
+    z-index: -1;
+    /* transform: translate3d(0, -120%, 0); */
+    transform: translate3d(0, 0, 0);
+    display: block;
+    animation: slideUpSubTitle 1s forwards;
+    animation-delay: 4.1s;
+}
+
+.subtitleContainer::before {
+    content: "";
+    height: 100%;
+    width: 120%;
+    background-color: #242424;
+    display: block;
+    z-index: 5555;
+    position: absolute;
+    overflow: hidden;
+    bottom: 0%;
 }
 
 .subtitleTransition {
@@ -139,10 +162,18 @@
 
 
 /* Temporario */
-.videoBg, .subtitle, .mainNavbar, .barDetail, .title2 {
+.videoBg, .subtitlee, .mainNavbar, .barDetail, .title2 {
     opacity: 0;
 }
 
+@keyframes slideUpSubTitle {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, -120%, 0);
+    }
+}
 
 @keyframes mainBlock {
     0% {

@@ -41,14 +41,16 @@ export default function About() {
                     </div>
 
                     {/* Terceiro Elemento */}
-                    <p className={S.subtitle}>Desenvolvedor
-                        <span className={S.subtitleTransition} >
-                            <TypeWriter
-                                textArray={["Front-End", "Mobile"]}
-
-                            />
+                    {/* <div className={S.subTitleContainer}> */}
+                    <p className={S.subtitleContainer}>
+                        <span className={S.subtitle}>
+                            Desenvolvedor
+                            <span className={S.subtitleTransition} >
+                                <TypeWriter textArray={["Front-End", "Mobile"]} />
+                            </span>
                         </span>
                     </p>
+                    {/* </div> */}
                 </div>
             </div>
 
