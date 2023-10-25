@@ -3,7 +3,6 @@
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    background: #1d1d1d;
 }
 
 .mainContentWrap {
@@ -15,29 +14,27 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* background: #1d1d1d; */
     /* background-color: #FF6969; */
-    /* background-color: #ED1755; */
+    background-color: #ED1755;
     /* background: rgb(237,23,85); */
-    /* background: linear-gradient(90deg, rgba(237,23,85,.6) 0%, rgba(237,23,85,.6) 35%, rgba(237,23,85,0.6) 90%); */
+    /* background-color: inherit; */
 }
 
 .mainNavbar {
     width: 100%;
-    background-color: #E94560;
-    /* height: 100%; */
     position: absolute;
     top: 0;
-    /* transform: translate3d(0, -50%, 0); */
-    transform: translateY(50%);
+    transform: translateY(-120%);
     animation: slideDown 1s forwards;
     overflow: hidden;
-    /* animation-delay: 4.1s; */
+    animation-delay: 4.1s;
 }
 
 
 @keyframes slideDown {
     0% {
-        transform: translate3d(0, 120%, 0);
+        transform: translate3d(0, -120%, 0);
     }
     100% {
         transform: translate3d(0, 0%, 0);
@@ -152,7 +149,7 @@
     content: "";
     height: 100%;
     width: 120%;
-    background-color: #1d1d1d;
+    background-color: #ED1755;
     display: block;
     z-index: 5555;
     position: absolute;
@@ -179,9 +176,8 @@
     100% { opacity: 0; }
 }
 
-
 /* Temporario */
-.videoBg, .subtitlee, .mainNavbarr, .barDetail, .title2 {
+.videoBgg, .subtitlee, .mainNavbarr, .barDetail, .title2 {
     opacity: 0;
 }
 

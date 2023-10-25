@@ -4,8 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    top: 0;
+    /* position: absolute; */
+    /* top: 0; */
     padding: 0 100px;
     color: #fff;
     padding-top: 1rem;
