@@ -1,3 +1,4 @@
+
 .mainContent {
     position: relative;
     height: 100vh;
@@ -16,7 +17,7 @@
     flex-direction: column;
     /* background: #1d1d1d; */
     /* background-color: #FF6969; */
-    background-color: #ED1755;
+    /* background-color: #ED1755; */
     /* background: rgb(237,23,85); */
     /* background-color: inherit; */
 }
@@ -52,11 +53,20 @@
 
 .barDetail {
     height: 10px;
-    width: 39%;
+    width: 0;
     background-color: #ed1755;
     display: block;
     margin-bottom: .8rem;
-    display: block;
+    animation: barDetailTransition 1s forwards 7.3s;
+}
+
+@keyframes barDetailTransition {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 40%;
+    }
 }
 
 .title, .title2 {
@@ -79,9 +89,10 @@
     position: absolute;
     height: 100%;
     width: 0;
-    background: #3F51B5;
+    /* background: #3F51B5; */
+    background: #313552;
     z-index: 22;
-    border-radius: .2rem;
+    border-radius: .1rem;
     animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
 }
 
@@ -89,9 +100,9 @@
     position: absolute;
     height: 100%;
     width: 0;
-    background: #E94560;
+    background: #313552;
     z-index: 22;
-    border-radius: .2rem;
+    border-radius: .1rem;
     animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
     animation-delay: 2s;
 }
@@ -99,7 +110,7 @@
 .title {
     letter-spacing: .3rem;
     opacity: 0;
-    animation:  fadeIn 2s forwards;
+    animation:  fadeIn 1.2s forwards;
     animation-delay: 1.5s;
 }
 
@@ -149,7 +160,7 @@
     content: "";
     height: 100%;
     width: 120%;
-    background-color: #ED1755;
+    /* background-color: #132043; */
     display: block;
     z-index: 5555;
     position: absolute;
@@ -171,27 +182,35 @@
     animation: blink 1s infinite;
 }
 
-
-.mainContentWrap, .subtitleContainer::before {
-    animation: zxz 0s forwards;
-    animation-delay: 5s;
+.mainContentWrap::before, .subtitleContainer::before  {
+    background-color: #132043;
+    border-bottom: #132043;
+}
+.mainContentWrap::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    opacity: .2;
+    position: absolute;
+    /* animation: slideOutRight 1.5s cubic-bezier(.74, .06, .4, .92) forwards; */
+    animation-delay: 5.6s; 
+    /* border-bottom: 150px solid #132043; */
 }
 
-@keyframes zxz {
+.subtitleContainer::before {
+    animation: blink 0s forwards;
+    animation-delay: 5.2s;
+}
+
+@keyframes slideOutRight {
     to {
-        background-color: inherit;
+        transform: translateX(100%);
     }
 }
-
 
 @keyframes blink {
     0% { opacity: 1; }
     100% { opacity: 0; }
-}
-
-/* Temporario */
-.videoBgg, .subtitlee, .mainNavbarr, .barDetail, .title2 {
-    opacity: 0;
 }
 
 @keyframes slideUp {
