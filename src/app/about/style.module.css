@@ -171,6 +171,19 @@
     animation: blink 1s infinite;
 }
 
+
+.mainContentWrap, .subtitleContainer::before {
+    animation: zxz 0s forwards;
+    animation-delay: 5s;
+}
+
+@keyframes zxz {
+    to {
+        background-color: inherit;
+    }
+}
+
+
 @keyframes blink {
     0% { opacity: 1; }
     100% { opacity: 0; }
