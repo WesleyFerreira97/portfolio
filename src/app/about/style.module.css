@@ -115,7 +115,6 @@
 }
 
 .surNameContainer {
-     /* background-color: aqua; */
      display: flex;
      justify-content: flex-end;
      width: 96.5%;
@@ -124,17 +123,15 @@
 
 .title2 {
     font-size: 5rem;
-    opacity: .55;
     letter-spacing: .3rem;
-    animation:  fadeIn 2s forwards;
+    opacity: 0;
+    animation:  fadeInHalf 2s forwards;
     animation-delay: 3.5s;
-    z-index: -1;
 }
 
 .subtitleContainer {
     min-width: 480px;
     position: absolute;
-    /* bottom: 3rem; */
     bottom: 0;
     border-radius: 0.3rem;
     padding: 0.4rem 1rem;
@@ -162,7 +159,7 @@
     width: 120%;
     /* background-color: #132043; */
     display: block;
-    z-index: 5555;
+    z-index: 555;
     position: absolute;
     overflow: hidden;
     bottom: 0%;
@@ -183,14 +180,16 @@
 }
 
 .mainContentWrap::before, .subtitleContainer::before  {
-    background-color: #132043;
-    border-bottom: #132043;
+    background-color: #090d1f;
+    border-bottom: #090d1f;
+    animation: mainContentOpacityAnimation 1s forwards 2.5s;
 }
+
 .mainContentWrap::before {
     content: "";
     height: 100%;
     width: 100%;
-    opacity: .2;
+    /* opacity: .2; */
     position: absolute;
     /* animation: slideOutRight 1.5s cubic-bezier(.74, .06, .4, .92) forwards; */
     animation-delay: 5.6s; 
@@ -246,6 +245,23 @@
     }
 }
 
+@keyframes fadeInHalf {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .65;
+    }
+}
+
+@keyframes mainContentOpacityAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .35;
+    }
+}
 
 
 
