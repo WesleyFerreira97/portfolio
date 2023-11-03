@@ -1,76 +1,320 @@
-.loading_container {
-    height: 50%;
-    width: 20%;
-    position: relative;
-    flex-grow: 1;
-    font-size: 5rem;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
-.loading_container svg {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    position: relative !important;
-}
-
-.logoW {
-  /* animation: fillLogo 4.23s forwards ease-in-out; */
-  animation: fillLogo 4s forwards ease-in-out;
-  transform-origin: bottom left;
-  animation-iteration-count: 1;
-}
-  
-@keyframes fillLogo {
-  from {
-      height: 100%;
-      
-  }
-  to {
-      height: 0%;
-  }
-}
-
-/* .logoCircle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 30px solid #C23373;
-  border-radius: 50%;
-  height: 100%;
-  width: 100%;
-} */
-
-.logoCircle {
+.mainContent {
   position: relative;
+  height: 100vh;
   width: 100%;
-  height: 100%;
-  background: #C23373;
-  border-radius: 50%;
   overflow: hidden;
 }
-.logoCircle:after{
-  content: '';
+
+.mainContentWrap {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background: #1d1d1d; */
+  /* background-color: #FF6969; */
+  /* background-color: #ED1755; */
+  /* background: rgb(237,23,85); */
+  /* background-color: inherit; */
+}
+
+.mainNavbar {
+  width: 100%;
   position: absolute;
-  inset: 15px;
-  margin: auto;
-  background: #0c0c30;
-   border-radius: 50%;
+  top: 0;
+  transform: translateY(-120%);
+  animation: slideDown 1s forwards;
+  overflow: hidden;
+  animation-delay: 4.1s;
 }
-.logoCircle:before{
-  content: '';
+
+
+@keyframes slideDown {
+  0% {
+      transform: translate3d(0, -120%, 0);
+  }
+  100% {
+      transform: translate3d(0, 0%, 0);
+  }
+}
+
+
+.homeNameContainer {
+  /* background-color: #303030; */
+  display: flex;
+  flex-direction: column;
+  gap: .5px;
+  position: relative;
+}
+
+.barDetail {
+  height: 10px;
+  width: 0;
+  background-color: #ed1755;
+  display: block;
+  margin-bottom: .8rem;
+  animation: barDetailTransition 1s forwards 7.3s;
+}
+
+@keyframes barDetailTransition {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 40%;
+  }
+}
+
+.title, .title2 {
+  font-size: 10rem;
+  color: #fff;
+  font-family: var(--primary-font);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 90%;
+}
+
+.titleContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* background: blue; */
+}
+
+.animationBlock {
   position: absolute;
-  inset: 0px;
-  margin: auto;
-  background: #fff;
-  animation: logoCircleAnimation 3.2s ease-in-out forwards alternate;
+  height: 100%;
+  width: 0;
+  /* background: #3F51B5; */
+  background: #313552;
+  z-index: 22;
+  border-radius: .1rem;
+  animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
 }
-@keyframes logoCircleAnimation {
-  0%  ,10% { transform: translateY(0%) }
-  90% , 100% { transform: translateY(100%) }
+
+.animationBlock2 {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background: #313552;
+  z-index: 22;
+  border-radius: .1rem;
+  animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+  animation-delay: 2s;
 }
-    
+
+.title {
+  letter-spacing: .3rem;
+  opacity: 0;
+  animation:  fadeIn 1.2s forwards;
+  animation-delay: 1.5s;
+}
+
+.surNameContainer {
+   display: flex;
+   justify-content: flex-end;
+   width: 96.5%;
+   position: relative;
+}
+
+.title2 {
+  font-size: 5rem;
+  letter-spacing: .3rem;
+  opacity: 0;
+  animation:  fadeInHalf 2s forwards;
+  animation-delay: 3.5s;
+}
+
+.subtitleContainer {
+  min-width: 480px;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0.3rem;
+  padding: 0.4rem 1rem;
+  color: #fff;
+  font-weight: 400;
+  font-family: var(--secondary-font);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  line-height: 100%;
+}
+
+.subtitle {
+  z-index: -1;
+  transform: translate3d(0, 0, 0);
+  display: block;
+  animation: slideUp 1s forwards;
+  animation-delay: 4.1s;
+}
+
+.subtitleContainer::before {
+  content: "";
+  height: 100%;
+  width: 120%;
+  /* background-color: #132043; */
+  display: block;
+  z-index: 555;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0%;
+}
+
+.subtitleTransition {
+  margin-left: .6rem;
+  color: #ed1755;
+  position: absolute;
+  width: 100%;
+}
+
+.subtitleTransition::after {
+  content: "|";
+  margin-left: .1rem;
+  color: #ed1755;
+  animation: blink 1s infinite;
+}
+
+.mainContentWrap::before, .subtitleContainer::before  {
+  background-color: #090d1f;
+  border-bottom: #090d1f;
+  animation: mainContentOpacityAnimation 1s forwards 2.5s;
+}
+
+.mainContentWrap::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  /* opacity: .2; */
+  position: absolute;
+  /* animation: slideOutRight 1.5s cubic-bezier(.74, .06, .4, .92) forwards; */
+  animation-delay: 5.6s; 
+  /* border-bottom: 150px solid #132043; */
+}
+
+.subtitleContainer::before {
+  animation: blink 0s forwards;
+  animation-delay: 5.2s;
+}
+
+@keyframes slideOutRight {
+  to {
+      transform: translateX(100%);
+  }
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes slideUp {
+  0% {
+      transform: translate3d(0, 0, 0);
+  }
+  100% {
+      transform: translate3d(0, -120%, 0);
+  }
+}
+
+@keyframes mainBlock {
+  0% {
+      width: 0;
+      left: 0;
+  }
+  50% {
+      width: 100%;
+      left: 0;
+  }
+  100% {
+      width: 0%;
+      left: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInHalf {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: .65;
+  }
+}
+
+@keyframes mainContentOpacityAnimation {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: .35;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Component About Me */
+.aboutMeContainer {
+  display: flex;
+  gap: 2.5rem;
+  padding: 8rem 100px 1rem;
+  background-color: #E4DCCF;
+}
+
+.aboutMeThumb {
+  position: relative;
+  width: 45%;
+  aspect-ratio: 9/10;
+  max-height: 500px;
+  border-radius: .6rem;
+  overflow: hidden;
+}
+
+.aboutMeThumb img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.aboutMeInfo {
+  width: 100%;
+}
+
+.aboutMeTitle {
+  font-family: var(--primary-font);
+  font-size: 2.3rem;
+  color: #141414;
+  margin-bottom: 1.5rem;
+}
+
+.aboutMeParagraph {
+  font-family: var(--secondary-font);
+  font-size: 1.2rem;
+  color: #303030;
+  margin-bottom: .5rem;
+  line-height: 160%;
+}
