@@ -4,57 +4,59 @@ import S from './style.module.css'
 import ProfilePic from '../../public/images/profilePic.jpeg'
 import Image from 'next/image'
 import { HomeVideoBg } from '@/components/HomeVideoBg'
-import MainNavbar from '@/components/MainNavbar'
+import { MainNavbar } from '@/components/MainNavbar'
 import { TypeWriter } from '@/components/TypeWriter'
 
 export default function About() {
 
     return (
         <>
-            {/* <div className={S.mainContent} style={{ background: "#C70039" }}> */}
-            <div className={S.mainContent} >
-                <div className={S.videoBg}>
-                    <HomeVideoBg />
-                </div>
-
-                <div className={S.mainContentWrap}>
-
-                    <div className={S.mainNavbar}>
-                        <MainNavbar />
+            <MainNavbar>
+                {/* <div className={S.mainContent} style={{ background: "#C70039" }}> */}
+                <div className={S.mainContent} >
+                    <div className={S.videoBg}>
+                        <HomeVideoBg />
                     </div>
 
-                    <div className={S.homeNameContainer}>
-                        {/* Ultimo Elemento */}
-                        <span className={S.barDetail} />
+                    <div className={S.mainContentWrap}>
 
-                        {/* Primeiro Elemento  */}
-                        <div className={S.titleContainer}>
-                            <span className={S.animationBlock}></span>
-                            {/* <h1 className={S.title}>Wesley</h1> */}
+                        <div className={S.mainNavbar}>
+                            <MainNavbar.Navbar />
                         </div>
 
-                        {/* Segundo Elemento */}
-                        <span className={S.surNameContainer}>
-                            <span className={S.animationBlock2}></span>
-                            {/* <h1 className={S.title2}>Ferreira</h1> */}
-                        </span>
-                    </div>
+                        <div className={S.homeNameContainer}>
+                            {/* Ultimo Elemento */}
+                            <span className={S.barDetail} />
 
-                    {/* Terceiro Elemento */}
-                    {/* <div className={S.subTitleContainer}> */}
-                    <p className={S.subtitleContainer}>
-                        <span className={S.subtitle}>
-                            Desenvolvedor
-                            <span className={S.subtitleTransition} >
-                                <TypeWriter textArray={["Front-End", "Mobile"]} />
+                            {/* Primeiro Elemento  */}
+                            <div className={S.titleContainer}>
+                                <span className={S.animationBlock}></span>
+                                <h1 className={S.title}>Wesley</h1>
+                            </div>
+
+                            {/* Segundo Elemento */}
+                            <span className={S.surNameContainer}>
+                                <span className={S.animationBlock2}></span>
+                                <h1 className={S.title2}>Ferreira</h1>
                             </span>
-                        </span>
-                    </p>
-                    {/* </div> */}
-                </div>
-            </div>
+                        </div>
 
-            {/* <AboutMe /> */}
+                        {/* Terceiro Elemento */}
+                        {/* <div className={S.subTitleContainer}> */}
+                        <p className={S.subtitleContainer}>
+                            <span className={S.subtitle}>
+                                Desenvolvedor
+                                <span className={S.subtitleTransition} >
+                                    <TypeWriter textArray={["Front-End", "Mobile"]} />
+                                </span>
+                            </span>
+                        </p>
+                        {/* </div> */}
+                    </div>
+                </div>
+
+                {/* <AboutMe /> */}
+            </MainNavbar>
         </>
     )
 }

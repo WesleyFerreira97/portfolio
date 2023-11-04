@@ -27,12 +27,25 @@
     max-height: 100%;
 }
 
+.menuMobile {
+    display: block;
+}
+
 .mainMenu {
     gap: 1.8rem;
-    display: flex;
+    display: none;
 }
 
 .mainMenu li{
     font-family: var(--secondary-font);
     font-weight: 300;
+}
+
+@media (min-width: 920px) {
+    .mainMenu {
+        display: flex;
+    }
+    .menuMobile {
+        display: none;
+}
 }
