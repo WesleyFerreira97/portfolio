@@ -7,12 +7,11 @@ import { HomeVideoBg } from '@/components/HomeVideoBg'
 import { MainNavbar } from '@/components/MainNavbar'
 import { TypeWriter } from '@/components/TypeWriter'
 
-export default function About() {
+export default function Home() {
 
     return (
         <>
             <MainNavbar>
-                {/* <div className={S.mainContent} style={{ background: "#C70039" }}> */}
                 <div className={S.mainContent} >
                     <div className={S.videoBg}>
                         <HomeVideoBg />
@@ -29,15 +28,15 @@ export default function About() {
                             <span className={S.barDetail} />
 
                             {/* Primeiro Elemento  */}
-                            <div className={S.titleContainer}>
+                            <div className={S.nameContainer}>
                                 <span className={S.animationBlock}></span>
-                                <h1 className={S.title}>Wesley</h1>
+                                <h1 className={S.name}>Wesley</h1>
                             </div>
 
                             {/* Segundo Elemento */}
                             <span className={S.surNameContainer}>
                                 <span className={S.animationBlock2}></span>
-                                <h1 className={S.title2}>Ferreira</h1>
+                                <h1 className={S.surName}>Ferreira</h1>
                             </span>
                         </div>
 
@@ -51,42 +50,14 @@ export default function About() {
                                 </span>
                             </span>
                         </p>
-                        {/* </div> */}
                     </div>
                 </div>
 
-                {/* <AboutMe /> */}
+                <AboutMe />
             </MainNavbar>
         </>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const AboutMe = () => {
     return (

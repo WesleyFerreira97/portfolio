@@ -1,8 +1,8 @@
 
 .mainContent {
-  position: relative;
   height: 100vh;
   width: 100%;
+  position: relative;
   overflow: hidden;
 }
 
@@ -15,118 +15,82 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background: #1d1d1d; */
-  /* background-color: #FF6969; */
-  /* background-color: #ED1755; */
-  /* background: rgb(237,23,85); */
-  /* background-color: inherit; */
 }
 
 .mainNavbar {
   width: 100%;
   position: absolute;
   top: 0;
+  overflow: hidden;
   transform: translateY(-120%);
   animation: slideDown 1s forwards;
-  overflow: hidden;
-  animation-delay: 4.1s;
+  animation-delay: 3.1s;
 }
-
-
-@keyframes slideDown {
-  0% {
-      transform: translate3d(0, -120%, 0);
-  }
-  100% {
-      transform: translate3d(0, 0%, 0);
-  }
-}
-
 
 .homeNameContainer {
-  /* background-color: #303030; */
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   gap: .5px;
-  position: relative;
 }
 
 .barDetail {
   height: 10px;
   width: 0;
-  background-color: #ed1755;
   display: block;
   margin-bottom: .8rem;
+  background-color: #ed1755;
   animation: barDetailTransition 1s forwards 7.3s;
 }
 
-@keyframes barDetailTransition {
-  0% {
-      width: 0;
-  }
-  100% {
-      width: 40%;
-  }
+.nameContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
-.title, .title2 {
-  font-size: 10rem;
+.surNameContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 96.5%;
+  position: relative;
+}
+
+.animationBlock, .animationBlock2 {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  /* background: #3F51B5; */
+  background: #313552;
+  z-index: 22;
+  border-radius: .1rem;
+  animation: mainBlock 1.5s cubic-bezier(.74, .06, .4, .92) forwards;
+}
+
+.animationBlock2 {
+  animation-delay: 1.5s;
+}
+
+.name, .surName {
   color: #fff;
   font-family: var(--primary-font);
   font-weight: 900;
   text-transform: uppercase;
   line-height: 90%;
-}
-
-.titleContainer {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  /* background: blue; */
-}
-
-.animationBlock {
-  position: absolute;
-  height: 100%;
-  width: 0;
-  /* background: #3F51B5; */
-  background: #313552;
-  z-index: 22;
-  border-radius: .1rem;
-  animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-}
-
-.animationBlock2 {
-  position: absolute;
-  height: 100%;
-  width: 0;
-  background: #313552;
-  z-index: 22;
-  border-radius: .1rem;
-  animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
-  animation-delay: 2s;
-}
-
-.title {
   letter-spacing: .3rem;
   opacity: 0;
+}
+
+.name {
+  font-size: 10rem;
   animation:  fadeIn 1.2s forwards;
   animation-delay: 1.5s;
 }
 
-.surNameContainer {
-   display: flex;
-   justify-content: flex-end;
-   width: 96.5%;
-   position: relative;
-}
-
-.title2 {
+.surName {
   font-size: 5rem;
-  letter-spacing: .3rem;
-  opacity: 0;
   animation:  fadeInHalf 2s forwards;
-  animation-delay: 3.5s;
+  animation-delay: 2.5s;
 }
 
 .subtitleContainer {
@@ -147,22 +111,21 @@
 
 .subtitle {
   z-index: -1;
-  transform: translate3d(0, 0, 0);
   display: block;
+  transform: translate3d(0, 0, 0);
   animation: slideUp 1s forwards;
-  animation-delay: 4.1s;
+  animation-delay: 3.1s;
 }
 
 .subtitleContainer::before {
   content: "";
   height: 100%;
   width: 120%;
-  /* background-color: #132043; */
-  display: block;
-  z-index: 555;
   position: absolute;
-  overflow: hidden;
   bottom: 0%;
+  z-index: 555;
+  display: block;
+  overflow: hidden;
 }
 
 .subtitleTransition {
@@ -189,16 +152,34 @@
   content: "";
   height: 100%;
   width: 100%;
-  /* opacity: .2; */
   position: absolute;
   /* animation: slideOutRight 1.5s cubic-bezier(.74, .06, .4, .92) forwards; */
-  animation-delay: 5.6s; 
+  /* opacity: .2; */
+  animation-delay: 5s; 
   /* border-bottom: 150px solid #132043; */
 }
 
 .subtitleContainer::before {
   animation: blink 0s forwards;
   animation-delay: 5.2s;
+}
+
+@keyframes slideDown {
+  0% {
+      transform: translate3d(0, -120%, 0);
+  }
+  100% {
+      transform: translate3d(0, 0%, 0);
+  }
+}
+
+@keyframes barDetailTransition {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 40%;
+  }
 }
 
 @keyframes slideOutRight {
@@ -282,7 +263,7 @@
   display: flex;
   gap: 2.5rem;
   padding: 8rem 100px 1rem;
-  background-color: #E4DCCF;
+  background-color: #FCF5ED;
 }
 
 .aboutMeThumb {
