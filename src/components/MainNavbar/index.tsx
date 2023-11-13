@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react'
 import LogoSVG from '../../../public/images/logo.svg'
 import Image from 'next/image'
 import S from "./styles.module.css"
+import { List } from '@phosphor-icons/react'
 
 type MainNavbarProps = {
     children: ReactNode
@@ -38,7 +39,7 @@ const Navbar = () => {
                 <Image src={LogoSVG} alt='Logo Portfólio' fill={true} />
             </span>
             <div className={S.menuMobile}>
-                |||
+                <List size={24} color='#fff' weight='fill' />
             </div>
             <MenuDesktop />
         </div>

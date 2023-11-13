@@ -1,14 +1,10 @@
 .mainNavbar {
-    /* height: 80px; */
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: absolute; */
-    /* top: 0; */
-    padding: 0 100px;
+    padding: 1rem 2rem 0 2rem;
     color: #fff;
-    padding-top: 1rem;
 }
 
 .logo {
@@ -39,6 +35,12 @@
 .mainMenu li{
     font-family: var(--secondary-font);
     font-weight: 300;
+}
+
+@media (min-width: 767px) {
+    .mainNavbar {
+        padding: 1rem 4rem 0 4rem
+    }
 }
 
 @media (min-width: 920px) {

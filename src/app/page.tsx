@@ -41,9 +41,10 @@ export default function Home() {
                         </div>
 
                         {/* Terceiro Elemento */}
-                        {/* <div className={S.subTitleContainer}> */}
                         <p className={S.subtitleContainer}>
                             <span className={S.subtitle}>
+                                {/* <span className={S.subtitleDesktop}>Desenvolvedor</span>
+                                <span className={S.subtitleMobile}>Dev</span> */}
                                 Desenvolvedor
                                 <span className={S.subtitleTransition} >
                                     <TypeWriter textArray={["Front-End", "Mobile"]} />
@@ -53,7 +54,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <AboutMe />
+                {/* <AboutMe /> */}
             </MainNavbar>
         </>
     )
