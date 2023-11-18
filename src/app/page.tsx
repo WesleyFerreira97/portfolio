@@ -55,6 +55,7 @@ export default function Home() {
                 </div>
 
                 {/* <AboutMe /> */}
+                <MainNavbar.MenuMobile />
             </MainNavbar>
         </>
     )

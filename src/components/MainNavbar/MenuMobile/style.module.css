@@ -1,0 +1,29 @@
+.menuMobileWrap {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 6666;
+}
+
+.menuMobileWrap::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #090d1f;
+    opacity: .5;
+}
+
+.content {
+    height: 100%;
+    width: 80%;
+    position: relative;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.content li {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+}

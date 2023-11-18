@@ -23,16 +23,16 @@
     max-height: 100%;
 }
 
-.menuMobile {
+.menuMobileButton {
     display: block;
 }
 
-.mainMenu {
+.menuDesktop {
     gap: 1.8rem;
     display: none;
 }
 
-.mainMenu li{
+.menuDesktop li{
     font-family: var(--secondary-font);
     font-weight: 300;
 }
@@ -44,10 +44,10 @@
 }
 
 @media (min-width: 920px) {
-    .mainMenu {
+    .menuMobileButton {
+        display: none;
+    }
+    .menuDesktop {
         display: flex;
     }
-    .menuMobile {
-        display: none;
-}
 }
