@@ -4,6 +4,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  background: #EBE8E8;
 }
 
 .mainContentWrap {
@@ -278,60 +279,4 @@
   100% {
       opacity: .35;
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Component About Me */
-.aboutMeContainer {
-  display: flex;
-  gap: 2.5rem;
-  padding: 8rem 100px 1rem;
-  background-color: #FCF5ED;
-}
-
-.aboutMeThumb {
-  position: relative;
-  width: 45%;
-  aspect-ratio: 9/10;
-  max-height: 500px;
-  border-radius: .6rem;
-  overflow: hidden;
-}
-
-.aboutMeThumb img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.aboutMeInfo {
-  width: 100%;
-}
-
-.aboutMeTitle {
-  font-family: var(--primary-font);
-  font-size: 2.3rem;
-  color: #141414;
-  margin-bottom: 1.5rem;
-}
-
-.aboutMeParagraph {
-  font-family: var(--secondary-font);
-  font-size: 1.2rem;
-  color: #303030;
-  margin-bottom: .5rem;
-  line-height: 160%;
 }
