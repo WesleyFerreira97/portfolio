@@ -1,23 +1,22 @@
 
 .aboutMeWrap {
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 2.5rem;
-    padding: 8rem 0 2rem;
-    background-color: #FCF5ED;
+    margin: 8rem 0 2rem;
 }
 
 .aboutMe {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 85%;
     gap: 5rem;
 }
   
 .aboutMeThumb {
     position: relative;
-    width: 80%;
+    width: 60%;
     aspect-ratio: 9/10;
     max-height: 500px;
     /* overflow: hidden; */
@@ -95,16 +94,13 @@
     /* gap: 2.5rem; */
     /* padding: rem 0 2rem; */
     }
-    .aboutMe {
-        width: 70%;
-    }
-  
-
+ 
     .aboutMe {
         flex-direction: row;
     }
-    .aboutMe {
-        width: 55%;
+
+    .aboutMeThumb {
+        width: 80%;
     }
 
     .aboutMeTitle {
