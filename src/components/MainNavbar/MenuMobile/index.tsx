@@ -4,12 +4,15 @@ import { useMenuMobileContext } from '..'
 
 export const MenuMobile = () => {
     const { isMenuOpen, setIsMenuOpen } = useMenuMobileContext();
+    const handleMenuClose = () => setIsMenuOpen(prev => !prev);
 
-    const handleMenuClose = () => setIsMenuOpen(false);
+    let toggleOverlay = isMenuOpen ? S.bgOverlay : S.bgOverlayOut;
+    let toggleMenuStatus = isMenuOpen ? S.openMenu : S.closeMenu;
 
     return (
-        <div className={S.menuMobileWrap}>
-            <ul className={S.content}>
+        <div className={`${S.menuMobileWrap} ${toggleOverlay}`}>
+            {/* <span className={ } /> */}
+            <ul className={`${S.content} ${toggleMenuStatus}`}>
                 <span
                     onClick={handleMenuClose}
                 >

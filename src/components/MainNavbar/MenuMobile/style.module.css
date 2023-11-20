@@ -4,6 +4,7 @@
     position: fixed;
     top: 0;
     z-index: 6666;
+    transform: translate3d(-105%, 0, 0);
 }
 
 .menuMobileWrap::before {
@@ -26,4 +27,25 @@
 .content li {
     font-family: var(--primary-font);
     font-size: 2rem;
+}
+
+.openMenu {
+    transform: translate3d(0%, 0, 0);
+    transition: 0.8s ease;
+}
+
+.closeMenu {
+    transform: translate3d(-105%, 0, 0);
+    transition: 0.8s ease;
+}
+
+.bgOverlay {
+    height: 100%;
+    width: 100%;
+    transform: translate3d(0%, 0, 0);
+}
+
+.bgOverlayOut {
+    transform: translate3d(-105%, 0, 0);
+    transition-delay: 0.8s;
 }

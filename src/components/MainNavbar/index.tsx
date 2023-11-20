@@ -30,7 +30,7 @@ export const useMenuMobileContext = () => {
 const Navbar = () => {
     const { isMenuOpen, setIsMenuOpen } = useMenuMobileContext();
 
-    const handleMenuOpen = () => setIsMenuOpen(true);
+    const handleMenuOpen = () => setIsMenuOpen(prev => !prev);
     console.log(isMenuOpen);
 
     return (
