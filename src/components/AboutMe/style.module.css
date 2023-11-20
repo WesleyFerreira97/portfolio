@@ -3,23 +3,26 @@
     display: flex;
     justify-content: center;
     gap: 2.5rem;
-    padding: 14rem 0 2rem;
+    padding: 8rem 0 2rem;
     background-color: #FCF5ED;
 }
 
 .aboutMe {
     display: flex;
-    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
     gap: 5rem;
 }
   
 .aboutMeThumb {
     position: relative;
-    width: 55%;
+    width: 80%;
     aspect-ratio: 9/10;
     max-height: 500px;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
+    margin: auto;
 }
 
 .aboutMeThumb::after {
@@ -28,7 +31,17 @@
     width: 90%;
     /* margin-left: -100%; */
     /* position: absolute; */
+    /* background-color: #ed1755; */
+    background-color: #0c1127;
+}
+
+.quoteIcon {
     background-color: #ed1755;
+    position: absolute;
+    right: -30px;
+    top: 20%;
+    z-index: 999;
+    padding: 1rem;
 }
   
 .aboutMeThumb img {
@@ -46,7 +59,7 @@
 .aboutMeTitle {
     font-family: var(--primary-font);
     font-size: 2.3rem;
-    color: #141414;
+    color: #0c1127;
     margin-bottom: 3rem;
     position: relative;
     padding-bottom: 1rem;
@@ -57,7 +70,6 @@
     height: 7px;
     width: 30%;
     background-color: #ed1755;
-    z-index: 23233232232;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -67,6 +79,7 @@
     font-size: 1.5rem;
     font-weight: 700;
     font-family: var(--secondary-font);
+    color: #0c1127;
 }
 
 .aboutMeParagraph {
@@ -77,8 +90,33 @@
     line-height: 160%;
 }
 
-  @media (min-width: 767px) {
+@media (min-width: 767px) {
+    .aboutMeWrap {
+    /* gap: 2.5rem; */
+    /* padding: rem 0 2rem; */
+    }
+    .aboutMe {
+        width: 70%;
+    }
+  
+
+    .aboutMe {
+        flex-direction: row;
+    }
+    .aboutMe {
+        width: 55%;
+    }
+
+    .aboutMeTitle {
+        font-size: 3.5rem;
+    }
+}
+
+  
+@media (min-width: 1360px) {
     .aboutMeTitle {
         font-size: 4.5rem;
     }
-  }
+
+}
+ 

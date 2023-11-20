@@ -1,12 +1,17 @@
+"use client"
 import Image from "next/image"
-import ProfilePic from '../../../public/images/mainBg.png'
+import ProfilePic from '../../../public/images/profilePic.jpeg'
 import S from './style.module.css'
+import { Quotes } from '@phosphor-icons/react'
 
 export function AboutMe() {
     return (
         <div className={S.aboutMeWrap}>
             <div className={S.aboutMe}>
                 <div className={S.aboutMeThumb}>
+                    <div className={S.quoteIcon}>
+                        <Quotes size={32} color={"#fff"} />
+                    </div>
                     <Image
                         src={ProfilePic.src}
                         fill={true}
