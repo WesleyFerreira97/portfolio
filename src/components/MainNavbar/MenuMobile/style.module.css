@@ -22,11 +22,38 @@
     position: relative;
     background-color: #fff;
     z-index: 9999;
+    padding: 2rem 2rem;
 }
 
-.content li {
+
+.closeButton {
+    display: block;
+    margin-bottom: 3rem;
+}
+
+.closeButton >:hover {
+    transform: rotate(180deg);
+    transition: 0.4s ease;
+}
+
+.closeButton >:hover *{
+    color: #ed1755;
+}
+
+.menuList {
+    padding-bottom: 1.5rem;
+}
+
+.menuList li {
     font-family: var(--primary-font);
     font-size: 2rem;
+    color: #090d1f;
+    padding-bottom: .6rem;
+}
+
+.menuList li:hover {
+    transition: .2s;
+    color: #ed1755;
 }
 
 .openMenu {

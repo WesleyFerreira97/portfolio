@@ -1,6 +1,7 @@
 import React from 'react'
 import S from "./style.module.css"
 import { useMenuMobileContext } from '..'
+import { X } from '@phosphor-icons/react'
 
 export const MenuMobile = () => {
     const { isMenuOpen, setIsMenuOpen } = useMenuMobileContext();
@@ -10,20 +11,22 @@ export const MenuMobile = () => {
     let toggleMenuStatus = isMenuOpen ? S.openMenu : S.closeMenu;
 
     return (
-        <div className={`${S.menuMobileWrap} ${toggleOverlay}`}>
-            {/* <span className={ } /> */}
-            <ul className={`${S.content} ${toggleMenuStatus}`}>
+        <div className={`${S.menuMobileWrap} ${toggleOverlay}`} >
+            <div className={`${S.content} ${toggleMenuStatus}`}>
                 <span
+                    className={S.closeButton}
                     onClick={handleMenuClose}
                 >
-                    Close Menu
+                    <X size={32} color='#090d1f' />
                 </span>
-                <li>Inicio</li>
-                <li>Mobile</li>
-                <li>Projetos</li>
-                <li>Artigos</li>
-                <li>Contato</li>
-            </ul>
+                <ul className={S.menuList}>
+                    <li>Inicio</li>
+                    <li>Mobile</li>
+                    <li>Projetos</li>
+                    <li>Artigos</li>
+                    <li>Contato</li>
+                </ul>
+            </div>
         </div>
     )
 }
