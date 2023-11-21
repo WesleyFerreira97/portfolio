@@ -57,6 +57,7 @@
   
 .aboutMeTitle {
     font-family: var(--primary-font);
+    font-weight: 700;
     font-size: 2.3rem;
     color: #0c1127;
     margin-bottom: 3rem;
@@ -95,6 +96,13 @@
     /* padding: rem 0 2rem; */
     }
  
+
+    .aboutMeTitle {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 920px) {    
     .aboutMe {
         flex-direction: row;
     }
@@ -103,9 +111,7 @@
         width: 80%;
     }
 
-    .aboutMeTitle {
-        font-size: 3.5rem;
-    }
+
 }
 
   

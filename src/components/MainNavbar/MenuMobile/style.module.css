@@ -47,6 +47,7 @@
 .menuList li {
     font-family: var(--primary-font);
     font-size: 2rem;
+    font-weight: 700;
     color: #090d1f;
     padding-bottom: .6rem;
 }

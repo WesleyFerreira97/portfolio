@@ -1,0 +1,11 @@
+.cardWrap {
+    width: 100%;
+    background-color: #1F1D36;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardThumb {
+    flex-grow: 2;
+    background-color: #3F3351;
+}
