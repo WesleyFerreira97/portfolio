@@ -1,3 +1,4 @@
+"use client"
 import React, { ReactNode } from 'react'
 import S from "./styles.module.css"
 
@@ -8,10 +9,9 @@ type CardProps = {
     link?: string;
     width?: string;
     ratio?: string;
-    maxH?: string;
 }
 
-export function Card({ width, ratio, maxH, ...props }: CardProps) {
+export function Card({ width, ratio, ...props }: CardProps) {
 
     return (
         <div
@@ -19,17 +19,20 @@ export function Card({ width, ratio, maxH, ...props }: CardProps) {
             style={{
                 width: width,
                 aspectRatio: ratio,
-                maxHeight: maxH
             }} >
+
             <div className={S.cardThumb}>
-                {props.icon}
-                <h2>{props.title}</h2>
+                <div className={S.icon}>{props.icon}</div>
+                <h2 className={S.title}>{props.title}</h2>
             </div>
+
             <div className={S.cardInfo}>
                 <p className={S.cardDescription}>
                     {props.description}
                 </p>
             </div>
+
+
         </div>
     )
 }
