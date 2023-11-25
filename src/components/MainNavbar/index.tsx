@@ -6,7 +6,7 @@ import { List } from '@phosphor-icons/react'
 import { MenuMobile } from './MenuMobile'
 
 type MainNavbarProps = {
-    children: ReactNode
+    children: ReactNode,
 }
 
 type TypeMenuMobileContext = {

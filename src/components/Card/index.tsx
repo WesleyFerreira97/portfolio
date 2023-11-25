@@ -1,6 +1,7 @@
 "use client"
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useState } from 'react'
 import S from "./styles.module.css"
+import { Modal } from '../Modal';
 
 type CardProps = {
     title: string;
@@ -12,6 +13,11 @@ type CardProps = {
 }
 
 export function Card({ width, ratio, ...props }: CardProps) {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const toggleModalState = () => setIsModalOpen(prev => !prev);
+
+
 
     return (
         <div
@@ -24,6 +30,7 @@ export function Card({ width, ratio, ...props }: CardProps) {
             <div className={S.cardThumb}>
                 <div className={S.icon}>{props.icon}</div>
                 <h2 className={S.title}>{props.title}</h2>
+                <button onClick={toggleModalState}>Toggle Modal</button>
             </div>
 
             <div className={S.cardInfo}>
@@ -31,7 +38,7 @@ export function Card({ width, ratio, ...props }: CardProps) {
                     {props.description}
                 </p>
             </div>
-
+            <Modal toggleModal={isModalOpen} />
 
         </div>
     )

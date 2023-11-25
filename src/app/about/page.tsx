@@ -6,6 +6,12 @@ import { Container } from '@/components/Layout/Container'
 import { Card } from '@/components/Card'
 import { AndroidLogo, Pencil } from '@phosphor-icons/react'
 
+const allSections = {
+    frontEnd: () => <Card title='Front End' />,
+    mobile: () => <Card title='Mobile' />,
+    designer: () => <Card title='Designer' />,
+}
+
 export default function About() {
 
     return (
@@ -14,14 +20,18 @@ export default function About() {
                 {/* <AboutMe /> */}
                 <div className={S.grid}>
                     {[1, 2, 3].map((index, value) => (
-                        <Card
-                            title='Front-End'
-                            width="100%"
-                            ratio="9/16"
-                            description='Conhecimento aprofundado em JavaScript, React JS/Native e facilidade de adaptação a todas tecnologias Web,m Conhecimento aprofundado em JavaScript, React JS/Native e facilidade de adaptação a todas tecnologias WebConhecimento aprofundado em JavaScript, React JS/Native e facilidade de adaptação a todas tecnologias Web'
+                        <button
                             key={index}
-                            icon={<Pencil size={"100%"} color='#fff' weight='fill' />}
-                        />
+                        >
+                            <Card
+                                title='Front-End'
+                                width="100%"
+                                ratio="9/16"
+                                description='Conhecimento aprofundado em JavaScript, React JS/Native e facilidade de adaptação a todas te todas tecnologias WebConhecimento aprofundado em JavaScript, React JS/Native e facilidade de adaptação a todas tecnologias Web'
+
+                                icon={<Pencil size={"100%"} color='#fff' weight='fill' />}
+                            />
+                        </button>
                     ))}
                 </div>
             </Container.Inner>
