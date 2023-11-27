@@ -1,5 +1,5 @@
-import React, { ReactNode, SetStateAction, createContext, useState, Dispatch, useContext } from 'react'
-import LogoSVG from '../../../public/images/logo.svg'
+import React, { ReactNode, SetStateAction, createContext, useState, useContext } from 'react'
+import LogoSVG from '../../../../public/images/logo.svg'
 import Image from 'next/image'
 import S from "./styles.module.css"
 import { List } from '@phosphor-icons/react'

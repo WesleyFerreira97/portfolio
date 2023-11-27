@@ -2,9 +2,11 @@
 import React from 'react'
 import S from './style.module.css'
 import { HomeVideoBg } from '@/components/HomeVideoBg'
-import { MainNavbar } from '@/components/MainNavbar'
+import { MainNavbar } from '@/components/Sections/MainNavbar'
 import { TypeWriter } from '@/components/TypeWriter'
-import { AboutMe } from '@/components/AboutMe'
+import { AboutMe } from '@/components/Sections/AboutMe'
+import { Container } from '@/components/Layout/Container'
+import { Skills } from '@/components/Sections/Skills'
 
 export default function Home() {
 
@@ -54,6 +56,7 @@ export default function Home() {
                 </div>
 
                 <AboutMe />
+                <Skills />
                 <MainNavbar.MenuMobile />
             </MainNavbar>
         </>

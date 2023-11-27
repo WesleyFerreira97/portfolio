@@ -1,9 +1,9 @@
 "use client"
 import Image from "next/image"
-import ProfilePic from '../../../public/images/mainBg.png'
+import ProfilePic from '../../../../public/images/mainBg.png'
 import S from './style.module.css'
 import { Quotes } from '@phosphor-icons/react'
-import { Container } from "../Layout/Container"
+import { Container } from "../../Layout/Container"
 
 export function AboutMe() {
     return (
