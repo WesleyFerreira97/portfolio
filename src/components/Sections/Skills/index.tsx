@@ -14,25 +14,36 @@ const allSections = {
 
 export function Skills() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const toggleModalState = () => setIsModalOpen(prev => !prev);
+    const [skillComponent, setSkillComponent] = useState<string>("frontEnd")
 
-    const CurrentComponent = SkillsData["frontEnd"].pageComponent
+    const toggleModalState = () => setIsModalOpen(prev => !prev);
+    const CurrentComponent = SkillsData["skillComponent"].pageComponent;
+
+    const toggleSkillModal = (value: string) => {
+        toggleModalState();
+    }
 
     return (
         <Container>
             <Container.Inner>
                 <div className={S.grid}>
-                    {Object.values(SkillsData).map((item, index) => (
-                        <Card
-                            key={index}
-                            title={item.title}
-                            width="100%"
-                            ratio="9/16"
-                            onClick={toggleModalState}
-                            description={item.description}
-                            icon={<item.icon size={"100%"} color='#fff' weight='fill' />}
-                        />
-                    ))}
+                    {Object.entries(SkillsData).map((item, index) => {
+                        const objKey = item[0];
+                        const values = item[1];
+                        return (
+                            <>
+                                <Card
+                                    key={index}
+                                    title={values.title}
+                                    width="100%"
+                                    ratio="9/16"
+                                    onClick={() => toggleSkillModal(objKey)}
+                                    description={values.description}
+                                    icon={<values.icon size={"100%"} color='#fff' weight='fill' />}
+                                />
+                            </>
+                        )
+                    })}
                 </div>
             </Container.Inner>
             <Modal toggleModal={isModalOpen} />
