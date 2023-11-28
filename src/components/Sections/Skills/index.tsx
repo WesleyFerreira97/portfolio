@@ -12,15 +12,18 @@ const allSections = {
     designer: () => <Card title='Designer' />,
 }
 
+type SkillsKeys = keyof typeof SkillsData
+
 export function Skills() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [skillComponent, setSkillComponent] = useState<string>("frontEnd")
+    const [skillComponent, setSkillComponent] = useState<SkillsKeys>("frontEnd")
 
     const toggleModalState = () => setIsModalOpen(prev => !prev);
-    const CurrentComponent = SkillsData["skillComponent"].pageComponent;
+    const CurrentComponent = SkillsData[skillComponent].pageComponent;
 
-    const toggleSkillModal = (value: string) => {
+    const toggleSkillModal = (value: SkillsKeys) => {
         toggleModalState();
+        setSkillComponent(value)
     }
 
     return (
@@ -37,7 +40,7 @@ export function Skills() {
                                     title={values.title}
                                     width="100%"
                                     ratio="9/16"
-                                    onClick={() => toggleSkillModal(objKey)}
+                                    onClick={() => toggleSkillModal(objKey as SkillsKeys)}
                                     description={values.description}
                                     icon={<values.icon size={"100%"} color='#fff' weight='fill' />}
                                 />
