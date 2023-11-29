@@ -1,0 +1,12 @@
+.closeButtonWrap {
+    display: block;
+}
+
+.closeButton >:hover {
+    transform: rotate(180deg);
+    transition: 0.4s ease;
+}
+
+.closeButton >:hover *{
+    color: #ed1755;
+}

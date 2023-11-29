@@ -49,8 +49,9 @@ export function Skills() {
                     })}
                 </div>
             </Container.Inner>
-            <Modal toggleModal={isModalOpen} />
-            <allSections.designer />
+            <Modal modalStatus={isModalOpen} handleClose={toggleModalState}>
+                <CurrentComponent title='' />
+            </Modal>
             <CurrentComponent title='Frontend' width="100%" />
         </Container>
     )
