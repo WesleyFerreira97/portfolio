@@ -1,0 +1,32 @@
+.cardProjectWrap {
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 350px;
+    position: relative;
+    display: flex;
+    background-color: #1F1D36;
+}
+
+.cardPreview {
+    height: 100%;
+    width: 60%;
+    background-color: blue;
+}
+
+.cardThumb {
+    /* position: absolute; */
+    background-color: #042F4B;
+    position: relative;
+}
+
+.cardInfo {
+    height: 100%;
+    width: 55%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    background-color: #ED1250;
+    opacity: .4;
+}
