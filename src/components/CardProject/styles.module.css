@@ -5,28 +5,132 @@
     min-height: 350px;
     position: relative;
     display: flex;
-    background-color: #1F1D36;
+    flex-direction: column;
+    /* background-color: #1F1D36; */
+    padding: 2rem 3rem;
+}
+
+.projectType {
+    padding: 1rem 0 1rem;
+    font-size: 1.7rem;
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    color: #fff;
+}
+
+.cardProject {
+    position: relative;
 }
 
 .cardPreview {
     height: 100%;
-    width: 60%;
-    background-color: blue;
+    width: 100%;
+    /* flex-grow: 1; */
+    /* background-color: blue; */
 }
 
+
 .cardThumb {
-    /* position: absolute; */
-    background-color: #042F4B;
     position: relative;
+    padding: 2rem 0 2rem;
+    height: 350px;
+    border-radius: .3rem;
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+
+.cardThumb img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .cardInfo {
     height: 100%;
-    width: 55%;
+    width: 100%;
     position: absolute;
     top: 0;
     right: 0;
     z-index: 50;
-    background-color: #ED1250;
-    opacity: .4;
+    /* background-color: #ED1250; */
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--secondary-font);
+}
+
+.infoHeader {
+    padding: 2rem 1rem;
+}
+
+.infoHeaderLabel {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #ed1755;
+}
+
+.infoHeaderTitle {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.infoContent {
+    background-color: #0b3049;
+    padding: 2rem 1rem;
+    border-radius: .2rem;
+    color: #d1d1d1;
+    font-size: 1.1rem;
+}
+
+.infoFooter {
+    /* padding: 0 1rem; */
+}
+
+.techList {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.techList li {
+    padding: .5rem 1rem;
+    color: #d1d1d1;
+}
+
+.techList li:last-child {
+    padding-right: 1rem;
+}
+
+@media (min-width: 950px) {
+    .cardPreview {
+        width: 60%;
+    }
+
+    .cardThumb {
+        aspect-ratio: 16/9;
+    }
+    
+    
+    .cardInfo {
+        
+    }
+    .infoHeader, .infoFooter {
+        padding: 0;
+    }
+
+    
+    .techList li:last-child {
+        padding-right: 0;
+    }
+
+}
+@media (min-width: 1100px) {
+    /* TODO - Aplicar overlay na imagem preview */
+
+
+    .cardInfo {
+        width: 55%;
+    }
 }
