@@ -8,7 +8,6 @@
     background-color: #1F1D36;
 }
 
-
 .closeButton {
     height: 70px;
     width: 100%;
@@ -18,7 +17,6 @@
     padding-right: 3rem;
     background-color: #100e27;
 }
-
 
 .openModal {
     transform: translate3d(0, 0%, 0);

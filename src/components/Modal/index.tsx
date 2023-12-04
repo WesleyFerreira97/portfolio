@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react'
 import S from "./styles.module.css"
 import { X } from '@phosphor-icons/react';
 import { CloseButton } from '../CloseButton';
+import { Container } from '../Layout/Container';
 
 type ModalProps = {
     children?: ReactNode;
@@ -21,9 +22,11 @@ export function Modal({ modalStatus, ...props }: ModalProps) {
                     color='#fff'
                 />
             </span>
-            <div>
-                {props.children}
-            </div>
+            <Container>
+                <Container.Inner>
+                    {props.children}
+                </Container.Inner>
+            </Container>
         </div>
     )
 }
