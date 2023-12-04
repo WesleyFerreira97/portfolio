@@ -18,12 +18,14 @@ export function Card({ width, ratio, ...props }: CardProps) {
             className={S.cardWrap}
             style={{
                 width: width,
-                aspectRatio: ratio,
             }} >
 
             <div
                 className={S.cardThumb}
                 onClick={props.onClick}
+                style={{
+                    aspectRatio: ratio,
+                }}
             >
                 <div className={S.icon}>{props.icon}</div>
                 <h2 className={S.title}>{props.title}</h2>

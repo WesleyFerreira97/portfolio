@@ -39,7 +39,7 @@ export function Skills() {
                                     key={index}
                                     title={values.title}
                                     width="100%"
-                                    ratio="9/16"
+                                    ratio="16/9"
                                     onClick={() => toggleSkillModal(objKey as SkillsKeys)}
                                     description={values.description}
                                     icon={<values.icon size={"100%"} color='#fff' weight='fill' />}
@@ -52,7 +52,6 @@ export function Skills() {
             <Modal modalStatus={isModalOpen} handleClose={toggleModalState}>
                 <CurrentComponent title='' />
             </Modal>
-            <CurrentComponent title='Frontend' width="100%" />
         </Container>
     )
 }
