@@ -45,7 +45,7 @@ export function CardProject({ props }: CardProjectProps) {
                         <ul className={S.techList}>
                             {props.skills.map((item, index) => (
                                 <li key={index}>
-                                    dsfg
+                                    {item}
                                 </li>
                             ))}
                         </ul>

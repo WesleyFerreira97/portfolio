@@ -6,8 +6,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    /* background-color: #1F1D36; */
-    padding: 2rem 3rem;
 }
 
 .projectType {
