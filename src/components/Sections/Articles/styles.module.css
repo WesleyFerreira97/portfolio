@@ -1,0 +1,22 @@
+.sectionHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+}
+
+.sectionTitle {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.postCategories {
+    display: flex;
+}
+
+.postCategories li {
+    padding: .5rem 1rem;
+}

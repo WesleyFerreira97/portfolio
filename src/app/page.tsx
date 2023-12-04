@@ -7,6 +7,7 @@ import { TypeWriter } from '@/components/TypeWriter'
 import { AboutMe } from '@/components/Sections/AboutMe'
 import { Container } from '@/components/Layout/Container'
 import { Skills } from '@/components/Sections/Skills'
+import { Articles } from '@/components/Sections/Articles'
 
 export default function Home() {
 
@@ -57,6 +58,7 @@ export default function Home() {
 
                 <AboutMe />
                 <Skills />
+                <Articles />
                 <MainNavbar.MenuMobile />
             </MainNavbar>
         </>
