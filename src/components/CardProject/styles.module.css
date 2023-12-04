@@ -30,11 +30,28 @@
 
 .cardThumb {
     position: relative;
-    padding: 2rem 0 2rem;
     height: 350px;
     border-radius: .3rem;
     overflow: hidden;
     padding-bottom: 2rem;
+}
+
+.cardThumb:hover img {
+    transform: scale(1.06);
+    transition: .4s;
+}
+
+.cardThumb:hover::after {
+    opacity: 0;
+    transition: .4s;
+}
+.cardThumb:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .3;
 }
 
 .cardThumb img {

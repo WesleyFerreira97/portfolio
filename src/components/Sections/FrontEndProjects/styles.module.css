@@ -1,17 +1,32 @@
 .pageHeader {
-    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.8rem;
 }
 
 .headerInfo {
-    width: 60%;
+    width: 100%;
 }
 
+.iconMobile {
+    height: 60px;
+    color: #fff;
+    display: block;
+    margin-right: 1.5rem;
+}
 .icon {
     height: 250px;
     color: #fff;
     margin-right: 2rem;
+    display: none;
 }
 
 .pageTitle {
@@ -21,7 +36,7 @@
     font-size: 5rem;
     color: #fff;
     letter-spacing: .2rem;
-    margin-bottom: 2rem;
+
 }
 
 .pageDescription {
@@ -29,4 +44,28 @@
     font-size: 1.1rem;
     color: #dad9d9;
     line-height: 180%;
+}
+
+.projectsSection {
+    margin-bottom: 3rem;
+}
+
+.projectsLabel {
+    font-family: var(--primary-font);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media (min-width: 920px) {
+    .headerInfo {
+        width: 60%;
+    }
+    
+.iconMobile {
+    display: none;
+}
+    .icon {
+        display: block;
+    }
 }
