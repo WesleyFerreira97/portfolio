@@ -4,15 +4,18 @@ import ProfilePic from '../../../public/images/mainBg.png'
 import Image from 'next/image';
 
 
-type CardProjectProps = {
+type ProjectProps = {
     projectTitle: string;
     projectType: string;
     description: string;
     skills: string[];
 }
 
+export type CardProjectProps = {
+    props: ProjectProps
+}
 
-export function CardProject(props: CardProjectProps) {
+export function CardProject({ props }: CardProjectProps) {
     return (
         <div className={S.cardProjectWrap}>
             <h2 className={S.projectType}>

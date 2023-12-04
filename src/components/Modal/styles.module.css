@@ -4,8 +4,11 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999999999999;
+    z-index: 99999;
     background-color: #1F1D36;
+    min-height:100%;
+    overflow-y:scroll;
+    overflow-x:hidden;
 }
 
 .closeButton {

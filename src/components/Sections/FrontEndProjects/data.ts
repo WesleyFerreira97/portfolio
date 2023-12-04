@@ -1,4 +1,4 @@
-const frontEndProjectsData = [
+export const frontEndProjectsData = [
     {
         projectType: "E-commerce React JS/Native",
         projectTitle: "Bela Garota",
