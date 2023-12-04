@@ -31,7 +31,6 @@
     transition: 0.8s ease;
 }
 
-
 @keyframes slideInTop {
     0% {
         transform: translate3d(0, 0%, 0);

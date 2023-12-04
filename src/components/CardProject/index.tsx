@@ -9,6 +9,7 @@ type ProjectProps = {
     projectType: string;
     description: string;
     skills: string[];
+    thumb: any;
 }
 
 export type CardProjectProps = {
@@ -25,7 +26,7 @@ export function CardProject({ props }: CardProjectProps) {
                 <div className={S.cardPreview}>
                     <div className={S.cardThumb}>
                         <Image
-                            src={ProfilePic}
+                            src={props.thumb}
                             alt='Project Thumb'
                             fill={true}
                         />

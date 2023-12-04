@@ -6,12 +6,6 @@ import React, { useState } from 'react'
 import S from "./style.module.css"
 import { SkillsData } from './data';
 
-const allSections = {
-    frontEnd: () => <Card title='Front End' />,
-    mobile: () => <Card title='Mobile' />,
-    designer: () => <Card title='Designer' />,
-}
-
 type SkillsKeys = keyof typeof SkillsData
 
 export function Skills() {
