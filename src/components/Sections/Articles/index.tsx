@@ -11,7 +11,7 @@ type CardArticlesProps = {
 
 const CardArticles = (props: CardArticlesProps) => {
     return (
-        <div>
+        <div className={S.cardArticlesWrap}>
             <div className={S.cardInfo}>
                 <div className={S.cardIcon}>
                     <Pencil size={38} color="#fff" />
@@ -47,6 +47,13 @@ export function Articles() {
                         <li>Recact</li>
                         <li>Android Nativo</li>
                     </ul>
+                </div>
+                <div style={{ marginBottom: "5rem" }}>
+                    <CardArticles
+                        cardTitle='Closures em Javascript'
+                        description='Entenda um dos conceitos base do javascript'
+                        tags={["Javascript"]}
+                    />
                 </div>
             </Container.Inner>
         </Container>
