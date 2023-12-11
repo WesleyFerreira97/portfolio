@@ -1,6 +1,6 @@
 "use client"
 import React, { ReactNode, useState } from 'react'
-import S from "./styles.module.css"
+import S from "./styles.module.scss"
 
 export type CardProps = {
     title: string;

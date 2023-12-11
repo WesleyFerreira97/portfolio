@@ -1,0 +1,25 @@
+// Breakpoints
+$breakpoint-xs: 320px;
+$breakpoint-sm: 550px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1800px;
+
+
+$color-primary: #FF2E63;
+$color-secondary: #252A34;
+$color-tertiary: #08D9D6;
+$color-neutral: #EAEAEA;
+
+// $font1: 'Raleway';
+$font1: 'Merriweather';
+$font2: 'Questrial';
+
+:export {
+    primaryColor: $color-primary;
+    secondaryColor: $color-secondary;
+    tertiaryColor: $color-tertiary;
+    neutralColor: $color-neutral;
+    primaryFont: $font1;
+    secondaryFont: $font2;
+}

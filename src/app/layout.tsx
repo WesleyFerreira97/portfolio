@@ -1,7 +1,6 @@
-import './globals.css'
+import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter, Titillium_Web, Raleway } from 'next/font/google'
-import Link from 'next/link'
 
 const primary = Raleway({
   weight: ['800', "900"],
