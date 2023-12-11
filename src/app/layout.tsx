@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Titillium_Web, Raleway } from 'next/font/google'
 
