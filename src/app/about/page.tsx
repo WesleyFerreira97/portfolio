@@ -21,22 +21,18 @@ export default function About() {
 
     return (
         <div className={S.pageContainer}>
-            <h1 className="text-base lg:text-5xl sm:text-8xl text-white uppercase">Wesley</h1>
-            <h1
-                style={css}>
-                About Test
-            </h1>
             <Typography
                 as="h3"
                 type="heading"
-                size="sm"
-                bpSizes={{
-                    sm: "2rem",
-                    md: "3rem",
-                    lg: "4rem"
-                }}
+                size="lg"
+                color="text-sky-600"
+            // bpSizes={{
+            //     sm: "2rem",
+            //     md: "3rem",
+            //     lg: "4rem"
+            // }}
             >
-                About
+                Tipografia Teste
             </Typography>
             {/* <CardProject /> */}
         </div>

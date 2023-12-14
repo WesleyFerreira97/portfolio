@@ -1,0 +1,44 @@
+.cardWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardThumb {
+    background-color: #ed1755;
+    flex-grow: 1;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.icon {
+    position: relative;
+    flex-grow: 1;
+}
+
+.icon > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.title {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.cardDescription {
+    padding-top: 1rem;
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 180%;
+    letter-spacing: .02rem;
+    color: #494949;
+}
