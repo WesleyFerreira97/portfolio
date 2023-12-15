@@ -5,37 +5,21 @@ import { AndroidLogo, Pencil } from '@phosphor-icons/react'
 import { CardProject } from '@/components/CardProject'
 import { Typography } from '@/components/Typography'
 
-const mediaQuery992 = "@media (min-width: 992px)";
-
-const css = {
-    color: "#fff",
-    fontSize: "2rem"
-    ,
-    [mediaQuery992]: {
-        fontSize: '10rem',
-    },
-}
-
 export default function About() {
-
 
     return (
         <div className={S.pageContainer}>
             <Typography
                 as="h3"
                 type="heading"
-                size="lg"
+                // size="lg"
+                bpSizes="sm:text-2xl md:text-3xl lg:text-9xl"
                 color="text-sky-600"
-            // bpSizes={{
-            //     sm: "2rem",
-            //     md: "3rem",
-            //     lg: "4rem"
-            // }}
             >
                 Tipografia Teste
             </Typography>
+            <h1 className='text-lg'>hjthjt</h1>
             {/* <CardProject /> */}
         </div>
     )
 }
-
