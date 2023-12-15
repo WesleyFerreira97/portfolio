@@ -9,6 +9,7 @@ export default function About() {
 
     return (
         <div className={S.pageContainer}>
+            <h1 className='font-secondary text-5xl text-white'>Tipografia Teste</h1>
             <Typography
                 as="h3"
                 type="heading"

@@ -45,13 +45,20 @@ const sizeByBreakpoint = (type: FontTypes, size: Partial<Breakpoints>) => {
 
 export function Typography({ as: Tag = "p", ...props }: TypographyProps) {
 
-    const responsiveText = props.size
+    const responsiveSizes = props.size
         ? sizeByBreakpoint(props.type, props.size)
         : props.bpSizes
 
+    const color = props.color ? props.color : "text-white"
+
+    const fontType = props.type == "heading"
+        ? "font-secondary"
+        : "font-primary"
+
     return (
-        <Tag className={`${responsiveText} ${props.color}`}>
+        <Tag className={`${responsiveSizes} ${color} ${fontType}`}>
             {props.children}
         </Tag>
     )
 }
+
