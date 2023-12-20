@@ -13,8 +13,8 @@ export default function About() {
             <Typography
                 as="h3"
                 type="heading"
-                // size="lg"
-                bpSizes="sm:text-2xl md:text-3xl lg:text-9xl"
+                size="lg"
+                // bpSizes="sm:text-2xl md:text-3xl lg:text-9xl"
                 color="text-sky-600"
             >
                 Tipografia Teste

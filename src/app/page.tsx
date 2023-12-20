@@ -9,7 +9,16 @@ import { Container } from '@/components/Layout/Container'
 import { Skills } from '@/components/Sections/Skills'
 import { Articles } from '@/components/Sections/Articles'
 
-export default function Home() {
+
+export default function Temp() {
+    return (
+        <>
+            <AboutMe />
+        </>
+    )
+}
+
+function Home() {
 
     return (
         <>
