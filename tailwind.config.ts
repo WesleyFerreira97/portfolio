@@ -28,9 +28,9 @@ const config: Config = {
         'primary': '#ED1755',
         'secondary': '#090D1F',
         'secondaryAlt': '#313552',
-        'lightGray': '#090D1F',
-        'gray': '#E9A6A6',
-        'dark-gray': '#090D1F',
+        'lightGray': '#C4C4CC',
+        'gray': '#8D8D99',
+        'dark-gray': '#323238',
       },
       animation: {
         'homeSlideInLeft': 'slideInLeft 1s ease 1s forwards',

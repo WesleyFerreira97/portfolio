@@ -22,4 +22,3 @@ export function Typography({ as: Tag = "p", ...props }: TypographyProps) {
         </Tag>
     )
 }
-

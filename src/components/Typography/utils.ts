@@ -2,11 +2,11 @@ import { Breakpoints, FontTypes, MapBreakpointsToStrings, ThemeColors } from "./
 
 const sizeByBreakpoint = (type: FontTypes, size: Partial<Breakpoints>) => {
     const sizesHeading: MapBreakpointsToStrings = {
-        default: "sm:text-2xl md:text-3xl lg:text-4xl",
-        sm: "sm:text-xl md:text-2xl lg:text-3xl",
-        md: "sm:text-2xl md:text-3xl lg:text-4xl",
-        lg: "sm:text-4xl md:text-5xl lg:text-6xl",
-        xlg: "sm:text-5xl md:text-6xl lg:text-7xl",
+        default: "text-2xl md:text-3xl",
+        sm: "text-xl md:text-2xl",
+        md: "text-2xl md:text-3xl",
+        lg: "text-4xl md:text-5xl",
+        xlg: "text-5xl text-6xl",
     }
 
     const sizesText: MapBreakpointsToStrings = {

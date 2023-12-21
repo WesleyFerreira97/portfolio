@@ -24,7 +24,7 @@ export function AboutMe() {
                         </div>
                         <div className={S.aboutMeInfo}>
                             <p className={S.aboutMeSubTitle}>Em Formação</p>
-                            <Typography type="heading" size="lg" color="gray">
+                            <Typography type="heading" size="lg" color="primary">
                                 Engenheiro de Software
                             </Typography>
                             <span className={S.aboutMeTitle} />
