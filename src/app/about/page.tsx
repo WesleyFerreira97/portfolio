@@ -1,26 +1,49 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 import S from "./style.module.css"
-import { AndroidLogo, Pencil } from '@phosphor-icons/react'
-import { CardProject } from '@/components/CardProject'
 import { Typography } from '@/components/Typography'
 
 export default function About() {
+    const text = "The quick brown fox"
+    const text2 = "The quick brown fox jumps over the lazy dog"
 
     return (
         <div className={S.pageContainer}>
-            <h1 className='font-secondary text-5xl text-white'>Tipografia Teste</h1>
-            <Typography
-                as="h3"
-                type="heading"
-                size="lg"
-                // bpSizes="sm:text-2xl md:text-3xl lg:text-9xl"
-                color="text-sky-600"
-            >
-                Tipografia Teste
-            </Typography>
-            <h1 className='text-lg'>hjthjt</h1>
-            {/* <CardProject /> */}
+            <div className={S.titlesContainer}>
+                <Typography type="heading" size="xlg">
+                    Xlg Title - {text}
+                </Typography>
+                <Typography type="heading" size="lg">
+                    lg Title - {text}
+                </Typography>
+                <Typography type="heading" size="md">
+                    md Title - {text}
+                </Typography>
+                <Typography type="heading" size="default">
+                    Default Title - {text}
+                </Typography>
+                <Typography type="heading" size="sm">
+                    sm Title - {text}
+                </Typography>
+            </div>
+
+            <div className={S.paragraphsContainer}>
+                <Typography type="text" size="xlg">
+                    xLg Text - {text2}
+                </Typography>
+                <Typography type="text" size="lg">
+                    LG Text - {text2}
+                </Typography>
+                <Typography type="text" size="md">
+                    MD Text - {text2}
+                </Typography>
+                <Typography type="text" size="default">
+                    Default Text - {text2}
+                </Typography>
+                <Typography type="text" size="sm">
+                    SM Text - {text2}
+                </Typography>
+            </div>
         </div>
     )
 }

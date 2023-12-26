@@ -10,11 +10,11 @@ const sizeByBreakpoint = (type: FontTypes, size: Partial<Breakpoints>) => {
     }
 
     const sizesText: MapBreakpointsToStrings = {
-        default: "sm:text-base md:text-lg lg:text-xl",
-        sm: "sm:text-sm md:text-base lg:text-lg",
-        md: "sm:text-base md:text-lg lg:text-xl",
-        lg: "sm:text-lg md:text-xl lg:text-2xl",
-        xlg: "sm:text-xl md:text-2xl lg:text-3xl",
+        default: "text-base md:text-lg",
+        sm: "text-sm md:text-base",
+        md: "text-base md:text-lg",
+        lg: "text-lg md:text-xl",
+        xlg: "text-xl md:text-2xl",
     }
 
     return type == "heading" ? sizesHeading[size] : sizesText[size]
@@ -32,6 +32,5 @@ const colorVariants = (color: ThemeColors) => {
 
     return colors[color]
 }
-
 
 export { sizeByBreakpoint, colorVariants }

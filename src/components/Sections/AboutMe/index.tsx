@@ -23,16 +23,38 @@ export function AboutMe() {
                             />
                         </div>
                         <div className={S.aboutMeInfo}>
-                            <p className={S.aboutMeSubTitle}>Em Formação</p>
-                            <Typography type="heading" size="lg" color="primary">
+                            <Typography
+                                as="span"
+                                type="heading"
+                                size="md"
+                                color="secondary"
+                            >
+                                Em Formação
+                            </Typography>
+                            <Typography
+                                as="h3"
+                                type="heading"
+                                size="lg"
+                                color="primary"
+                            >
                                 Engenheiro de Software
                             </Typography>
                             <span className={S.aboutMeTitle} />
-                            {/* <Typography type="text" size="md" color="text-gray">
+                            <Typography
+                                type="text"
+                                size="md"
+                                color="secondaryAlt"
+                            >
                                 Sou desenvolvedor Mobile e Front-end, voltado a Android Nativo e React Native, com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
-                            </Typography> */}
+                            </Typography>
 
-                            <p className={S.aboutMeParagraph}>Atualmente estou cursando ensino superior em Engenharia de Software</p>
+                            <Typography
+                                type="text"
+                                size="md"
+                                color="secondaryAlt"
+                            >
+                                Atualmente estou cursando ensino superior em Engenharia de Software
+                            </Typography>
                         </div>
                     </div>
                 </div>

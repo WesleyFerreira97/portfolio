@@ -9,3 +9,17 @@
     align-items: center;
 }
 
+.titlesContainer > * {
+    line-height: 165%;
+}
+
+.pageContainer > * {
+    margin-bottom: 3rem;
+}
+
+.paragraphsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
