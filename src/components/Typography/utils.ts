@@ -1,4 +1,11 @@
-import { Breakpoints, FontTypes, MapBreakpointsToStrings, ThemeColors } from "./types"
+import {
+    Breakpoints,
+    FontTypes,
+    MapBreakpointsToStrings,
+    ThemeColors,
+    LineHeightProps,
+    WeightProps
+} from "./types"
 
 const sizeByBreakpoint = (type: FontTypes, size: Partial<Breakpoints>) => {
     const sizesHeading: MapBreakpointsToStrings = {
@@ -20,7 +27,7 @@ const sizeByBreakpoint = (type: FontTypes, size: Partial<Breakpoints>) => {
     return type == "heading" ? sizesHeading[size] : sizesText[size]
 }
 
-const colorVariants = (color: ThemeColors) => {
+const colorVariants = (color: ThemeColors = "darkGray") => {
     const colors: { [key in ThemeColors]: string } = {
         primary: "text-primary",
         secondary: "text-secondary",
@@ -33,4 +40,35 @@ const colorVariants = (color: ThemeColors) => {
     return colors[color]
 }
 
-export { sizeByBreakpoint, colorVariants }
+const weightVariants = (weight: WeightProps = "semiBold") => {
+    const weights: { [key in WeightProps]: string } = {
+        light: "font-light",
+        normal: "font-normal",
+        semiBold: "font-semibold",
+        bold: "font-bold",
+        extraBold: "font-extrabold",
+        black: "font-black",
+    }
+
+    return weights[weight]
+}
+
+const lineHeightVariants = (lineHeight: LineHeightProps = "normal") => {
+    const lineHeights: { [key in LineHeightProps]: string } = {
+        none: "leading-none",
+        tight: "leading-tight",
+        snug: "leading-snug",
+        normal: "leading-normal",
+        relaxed: "leading-relaxed",
+        loose: "leading-loose",
+    }
+
+    return lineHeights[lineHeight]
+}
+
+export {
+    sizeByBreakpoint,
+    colorVariants,
+    weightVariants,
+    lineHeightVariants
+}

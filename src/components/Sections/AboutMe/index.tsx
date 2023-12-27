@@ -25,33 +25,46 @@ export function AboutMe() {
                         <div className={S.aboutMeInfo}>
                             <Typography
                                 as="span"
-                                type="heading"
                                 size="md"
-                                color="secondary"
+                                style={{
+                                    color: "secondary",
+                                    type: "heading",
+                                    weight: "bold",
+                                    lineHeight: "tight",
+                                }}
                             >
                                 Em Formação
                             </Typography>
                             <Typography
                                 as="h3"
-                                type="heading"
-                                size="lg"
-                                color="primary"
+                                size="xlg"
+                                style={{
+                                    type: "heading",
+                                    color: "primary",
+                                    weight: "bold",
+                                    lineHeight: "normal",
+                                }}
                             >
                                 Engenheiro de Software
                             </Typography>
                             <span className={S.aboutMeTitle} />
                             <Typography
-                                type="text"
                                 size="md"
-                                color="secondaryAlt"
+                                style={{
+                                    type: "text",
+                                    color: "secondaryAlt",
+                                    lineHeight: "loose",
+                                }}
                             >
                                 Sou desenvolvedor Mobile e Front-end, voltado a Android Nativo e React Native, com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
                             </Typography>
 
                             <Typography
-                                type="text"
                                 size="md"
-                                color="secondaryAlt"
+                                style={{
+                                    type: "text",
+                                    color: "secondaryAlt",
+                                }}
                             >
                                 Atualmente estou cursando ensino superior em Engenharia de Software
                             </Typography>

@@ -1,12 +1,14 @@
 type Breakpoints = "default" | "sm" | "md" | "lg" | "xlg";
 type FontTypes = "heading" | "text";
 type TypographyVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'li';
+type WeightProps = "light" | "normal" | "semiBold" | "bold" | "extraBold" | "black"
+type LineHeightProps = "none" | "tight" | "snug" | "normal" | "relaxed" | "loose"
+
 type MapBreakpointsToStrings = {
     [key in Breakpoints]?: string;
 }
 
-
-// Solução Temporária para o funcionamento do auto complete 
+// Solução Temporária para o funcionamento do auto complete
 type ThemeColors = "primary" | "secondary" | "secondaryAlt" | "lightGray" | "gray" | "darkGray" | string & {}
 
 type SizesProps = {
@@ -15,16 +17,29 @@ type SizesProps = {
 } | {
     size?: never;
     bpSizes: string;
-}
+};
 
-    ;
 
 type TypographyProps = {
     as?: TypographyVariant;
-    type: FontTypes;
     children: React.ReactNode;
-    color?: ThemeColors;
+    style: {
+        type: FontTypes;
+        color?: ThemeColors;
+        weight?: WeightProps;
+        lineHeight?: LineHeightProps;
+        className?: string;
+    }
 } & SizesProps
 
 
-export type { TypographyProps, TypographyVariant, FontTypes, Breakpoints, MapBreakpointsToStrings, ThemeColors }
+export type {
+    TypographyProps,
+    TypographyVariant,
+    FontTypes,
+    Breakpoints,
+    MapBreakpointsToStrings,
+    ThemeColors,
+    LineHeightProps,
+    WeightProps
+}
