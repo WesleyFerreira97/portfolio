@@ -12,9 +12,9 @@ import { Articles } from '@/components/Sections/Articles'
 
 export default function Temp() {
     return (
-        <>
+        <div style={{ background: "#e2e2e2" }}>
             <Skills />
-        </>
+        </div>
     )
 }
 

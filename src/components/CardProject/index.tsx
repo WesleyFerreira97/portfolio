@@ -2,6 +2,7 @@ import React from 'react'
 import S from "./styles.module.css"
 import ProfilePic from '../../../public/images/mainBg.png'
 import Image from 'next/image';
+import { Typography } from '../Typography';
 
 
 type ProjectProps = {
@@ -19,9 +20,6 @@ export type CardProjectProps = {
 export function CardProject({ props }: CardProjectProps) {
     return (
         <div className={S.cardProjectWrap}>
-            <h2 className={S.projectType}>
-                {props.projectType}
-            </h2>
             <div className={S.cardProject}>
                 <div className={S.cardPreview}>
                     <div className={S.cardThumb}>
@@ -35,19 +33,45 @@ export function CardProject({ props }: CardProjectProps) {
                 <div className={S.cardInfo}>
                     <div className={S.infoHeader}>
                         <span className={S.infoHeaderLabel}>Projeto</span>
-                        <h3 className={S.infoHeaderTitle}>
+                        <Typography
+                            as='h3'
+                            size='md'
+                            style={{
+                                type: 'heading',
+                                className: "uppercase mb-4"
+                            }}
+                        >
                             {props.projectTitle}
-                        </h3>
+                        </Typography>
                     </div>
                     <div className={S.infoContent}>
+                        <Typography
+                            as='h3'
+                            size='sm'
+                            style={{
+                                type: 'heading',
+                                className: "uppercase mb-8"
+                            }}
+                        >
+                            {props.projectType}
+                        </Typography>
                         {props.description}
                     </div>
                     <div className={S.infoFooter}>
                         <ul className={S.techList}>
                             {props.skills.map((item, index) => (
-                                <li key={index}>
+                                <Typography
+                                    key={index}
+                                    as='li'
+                                    size='sm'
+                                    style={{
+                                        type: 'text',
+                                        className: "uppercase mb-4",
+                                        color: "lightGray"
+                                    }}
+                                >
                                     {item}
-                                </li>
+                                </Typography>
                             ))}
                         </ul>
                     </div>

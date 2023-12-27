@@ -1,7 +1,6 @@
 .cardProjectWrap {
     height: 100%;
     width: 100%;
-    max-width: 1200px;
     min-height: 350px;
     position: relative;
     display: flex;
@@ -31,7 +30,6 @@
 
 .cardThumb {
     position: relative;
-    height: 350px;
     border-radius: .3rem;
     overflow: hidden;
     padding-bottom: 2rem;
@@ -88,13 +86,13 @@
 }
 
 .infoHeaderTitle {
-    color: #fff;
+    color: #0b3049;
     font-size: 1.8rem;
     font-weight: 700;
 }
 
 .infoContent {
-    background-color: #0b3049;
+    background-color: #090D1F;
     padding: 2rem 1rem;
     border-radius: .2rem;
     color: #d1d1d1;
@@ -147,6 +145,6 @@
 
 
     .cardInfo {
-        width: 55%;
+        width: 60%;
     }
 }
