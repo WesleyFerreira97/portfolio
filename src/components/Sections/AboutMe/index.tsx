@@ -53,10 +53,20 @@ export function AboutMe() {
                                 style={{
                                     type: "text",
                                     color: "secondaryAlt",
-                                    lineHeight: "loose",
+                                    lineHeight: "relaxed",
                                 }}
                             >
-                                Sou desenvolvedor Mobile e Front-end, voltado a Android Nativo e React Native, com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
+                                <Typography.Paragraph>
+                                    Sou desenvolvedor Mobile e Front-end, voltado a Android Nativo e React Native, com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
+                                </Typography.Paragraph>
+
+                                <Typography.Paragraph>
+                                    Sou desenvolvedor Mobile e Front-end, voltado a Android Nativo e React Native, com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
+                                </Typography.Paragraph>
+
+                                <Typography.Paragraph>
+                                    Sou desenvolvedor Mobile e Front-end, voltado a Android Nativo e React Native, com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
+                                </Typography.Paragraph>
                             </Typography>
 
                             <Typography

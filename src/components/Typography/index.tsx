@@ -2,7 +2,13 @@ import React from 'react'
 import type { TypographyProps } from './types'
 import { colorVariants, lineHeightVariants, sizeByBreakpoint, weightVariants } from './utils'
 
-export function Typography({ as: Tag = "p", style, ...props }: TypographyProps) {
+const Paragraph = ({ children, ...props }: any) => {
+    return (
+        <p className='my-2'>{children}</p>
+    )
+}
+
+function Typography({ as: Tag = "p", style, ...props }: TypographyProps) {
 
     const responsiveSizes = props.size
         ? sizeByBreakpoint(style.type, props.size)
@@ -24,3 +30,7 @@ export function Typography({ as: Tag = "p", style, ...props }: TypographyProps) 
         </Tag>
     )
 }
+
+Typography.Paragraph = Paragraph;
+
+export { Typography }

@@ -29,7 +29,10 @@ type TypographyProps = {
         weight?: WeightProps;
         lineHeight?: LineHeightProps;
         className?: string;
-    }
+    },
+    paragraph?: {
+        // coming soon
+    };
 } & SizesProps
 
 
