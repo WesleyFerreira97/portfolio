@@ -4,7 +4,12 @@ import { colorVariants, lineHeightVariants, sizeByBreakpoint, weightVariants } f
 
 const Paragraph = ({ children, ...props }: any) => {
     return (
-        <p className='my-2'>{children}</p>
+        <p
+            className='my-2'
+            style={{ fontFamily: "inherit" }}
+        >
+            {children}
+        </p>
     )
 }
 
@@ -19,13 +24,13 @@ function Typography({ as: Tag = "p", style, ...props }: TypographyProps) {
         color: colorVariants(style.color),
         fontWeight: weightVariants(style.weight),
         lineHeight: lineHeightVariants(style.lineHeight),
-        className: "",
+        className: style.className || "",
     }
 
     const finalStyle = Object.values(propsDefault).join(" ");
 
     return (
-        <Tag className={`${responsiveSizes} ${finalStyle}`}>
+        <Tag className={`${finalStyle} ${responsiveSizes} `}>
             {props.children}
         </Tag>
     )

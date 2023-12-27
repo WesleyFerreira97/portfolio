@@ -91,7 +91,7 @@
     }
 }
 
-@media (min-width: 920px) {    
+@media (min-width: 1100px) {    
     .aboutMe {
         flex-direction: row;
     }

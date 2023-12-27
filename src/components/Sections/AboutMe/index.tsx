@@ -25,34 +25,37 @@ export function AboutMe() {
                         <div className={S.aboutMeInfo}>
                             <Typography
                                 as="span"
-                                size="md"
+                                size="sm"
                                 style={{
                                     color: "secondary",
                                     type: "heading",
                                     weight: "bold",
                                     lineHeight: "tight",
+                                    className: "block my-4",
                                 }}
                             >
                                 Em Formação
                             </Typography>
                             <Typography
                                 as="h3"
-                                size="xlg"
                                 style={{
                                     type: "heading",
-                                    color: "primary",
+                                    color: "secondary",
                                     weight: "bold",
                                     lineHeight: "normal",
                                 }}
+                                // bpSizes="text-2xl lg:text-3xl xl:text-6xl"
+                                size="lg"
                             >
                                 Engenheiro de Software
                             </Typography>
-                            <span className={S.aboutMeTitle} />
+                            <span className="block h-1 w-1/2 bg-primary mt-4 mb-8" />
                             <Typography
+                                as="div"
                                 size="md"
                                 style={{
                                     type: "text",
-                                    color: "secondaryAlt",
+                                    // color: "secondaryAlt",
                                     lineHeight: "relaxed",
                                 }}
                             >
@@ -64,9 +67,6 @@ export function AboutMe() {
                                     Sou desenvolvedor Mobile e Front-end, voltado a Android Nativo e React Native, com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
                                 </Typography.Paragraph>
 
-                                <Typography.Paragraph>
-                                    Sou desenvolvedor Mobile e Front-end, voltado a Android Nativo e React Native, com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
-                                </Typography.Paragraph>
                             </Typography>
 
                             <Typography

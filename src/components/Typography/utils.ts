@@ -12,7 +12,7 @@ const sizeByBreakpoint = (type: FontTypes, size: Partial<Breakpoints>) => {
         default: "text-2xl md:text-3xl",
         sm: "text-xl md:text-2xl",
         md: "text-2xl md:text-3xl",
-        lg: "text-4xl md:text-5xl",
+        lg: "text-4xl sm:text-5xl lg:text-6xl",
         xlg: "text-5xl text-6xl",
     }
 

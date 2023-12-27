@@ -1,6 +1,6 @@
 type Breakpoints = "default" | "sm" | "md" | "lg" | "xlg";
 type FontTypes = "heading" | "text";
-type TypographyVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'li';
+type TypographyVariant = 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'li';
 type WeightProps = "light" | "normal" | "semiBold" | "bold" | "extraBold" | "black"
 type LineHeightProps = "none" | "tight" | "snug" | "normal" | "relaxed" | "loose"
 
