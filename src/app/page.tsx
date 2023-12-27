@@ -13,7 +13,7 @@ import { Articles } from '@/components/Sections/Articles'
 export default function Temp() {
     return (
         <>
-            <AboutMe />
+            <Skills />
         </>
     )
 }
