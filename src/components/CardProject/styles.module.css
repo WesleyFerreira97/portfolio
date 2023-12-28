@@ -101,6 +101,7 @@
 
 .infoFooter {
     /* padding: 0 1rem; */
+    margin-top: .75rem;
 }
 
 .techList {
@@ -109,8 +110,8 @@
 }
 
 .techList li {
-    padding: .5rem 1rem;
-    color: #d1d1d1;
+    /* padding: .5rem 1rem; */
+    /* color: #d1d1d1; */
 }
 
 .techList li:last-child {

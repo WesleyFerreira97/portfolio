@@ -32,12 +32,23 @@ export function CardProject({ props }: CardProjectProps) {
                 </div>
                 <div className={S.cardInfo}>
                     <div className={S.infoHeader}>
-                        <span className={S.infoHeaderLabel}>Projeto</span>
                         <Typography
-                            as='h3'
+                            as='span'
                             size='md'
                             style={{
+                                type: 'text',
+                                color: "primary",
+                                weight: "bold",
+                            }}
+                        >
+                            Projeto
+                        </Typography>
+                        <Typography
+                            as='h3'
+                            size='sm'
+                            style={{
                                 type: 'heading',
+                                color: "secondary",
                                 className: "uppercase mb-4"
                             }}
                         >
@@ -47,7 +58,7 @@ export function CardProject({ props }: CardProjectProps) {
                     <div className={S.infoContent}>
                         <Typography
                             as='h3'
-                            size='sm'
+                            bpSizes='text-base'
                             style={{
                                 type: 'heading',
                                 className: "uppercase mb-8"
@@ -55,22 +66,32 @@ export function CardProject({ props }: CardProjectProps) {
                         >
                             {props.projectType}
                         </Typography>
-                        {props.description}
+                        <Typography
+                            as='h3'
+                            bpSizes='text-sm'
+                            style={{
+                                type: 'text',
+                            }}
+                        >
+                            {props.description}
+                        </Typography>
                     </div>
-                    <div className={S.infoFooter}>
+                    <div className="mt-3">
                         <ul className={S.techList}>
                             {props.skills.map((item, index) => (
                                 <Typography
                                     key={index}
                                     as='li'
-                                    size='sm'
+                                    bpSizes='text-xs'
                                     style={{
                                         type: 'text',
-                                        className: "uppercase mb-4",
-                                        color: "lightGray"
+                                        className: "uppercase mx-2 mb-4 bg-zinc-200 py-1 px-3 rounded-sm",
+                                        color: "gray",
+                                        weight: "bold"
                                     }}
                                 >
                                     {item}
+                                    {/* <span className='mt'></span> */}
                                 </Typography>
                             ))}
                         </ul>
