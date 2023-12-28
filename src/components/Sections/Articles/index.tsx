@@ -2,6 +2,7 @@ import React from 'react'
 import S from "./styles.module.css"
 import { Container } from '@/components/Layout/Container'
 import { Pencil } from '@phosphor-icons/react'
+import { Typography } from '@/components/Typography'
 
 type CardArticlesProps = {
     cardTitle: string;
@@ -35,25 +36,60 @@ const CardArticles = (props: CardArticlesProps) => {
 }
 
 export function Articles() {
+    const categoriesOptions = [
+        { value: "javascript", label: "Javascript", link: "javascript" },
+        { value: "typescript", label: "Typescript", link: "typescript" },
+        { value: "front-end", label: "Front-end", link: "front-end" },
+        { value: "react", label: "React", link: "react" },
+        { value: "android", label: "Android Nativo", link: "android" },
+    ]
     return (
         <Container>
             <Container.Inner>
                 <div className={S.sectionHeader}>
-                    <h3 className={S.sectionTitle}>Articles</h3>
-                    <ul className={S.postCategories}>
-                        <li>Javascript</li>
-                        <li>Typescript</li>
-                        <li>Front-end</li>
-                        <li>Recact</li>
-                        <li>Android Nativo</li>
+                    <Typography
+                        as='h3'
+                        size='lg'
+                        style={{
+                            type: "heading",
+                            color: "secondary",
+                            weight: "bold",
+                            className: 'my-9'
+                        }}>
+                        Articles
+                    </Typography>
+                    <ul className="flex [&>*]:px-4 [&>*]:py-3">
+                        {categoriesOptions.map((value, index) => (
+                            <Typography
+                                key={index}
+                                as='li'
+                                size='md'
+                                style={{
+                                    type: "text",
+                                    color: "secondary",
+                                    weight: "bold",
+                                    className: "hover:text-primary cursor-pointer"
+                                }}
+                            >
+                                {value.label}
+                            </Typography>
+                        ))}
                     </ul>
                 </div>
-                <div style={{ marginBottom: "5rem" }}>
-                    <CardArticles
-                        cardTitle='Closures em Javascript'
-                        description='Entenda um dos conceitos base do javascript'
-                        tags={["Javascript"]}
-                    />
+                <div className='mb-20 flex gap-3 flex-wrap'>
+                    {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((value, index) => (
+                        <div
+                            key={index}
+                            className='bg-primary'
+                        >
+                            <CardArticles
+                                cardTitle='Closures em Javascript'
+                                description='Entenda um dos conceitos base do javascript'
+                                tags={["Javascript"]}
+                            />
+                        </div>
+                    ))}
+
                 </div>
             </Container.Inner>
         </Container>

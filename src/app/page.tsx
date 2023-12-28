@@ -10,7 +10,7 @@ import { Skills } from '@/components/Sections/Skills'
 import { Articles } from '@/components/Sections/Articles'
 
 
-export default function Temp() {
+function Temp() {
     return (
         <div style={{ background: "#e2e2e2" }}>
             <Skills />
@@ -18,7 +18,7 @@ export default function Temp() {
     )
 }
 
-function Home() {
+export default function Home() {
 
     return (
         <>

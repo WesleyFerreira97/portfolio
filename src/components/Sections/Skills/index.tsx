@@ -38,11 +38,11 @@ export function Skills() {
                         size='lg'
                         style={{
                             type: "heading",
-                            color: "darkGray",
+                            color: "secondary",
                             weight: "bold",
                             className: 'my-9'
-                        }} >
-                        Meus Projetos
+                        }}>
+                        Projetos e Habilidades
                     </Typography>
 
                     <ul className='flex [&>*]:px-4 [&>*]:py-3'>
@@ -50,10 +50,10 @@ export function Skills() {
                             <Typography
                                 key={index}
                                 as='li'
-                                size='lg'
+                                size='md'
                                 style={{
                                     type: "text",
-                                    color: "darkGray",
+                                    color: "secondary",
                                     weight: "bold",
                                     className: "hover:text-primary cursor-pointer"
                                 }}
@@ -71,16 +71,16 @@ export function Skills() {
                         size='md'
                         style={{
                             type: "text",
-                            color: "darkGray",
+                            color: "secondaryAlt",
                             weight: "semiBold",
-                            className: 'mb-36 mt-9'
+                            className: 'mb-24 mt-9'
                         }} >
                         Sou desenvolvedor Mobile voltado a Android Nativo e React Native, Front-end com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
                     </Typography>
                 </div>
 
                 {frontEndProjectsData.map((values, index) => (
-                    <div key={index} className='my-9'>
+                    <div key={index} className='my-20'>
                         <CardProject props={values} />
                     </div>
                 ))}

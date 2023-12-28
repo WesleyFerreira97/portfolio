@@ -115,7 +115,8 @@
 }
 
 .techList li:last-child {
-    padding-right: 1rem;
+    /* padding-right: 1rem; */
+    /* margin-right: 0; */
 }
 
 @media (min-width: 950px) {
