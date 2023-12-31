@@ -10,14 +10,6 @@ import { Skills } from '@/components/Sections/Skills'
 import { Articles } from '@/components/Sections/Articles'
 
 
-function Temp() {
-    return (
-        <div style={{ background: "#e2e2e2" }}>
-            <Skills />
-        </div>
-    )
-}
-
 export default function Home() {
 
     return (
