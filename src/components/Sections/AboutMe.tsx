@@ -8,7 +8,7 @@ import { Typography } from "@/components/Typography"
 
 const Thumbnail = () => {
     return (
-        <div className="relative flex m-auto xl:m-[inherit] aspect-[9/11] h-[500px]">
+        <div className="relative flex m-auto xl:m-[inherit] aspect-[9/11] h-[250px] xl:h-[500px] mb-9 xl:mb-0">
             <span className="absolute h-[90%] w-[90%] bg-secondary" />
             <div className="absolute right-[-30px] top-[20%] z-10 p-4 bg-primary">
                 <Quotes size={32} color={"#fff"} />
@@ -61,7 +61,9 @@ const AboutMeInfo = () => {
                 style={{
                     type: "text",
                     // color: "secondaryAlt",
+                    weight: "normal",
                     lineHeight: "relaxed",
+                    className: "font-normal",
                 }}
             >
                 <Typography.Paragraph>
@@ -72,16 +74,10 @@ const AboutMeInfo = () => {
                     Sou desenvolvedor Mobile e Front-end, voltado a Android Nativo e React Native, com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
                 </Typography.Paragraph>
 
-            </Typography>
+                <Typography.Paragraph>
+                    Atualmente estou cursando ensino superior em Engenharia de Software
+                </Typography.Paragraph>
 
-            <Typography
-                size="md"
-                style={{
-                    type: "text",
-                    color: "secondaryAlt",
-                }}
-            >
-                Atualmente estou cursando ensino superior em Engenharia de Software
             </Typography>
         </div>
     )
