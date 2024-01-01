@@ -10,7 +10,7 @@ const primary = Raleway({
 
 const secondary = Titillium_Web({
   subsets: ['latin'],
-  weight: ['700', '400', '300', '600'],
+  weight: ['300', '400', '600', '700', '900'],
   variable: "--secondary-font"
 })
 
