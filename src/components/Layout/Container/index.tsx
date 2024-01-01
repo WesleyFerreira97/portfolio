@@ -14,6 +14,9 @@ const Inner = ({ children }: ContainerProps) => {
 }
 
 function Container({ children }: ContainerProps) {
+    const containerMargin = {
+
+    }
     return (
         <div className={S.container}>
             {children}

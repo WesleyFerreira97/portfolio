@@ -6,6 +6,7 @@ import { SkillsData } from './data';
 import { Typography } from '@/components/Typography';
 import { frontEndProjectsData } from '../FrontEndProjects/data';
 import { CardProject } from '@/components/CardProject';
+import { SectionHeader } from '@/components/SectionHeader';
 
 type SkillsKeys = keyof typeof SkillsData
 
@@ -32,39 +33,10 @@ export function Skills() {
     return (
         <Container>
             <Container.Inner>
-                <div className='w-full flex justify-center items-center flex-col'>
-                    <Typography
-                        as='h3'
-                        size='lg'
-                        style={{
-                            type: "heading",
-                            color: "secondary",
-                            weight: "bold",
-                            className: 'my-9'
-                        }}>
-                        Projetos e Habilidades
-                    </Typography>
-
-                    <ul className='flex [&>*]:px-4 [&>*]:py-3'>
-                        {Object.values(skills).map((value, index) => (
-                            <Typography
-                                key={index}
-                                as='li'
-                                size='md'
-                                style={{
-                                    type: "text",
-                                    color: "secondary",
-                                    weight: "bold",
-                                    className: "hover:text-primary cursor-pointer"
-                                }}
-                            >
-                                {value.title}
-                            </Typography>
-
-                        ))}
-                    </ul>
-                </div>
-
+                <SectionHeader
+                    headerTitle='Projetos e Habilidades'
+                    menuOptions={skills}
+                />
                 <div>
                     <Typography
                         as='p'
