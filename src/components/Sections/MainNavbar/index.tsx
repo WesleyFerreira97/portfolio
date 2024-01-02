@@ -1,9 +1,10 @@
 import React, { ReactNode, SetStateAction, createContext, useState, useContext } from 'react'
 import LogoSVG from '../../../../public/images/logo.svg'
 import Image from 'next/image'
-import S from "./styles.module.css"
 import { List } from '@phosphor-icons/react'
 import { MenuMobile } from './MenuMobile'
+import { MenuOptions } from './data'
+import { Typography } from '@/components/Typography'
 
 type MainNavbarProps = {
     children: ReactNode,
@@ -28,33 +29,44 @@ export const useMenuMobileContext = () => {
 }
 
 const Navbar = () => {
-    const { isMenuOpen, setIsMenuOpen } = useMenuMobileContext();
+    const { setIsMenuOpen } = useMenuMobileContext();
 
     const handleMenuOpen = () => setIsMenuOpen(prev => !prev);
-    console.log(isMenuOpen);
 
     return (
-        <div className={S.mainNavbar}>
-            <span className={S.logo}>
-                <Image src={LogoSVG} alt='Logo Portfólio' fill={true} />
+        <div className="w-full flex justify-between items-center pt-4 px-8 lg:px-16 pb-0">
+            <span className="h-20 w-16 flex flex-row relative text-2xl font-bold font-primary mr-8">
+                <Image
+                    src={LogoSVG}
+                    alt='Logo Portfólio'
+                    fill={true}
+                    className="max-h-full"
+                />
             </span>
             <div
                 onClick={handleMenuOpen}
-                className={S.menuMobileButton}
+                className="block lg:hidden"
             >
                 <List size={24} color='#fff' weight='fill' />
             </div>
-            <ul className={S.menuDesktop}>
-                <li>Inicio</li>
-                <li>Desktop</li>
-                <li>Projetos</li>
-                <li>Artigos</li>
-                <li>Contato</li>
+            <ul className="hidden lg:flex gap-7">
+                {MenuOptions.map((value, index) => (
+                    <Typography
+                        key={index}
+                        as='li'
+                        size='md'
+                        style={{
+                            type: "text",
+                            color: "lightGray"
+                        }}
+                    >
+                        <a href={value.path}>{value.label}</a>
+                    </Typography>
+                ))}
             </ul>
         </div>
     )
 }
-
 
 function MainNavbar({ children }: MainNavbarProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,8 +78,6 @@ function MainNavbar({ children }: MainNavbarProps) {
         </>
     )
 }
-
-
 
 MainNavbar.Navbar = Navbar;
 MainNavbar.MenuMobile = MenuMobile;
