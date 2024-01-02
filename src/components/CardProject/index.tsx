@@ -85,7 +85,7 @@ export function CardProject({ props }: CardProjectProps) {
                                     bpSizes='text-xs'
                                     style={{
                                         type: 'text',
-                                        className: "uppercase mx-1 mb-4 bg-zinc-200 py-1 px-3 rounded-sm",
+                                        className: "uppercase mx-1 mb-4 bg-zinc-200 py-1 px-3 rounded-sm  whitespace-nowrap flex-wrap",
                                         color: "gray",
                                         weight: "bold"
                                     }}

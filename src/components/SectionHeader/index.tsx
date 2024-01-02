@@ -12,7 +12,7 @@ type SectionHeaderProps = {
 }
 export function SectionHeader({ headerTitle, menuOptions }: SectionHeaderProps) {
     return (
-        <div className='w-full flex justify-center items-center flex-col'>
+        <div className='w-full flex text-center justify-center items-center flex-col'>
             <Typography
                 as='h3'
                 size='lg'
@@ -25,17 +25,18 @@ export function SectionHeader({ headerTitle, menuOptions }: SectionHeaderProps) 
                 {headerTitle}
             </Typography>
 
-            <ul className='flex [&>*]:px-4 [&>*]:py-3'>
+            <ul className='flex [&>*]:px-3 [&>*]:py-2 break-normal'>
                 {Object.values(menuOptions).map((value, index) => (
                     <Typography
                         key={index}
                         as='li'
-                        size='md'
+                        // size='md'
+                        bpSizes="text-sm md:text-md lg:text-lg"
                         style={{
                             type: "text",
                             color: "secondary",
                             weight: "bold",
-                            className: "hover:text-primary cursor-pointer"
+                            className: "hover:text-primary cursor-pointer whitespace-nowrap"
                         }}
                     >
                         {value.title}
