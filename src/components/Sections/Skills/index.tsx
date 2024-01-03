@@ -45,7 +45,7 @@ export function Skills() {
                             type: "text",
                             color: "secondaryAlt",
                             weight: "semiBold",
-                            className: 'mb-24 mt-9'
+                            className: 'mt-9'
                         }} >
                         Sou desenvolvedor Mobile voltado a Android Nativo e React Native, Front-end com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
                     </Typography>

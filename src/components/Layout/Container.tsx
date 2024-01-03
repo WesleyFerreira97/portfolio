@@ -3,16 +3,18 @@ import React, { PropsWithChildren } from 'react'
 type ContainerSize = "full" | "boxed"
 type ContainerInnerProps = {
     size?: ContainerSize
+    gap?: GapBreakpoints
 }
 
 type ContainerProps = {
 
 }
 
-type GapBreakpoints = "xs" | "sm" | "md" | "lg" | "xl" | "xxl"
+type GapBreakpoints = "noGap" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl"
 type ContainerGapProps = { [key in GapBreakpoints]: string }
 
-const containerGap: ContainerGapProps = {
+const gapSizes: ContainerGapProps = {
+    noGap: "",
     xs: "mb-12",
     sm: "mb-16",
     md: "mb-20",
@@ -21,16 +23,17 @@ const containerGap: ContainerGapProps = {
     xxl: "mb-24 lg:mb-36",
 }
 
-const Inner = ({ children, size }: PropsWithChildren<ContainerInnerProps>) => {
+const Inner = ({ children, size, gap }: PropsWithChildren<ContainerInnerProps>) => {
     const innerContainerStyles: { [key in ContainerSize]: string } = {
         full: "w-full",
         boxed: "w-full max-w-[95%] md:max-w-[90%] lg:max-w-[80%] xl:max-w-[75%]",
     }
 
     const containerStyle = size === "full" ? innerContainerStyles.full : innerContainerStyles.boxed;
+    const containerGap = gap ? gapSizes[gap] : gapSizes["xxl"];
 
     return (
-        <div className={`${containerStyle} ${containerGap["xxl"]}`}>
+        <div className={`${containerStyle} ${containerGap}`}>
             {children}
         </div>
     )

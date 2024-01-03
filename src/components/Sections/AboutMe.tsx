@@ -86,7 +86,7 @@ const AboutMeInfo = () => {
 export function AboutMe() {
     return (
         <Container>
-            <Container.Inner>
+            <Container.Inner gap="xxl">
                 <div className="w-full flex justify-center gap-10">
                     <div className="flex flex-col xl:flex-row justify-center gap-x-14 relative mb-">
                         <Thumbnail />
