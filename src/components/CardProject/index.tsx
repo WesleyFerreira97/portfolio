@@ -20,15 +20,14 @@ export type CardProjectProps = {
 const CardInfo = ({ props }: CardProjectProps) => {
     return (
         <div className="h-full flex flex-col items-end text-right justify-center relative">
-            <span className='w-full h-full absolute bg-secondary z-0 opacity-50'></span>
-            <div className="z-10 relative">
+            <div className="z-10 relative pr-4 pb-5">
                 <Typography
                     as='span'
-                    size='md'
+                    size='sm'
                     style={{
                         type: 'text',
                         color: "primary",
-                        weight: "bold",
+                        weight: "normal",
                     }}
                 >
                     Projeto
@@ -38,9 +37,9 @@ const CardInfo = ({ props }: CardProjectProps) => {
                     size='sm'
                     style={{
                         type: 'heading',
-                        weight: "black",
+                        weight: "bold",
                         color: "secondary",
-                        className: "uppercase mb-4"
+                        className: "uppercase mb-4 max-lg:text-white"
                     }}
                 >
                     {props.projectTitle}
@@ -95,7 +94,8 @@ const CardInfo = ({ props }: CardProjectProps) => {
 export function CardProject({ props }: CardProjectProps) {
     return (
         <div className="w-full h-full min-h-[350px] max-w-[1200px] flex flex-col mx-auto cursor-pointer relative">
-            <div className='h-full w-full lg:w-3/5 xl:w-2/4 absolute'>
+            <div className="h-full w-full lg:w-3/5 xl:w-2/4 absolute">
+                <div className='w-full h-full absolute bg-secondary z-10 opacity-40 hover:opacity-0 transition-opacity' />
                 <Image
                     src={props.thumb}
                     alt='Project Thumb'
@@ -110,3 +110,6 @@ export function CardProject({ props }: CardProjectProps) {
         </div>
     )
 }
+
+
+// before:block before:content-['*sdfsfdg'] before:relative before:z-30 before:text-slate-200 before:bg-primary
