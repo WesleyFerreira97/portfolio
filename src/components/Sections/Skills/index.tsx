@@ -37,7 +37,7 @@ export function Skills() {
                     headerTitle='Projetos e Habilidades'
                     menuOptions={skills}
                 />
-                <div className='flex pb-10'>
+                <div className='flex pb-10 max-w-[1200px] mx-auto'>
                     <Typography
                         as='p'
                         size='md'
