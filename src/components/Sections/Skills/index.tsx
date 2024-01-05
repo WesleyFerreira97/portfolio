@@ -11,6 +11,16 @@ import { SectionHeader } from '@/components/SectionHeader';
 type SkillsKeys = keyof typeof SkillsData
 
 export function Skills() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalContent, setModalContent] = useState("")
+
+    const toggleModalState = () => setIsModalOpen(prev => !prev);
+
+    const handleModal = (value: any) => {
+        toggleModalState();
+        setModalContent(value)
+    }
+
     const skills = {
         frontEnd: {
             title: "Front-End",
@@ -52,10 +62,18 @@ export function Skills() {
                 </div>
 
                 {frontEndProjectsData.map((values, index) => (
-                    <div key={index} className='my-20'>
+                    <div
+                        key={index}
+                        className='my-20'
+                        onClick={() => handleModal(values.projectTitle)}
+                    >
                         <CardProject props={values} />
                     </div>
                 ))}
+
+                <Modal handleClose={toggleModalState} modalStatus={isModalOpen}>
+                    {modalContent}
+                </Modal>
             </Container.Inner>
         </Container>
     )
