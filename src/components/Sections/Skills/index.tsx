@@ -7,6 +7,7 @@ import { Typography } from '@/components/Typography';
 import { frontEndProjectsData } from '../FrontEndProjects/data';
 import { CardProject } from '@/components/CardProject';
 import { SectionHeader } from '@/components/SectionHeader';
+import { BelaGarota } from '../Singles/BelaGarota';
 
 type SkillsKeys = keyof typeof SkillsData
 
@@ -65,7 +66,7 @@ export function Skills() {
                     <div
                         key={index}
                         className='my-20'
-                        onClick={() => handleModal(values.projectTitle)}
+                        onClick={() => handleModal(<BelaGarota />)}
                     >
                         <CardProject props={values} />
                     </div>

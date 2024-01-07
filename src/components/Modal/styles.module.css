@@ -5,7 +5,8 @@
     top: 0;
     left: 0;
     z-index: 99999;
-    background-color: #18172b;
+    /* background-color: #191825; */
+    background: #fff;
     min-height:100%;
     overflow-y:scroll;
     overflow-x:hidden;
@@ -18,7 +19,7 @@
     justify-content: flex-end;
     align-items: center;
     padding-right: 3rem;
-    background-color: #100e27;
+    background-color: #0C1127;
 }
 
 .openModal {

@@ -44,7 +44,7 @@ export function Modal({ modalStatus, ...props }: ModalProps) {
                 />
             </span>
             <Container>
-                <Container.Inner>
+                <Container.Inner size='full'>
                     {props.children}
                 </Container.Inner>
             </Container>

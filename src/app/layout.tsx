@@ -1,6 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Titillium_Web, Raleway } from 'next/font/google'
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const primary = Raleway({
   weight: ['800', "900"],
