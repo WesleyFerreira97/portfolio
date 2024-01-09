@@ -9,7 +9,7 @@ type MapBreakpointsToStrings = {
 }
 
 // Solução Temporária para o funcionamento do auto complete
-type ThemeColors = "primary" | "secondary" | "secondaryAlt" | "lightGray" | "gray" | "darkGray" | string & {}
+type ThemeColors = "primary" | "secondary" | "secondaryAlt" | "lightGray" | "gray" | "darkGray" | "white" | string & {}
 
 type SizesProps = {
     size: Breakpoints;

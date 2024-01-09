@@ -35,6 +35,7 @@ const colorVariants = (color: ThemeColors = "darkGray") => {
         lightGray: "text-lightGray",
         gray: "text-gray",
         darkGray: "text-darkGray",
+        white: "text-white",
     }
 
     return colors[color]

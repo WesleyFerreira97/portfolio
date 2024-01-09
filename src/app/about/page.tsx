@@ -2,15 +2,16 @@
 import React from 'react'
 import S from "./style.module.css"
 import { Typography } from '@/components/Typography'
+import { BelaGarota } from '@/components/Sections/Singles/BelaGarota'
+import { Container } from '@/components/Layout/Container'
 
 const Testado = () => {
     return (
-        <div className='h-screen w-screen bg-secondary flex justify-center items-center'>
-            <div className='w-4/5 h-64 flex'>
-                <div className='w-[60%] bg-primary'></div>
-                <div className='w-[40%] bg-secondaryAlt'></div>
-            </div>
-        </div>
+        <Container>
+            <Container.Inner size='full'>
+                <BelaGarota />
+            </Container.Inner>
+        </Container>
     )
 }
 

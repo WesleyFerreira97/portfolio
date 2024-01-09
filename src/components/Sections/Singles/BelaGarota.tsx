@@ -25,39 +25,57 @@ const CarouselImage = ({ thumbImg }: CarouselImageProps) => {
         </div>
     )
 }
-// bg-[#0C1127]
 
 export function BelaGarota() {
     const carouselImages = [HomeImg, HomeHalfPage, HomeWidgets, HomeSingleProduct];
 
     return (
-        <div className='w-full text-white flex flex-col items-center'>
-
-            <div className='w-full h-[10vh]  bg-primary flex flex-col justify-center items-center'>
-                <Typography
-                    size='lg'
-                    style={{
-                        type: "heading",
-                        className: "uppercase"
-                    }}
-                >
-                    APP Administrativo E-commerce
-                </Typography>
-            </div>
-            <div className='w-full flex flex-col items-center relative'>
-                <span className='block absolute w-full h-[50%] bg-primary' />
-                <div className='w-3/5 h-[800px] z-10  pt-20'>
-                    <Image
-                        src={SiamHome}
-                        alt="Home"
-                        className='object-contain w-full h-full' />
+        <div className='relative flex flex-col'>
+            <div className='h-[40vh] bg-secondary flex justify-center items-center relative'>
+                <span className='absolute z-30 h-[calc(100%+70vh)] bg-secondaryAlt w-[4px] left-28 hidden lg:block' />
+                <span className='absolute z-30 h-[2px] w-full bg-secondaryAlt -bottom-52 hidden lg:block' />
+                <div className='text-center flex flex-col lg:flex-row gap-3'>
+                    <Typography
+                        bpSizes='text-3xl sm:text-5xl xl:text-6xl'
+                        style={{
+                            type: "heading",
+                            color: "white",
+                            className: 'z-50 uppercase'
+                        }}
+                    >
+                        App Administrativo
+                    </Typography>
+                    <Typography
+                        bpSizes='text-3xl sm:text-5xl xl:text-6xl'
+                        style={{
+                            type: "heading",
+                            color: "secondaryAlt",
+                            className: 'z-50 uppercase'
+                        }}
+                    >
+                        React Native
+                    </Typography>
                 </div>
+            </div>
+            <div className='relative w-full flex justify-center -mt-24 overflow-visible'>
+                <span className='absolute w-full h-[250px] sm:h-[350px] bg-secondary block' />
+                <Image
+                    src={SiamHome}
+                    alt="Home"
+                    className='z-50 absolute h-[400px] sm:h-[500px] xl:h-[600px] 2xl:h-[700px] object-contain'
+                />
             </div>
         </div>
     )
 }
 
 
+{/* <h1 className='font-primary text-white text-6xl uppercase'>
+    App Administrativo
+    <span className='font-primary text-secondaryAlt ml-3'>
+        React Native
+    </span>
+</h1> */}
 
 {/* <Swiper
                 slidesPerView={3}
