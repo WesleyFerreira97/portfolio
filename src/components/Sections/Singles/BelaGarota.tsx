@@ -8,10 +8,13 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules';
 import Image, { StaticImageData } from 'next/image'
 import { Typography } from '@/components/Typography'
+import { GithubLogo, FigmaLogo } from '@phosphor-icons/react'
+import type { Icon } from '@phosphor-icons/react'
 
 type CarouselImageProps = {
     thumbImg: StaticImageData
 }
+
 const CarouselImage = ({ thumbImg }: CarouselImageProps) => {
     return (
         <div className='h-96 w-full'>
@@ -26,15 +29,38 @@ const CarouselImage = ({ thumbImg }: CarouselImageProps) => {
     )
 }
 
+type ButtonProps = {
+    icon: Icon;
+    text: string
+}
+
+const Button = ({ icon, text }: ButtonProps) => {
+    const CurrentIcon = icon;
+    return (
+        <div className='bg-secondaryAlt px-9 py-2'>
+            <Typography
+                size='md'
+                style={{
+                    type: "text",
+                    color: "white",
+                }}
+            >
+                <CurrentIcon size={16} className='inline mr-1' />
+                {text}
+            </Typography>
+        </div>
+    )
+}
+
 export function BelaGarota() {
     const carouselImages = [HomeImg, HomeHalfPage, HomeWidgets, HomeSingleProduct];
 
     return (
         <div className='relative flex flex-col'>
-            <div className='h-[40vh] bg-secondary flex justify-center items-center relative'>
+            <div className='h-[40vh] bg-secondary flex flex-col justify-center items-center relative'>
                 <span className='absolute z-30 h-[calc(100%+70vh)] bg-secondaryAlt w-[4px] left-28 hidden lg:block' />
                 <span className='absolute z-30 h-[2px] w-full bg-secondaryAlt -bottom-52 hidden lg:block' />
-                <div className='text-center flex flex-col lg:flex-row gap-3'>
+                <div className='text-center flex flex-col lg:flex-row xl:gap-3'>
                     <Typography
                         bpSizes='text-3xl sm:text-5xl xl:text-6xl'
                         style={{
@@ -56,8 +82,12 @@ export function BelaGarota() {
                         React Native
                     </Typography>
                 </div>
+                <div className='my-8 z-50 flex gap-4'>
+                    <Button icon={GithubLogo} text='Github' />
+                    <Button icon={FigmaLogo} text='Figma' />
+                </div>
             </div>
-            <div className='relative w-full flex justify-center -mt-24 overflow-visible'>
+            <div className='relative w-full flex justify-center -mt-14 xl:-mt-10 overflow-visible'>
                 <span className='absolute w-full h-[250px] sm:h-[350px] bg-secondary block' />
                 <Image
                     src={SiamHome}
@@ -70,28 +100,22 @@ export function BelaGarota() {
 }
 
 
-{/* <h1 className='font-primary text-white text-6xl uppercase'>
-    App Administrativo
-    <span className='font-primary text-secondaryAlt ml-3'>
-        React Native
-    </span>
-</h1> */}
 
 {/* <Swiper
-                slidesPerView={3}
-                spaceBetween={10}
-                pagination={{
-                    clickable: true,
-                }}
-                // modules={[Pagination]}
-                className="flex flex-col"
-            >
-                {carouselImages.map((image, index) => (
-                    <>
-                        <SwiperSlide key={index}>
-                            <CarouselImage thumbImg={image} />
-                        </SwiperSlide>
-                    </>
-                ))}
+    slidesPerView={3}
+    spaceBetween={10}
+    pagination={{
+        clickable: true,
+    }}
+    // modules={[Pagination]}
+    className="flex flex-col"
+>
+    {carouselImages.map((image, index) => (
+        <>
+            <SwiperSlide key={index}>
+                <CarouselImage thumbImg={image} />
+            </SwiperSlide>
+        </>
+    ))}
 
-            </Swiper> */}
+</Swiper> */}
