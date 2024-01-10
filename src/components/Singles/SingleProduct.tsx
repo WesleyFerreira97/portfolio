@@ -1,9 +1,9 @@
 import React from 'react'
-import HomeImg from "../../../../public/images/bela_garota_images/home_main_content.png"
-import HomeHalfPage from "../../../../public/images/bela_garota_images/home_halfpage.png"
-import HomeWidgets from "../../../../public/images/bela_garota_images/home_widgets.png"
-import HomeSingleProduct from "../../../../public/images/bela_garota_images/single_product.png"
-import SiamHome from "../../../../public/images/bela_garota_images/SiamMockup.png"
+import HomeImg from "../../../public/images/bela_garota_images/home_main_content.png"
+import HomeHalfPage from "../../../public/images/bela_garota_images/home_halfpage.png"
+import HomeWidgets from "../../../public/images/bela_garota_images/home_widgets.png"
+import HomeSingleProduct from "../../../public/images/bela_garota_images/single_product.png"
+import SiamHome from "../../../public/images/bela_garota_images/SiamMockup.png"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules';
 import Image, { StaticImageData } from 'next/image'
@@ -75,7 +75,7 @@ const HeaderPage = () => {
 }
 
 
-export function Product() {
+export function SingleProduct() {
     const carouselImages = [HomeImg, HomeHalfPage, HomeWidgets, HomeSingleProduct];
 
     return (

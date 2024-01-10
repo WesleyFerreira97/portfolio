@@ -2,12 +2,12 @@ import { Container } from '@/components/Layout/Container'
 import { Modal } from '@/components/Layout/Modal';
 import { Pencil } from '@phosphor-icons/react';
 import React, { useState } from 'react'
-import { SkillsData } from './data';
+import { SkillsData } from '../../data/skills';
 import { Typography } from '@/components/Ui/Typography';
-import { frontEndProjectsData } from '../../../data/frontEndProjects';
+import { frontEndProjectsData } from '../../data/frontEndProjects';
 import { CardProject } from '@/components/Ui/CardProject';
 import { SectionHeader } from '@/components/Sections/SectionHeader';
-import { Product } from '../Singles/Product';
+import { SingleProduct } from '../Singles/SingleProduct';
 
 type SkillsKeys = keyof typeof SkillsData
 
@@ -66,7 +66,7 @@ export function Skills() {
                     <div
                         key={index}
                         className='my-20'
-                        onClick={() => handleModal(<Product />)}
+                        onClick={() => handleModal(<SingleProduct />)}
                     >
                         <CardProject props={values} />
                     </div>

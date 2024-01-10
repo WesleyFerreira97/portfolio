@@ -1,0 +1,283 @@
+
+.mainContent {
+    height: calc( 100vh - 55px);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #EBE8E8;
+  }
+  
+  .mainContentWrap {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .mainNavbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    transform: translateY(-120%);
+    animation: slideDown 1s forwards;
+    animation-delay: 3.1s;
+  }
+  
+  .homeNameContainer {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    gap: .5px;
+  }
+  
+  .barDetail {
+    height: 10px;
+    width: 0;
+    display: block;
+    margin-bottom: .8rem;
+    background-color: #ed1755;
+    animation: barDetailTransition 1s forwards 7.3s;
+  }
+  
+  .nameContainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  
+  .surNameContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 96.5%;
+    position: relative;
+  }
+  
+  .animationBlock, .animationBlock2 {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    /* background: #3F51B5; */
+    background: #313552;
+    z-index: 22;
+    border-radius: .1rem;
+    animation: mainBlock 1.5s cubic-bezier(.74, .06, .4, .92) forwards;
+  }
+  
+  .animationBlock2 {
+    animation-delay: 1.5s;
+  }
+  
+  .name, .surName {
+    color: #fff;
+    font-family: var(--primary-font);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 90%;
+    letter-spacing: .3rem;
+    opacity: 0;
+  }
+  
+  .name {
+    font-size: 5rem;
+    animation:  fadeIn 1.2s forwards;
+    animation-delay: 1.5s;
+  }
+  
+  .surName {
+    font-size: 2em;
+    animation:  fadeInHalf 2s forwards;
+    animation-delay: 2.5s;
+  }
+  
+  .subtitleDesktop {
+    display: none;
+  }
+  
+  .subtitleMobile {
+    display: block;
+  }
+  /*  */
+  /*  */
+  /*  */
+  
+  .subtitleContainer {
+    min-width: 65%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0.3rem;
+    padding: 0.4rem 1rem;
+    color: #fff;
+    font-weight: 400;
+    font-family: var(--secondary-font);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    line-height: 100%;
+  }
+  
+  .subtitle {
+    z-index: -1;
+    display: block;
+    transform: translate3d(0, 0, 0);
+    animation: slideUp 1s forwards;
+    animation-delay: 3.1s;
+  }
+  
+  .subtitleContainer::before {
+    content: "";
+    height: 100%;
+    width: 120%;
+    position: absolute;
+    bottom: 0%;
+    z-index: 555;
+    display: block;
+    overflow: hidden;
+  }
+  
+  .subtitleTransition {
+    margin-left: .6rem;
+    color: #ed1755;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .subtitleTransition::after {
+    content: "|";
+    margin-left: .1rem;
+    color: #ed1755;
+    animation: blink 1s infinite;
+  }
+  
+  .mainContentWrap::before, .subtitleContainer::before  {
+    background-color: #090d1f;
+    border-bottom: #090d1f;
+    animation: mainContentOpacityAnimation 1s forwards 2.5s;
+  }
+  
+  .mainContentWrap::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* animation: slideOutRight 1.5s cubic-bezier(.74, .06, .4, .92) forwards; */
+    /* opacity: .2; */
+    animation-delay: 5s; 
+    /* border-bottom: 150px solid #132043; */
+  }
+  
+  .subtitleContainer::before {
+    animation: blink 0s forwards;
+    animation-delay: 5.2s;
+  }
+  
+  @media (min-width: 767px) {
+    .mainContent {
+      height: 100vh;
+    }
+  
+    .name {
+      font-size: 8rem;
+    }
+    
+    .surName {
+      font-size: 4rem;
+    }
+  
+    .subtitleContainer {
+      min-width: 480px;
+    }
+    .subtitleDesktop {
+      display: block;
+    }
+    
+    .subtitleMobile {
+      display: none;
+    }
+  }
+  
+  @keyframes slideDown {
+    0% {
+        transform: translate3d(0, -120%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0%, 0);
+    }
+  }
+  
+  @keyframes barDetailTransition {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 40%;
+    }
+  }
+  
+  @keyframes slideOutRight {
+    to {
+        transform: translateX(100%);
+    }
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  @keyframes slideUp {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, -120%, 0);
+    }
+  }
+  
+  @keyframes mainBlock {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0%;
+        left: 100%;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInHalf {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .65;
+    }
+  }
+  
+  @keyframes mainContentOpacityAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .35;
+    }
+  }
+  
