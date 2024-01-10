@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { List } from '@phosphor-icons/react'
 import { MenuMobile } from './MenuMobile'
 import { MenuOptions } from './data'
-import { Typography } from '@/components/Typography'
+import { Typography } from '@/components/Ui/Typography'
 
 type MainNavbarProps = {
     children: ReactNode,

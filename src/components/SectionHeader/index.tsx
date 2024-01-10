@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography } from '../Typography'
+import { Typography } from '../Ui/Typography'
 import { Container } from '../Layout/Container';
 
 type SectionHeaderProps = {

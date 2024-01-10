@@ -2,7 +2,7 @@ import React from 'react'
 import S from "./styles.module.css"
 import { Container } from '@/components/Layout/Container'
 import { Pencil } from '@phosphor-icons/react'
-import { Typography } from '@/components/Typography'
+import { Typography } from '@/components/Ui/Typography'
 
 type CardArticlesProps = {
     cardTitle: string;

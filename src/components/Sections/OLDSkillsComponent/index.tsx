@@ -1,6 +1,6 @@
-import { Card } from '@/components/Card';
+import { Card } from '@/components/Ui/Card';
 import { Container } from '@/components/Layout/Container'
-import { Modal } from '@/components/Modal';
+import { Modal } from '@/components/Layout/Modal';
 import { Pencil } from '@phosphor-icons/react';
 import React, { useState } from 'react'
 import S from "./style.module.css"

@@ -7,9 +7,10 @@ import SiamHome from "../../../../public/images/bela_garota_images/SiamMockup.pn
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules';
 import Image, { StaticImageData } from 'next/image'
-import { Typography } from '@/components/Typography'
+import { Typography } from '@/components/Ui/Typography'
 import { GithubLogo, FigmaLogo } from '@phosphor-icons/react'
 import type { Icon } from '@phosphor-icons/react'
+import { Button } from '@/components/Ui/Button'
 
 type CarouselImageProps = {
     thumbImg: StaticImageData
@@ -29,28 +30,6 @@ const CarouselImage = ({ thumbImg }: CarouselImageProps) => {
     )
 }
 
-type ButtonProps = {
-    icon: Icon;
-    text: string
-}
-
-const Button = ({ icon, text }: ButtonProps) => {
-    const CurrentIcon = icon;
-    return (
-        <div className='bg-secondaryAlt px-9 py-2'>
-            <Typography
-                size='md'
-                style={{
-                    type: "text",
-                    color: "white",
-                }}
-            >
-                <CurrentIcon size={16} className='inline mr-1' />
-                {text}
-            </Typography>
-        </div>
-    )
-}
 
 export function BelaGarota() {
     const carouselImages = [HomeImg, HomeHalfPage, HomeWidgets, HomeSingleProduct];

@@ -2,7 +2,7 @@ import React from 'react'
 import S from "./styles.module.css"
 import { Pencil } from '@phosphor-icons/react'
 import { frontEndProjectsData } from './data'
-import { CardProject } from '@/components/CardProject'
+import { CardProject } from '@/components/Ui/CardProject'
 
 export function FrontEndProjects() {
     return (

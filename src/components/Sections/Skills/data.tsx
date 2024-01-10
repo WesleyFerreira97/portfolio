@@ -1,4 +1,4 @@
-import { Card, CardProps } from '@/components/Card';
+import { Card, CardProps } from '@/components/Ui/Card';
 import { Pencil } from '@phosphor-icons/react';
 import { FrontEndProjects } from '../FrontEndProjects';
 

@@ -1,11 +1,11 @@
 import { Container } from '@/components/Layout/Container'
-import { Modal } from '@/components/Modal';
+import { Modal } from '@/components/Layout/Modal';
 import { Pencil } from '@phosphor-icons/react';
 import React, { useState } from 'react'
 import { SkillsData } from './data';
-import { Typography } from '@/components/Typography';
+import { Typography } from '@/components/Ui/Typography';
 import { frontEndProjectsData } from '../FrontEndProjects/data';
-import { CardProject } from '@/components/CardProject';
+import { CardProject } from '@/components/Ui/CardProject';
 import { SectionHeader } from '@/components/SectionHeader';
 import { BelaGarota } from '../Singles/BelaGarota';
 

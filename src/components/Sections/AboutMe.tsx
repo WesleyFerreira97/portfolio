@@ -4,7 +4,7 @@ import ProfilePic from '../../../public/images/mainBg.png'
 import S from './style.module.css'
 import { Quotes } from '@phosphor-icons/react'
 import { Container } from "../Layout/Container"
-import { Typography } from "@/components/Typography"
+import { Typography } from "@/components/Ui/Typography"
 
 const Thumbnail = () => {
     return (

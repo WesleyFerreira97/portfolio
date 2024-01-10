@@ -1,8 +1,8 @@
 import React, { ReactNode, useCallback, useEffect } from 'react'
 import S from "./styles.module.css"
 import { X } from '@phosphor-icons/react';
-import { CloseButton } from '../CloseButton';
-import { Container } from '../Layout/Container';
+import { CloseButton } from '../../Ui/CloseButton';
+import { Container } from '../Container';
 
 type ModalProps = {
     children?: ReactNode;
