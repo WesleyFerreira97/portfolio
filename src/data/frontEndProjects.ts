@@ -1,4 +1,4 @@
-import Image1 from "../../../../public/images/bg.png"
+import Image1 from "../../public/images/bg.png"
 
 export const frontEndProjectsData = [
     {

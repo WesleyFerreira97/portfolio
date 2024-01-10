@@ -2,7 +2,7 @@
 import React from 'react'
 import S from "./style.module.css"
 import { Typography } from '@/components/Ui/Typography'
-import { BelaGarota } from '@/components/Sections/Singles/BelaGarota'
+import { BelaGarota } from '@/components/Sections/Singles/Product'
 import { Container } from '@/components/Layout/Container'
 
 const Testado = () => {

@@ -9,7 +9,6 @@ import { Pagination } from 'swiper/modules';
 import Image, { StaticImageData } from 'next/image'
 import { Typography } from '@/components/Ui/Typography'
 import { GithubLogo, FigmaLogo } from '@phosphor-icons/react'
-import type { Icon } from '@phosphor-icons/react'
 import { Button } from '@/components/Ui/Button'
 
 type CarouselImageProps = {
@@ -30,10 +29,7 @@ const CarouselImage = ({ thumbImg }: CarouselImageProps) => {
     )
 }
 
-
-export function BelaGarota() {
-    const carouselImages = [HomeImg, HomeHalfPage, HomeWidgets, HomeSingleProduct];
-
+const HeaderPage = () => {
     return (
         <div className='relative flex flex-col'>
             <div className='h-[40vh] bg-secondary flex flex-col justify-center items-center relative'>
@@ -75,6 +71,17 @@ export function BelaGarota() {
                 />
             </div>
         </div>
+    )
+}
+
+
+export function Product() {
+    const carouselImages = [HomeImg, HomeHalfPage, HomeWidgets, HomeSingleProduct];
+
+    return (
+        <>
+            <HeaderPage />
+        </>
     )
 }
 
