@@ -75,12 +75,19 @@ const HeaderPage = () => {
 }
 
 
+const ContentPage = () => {
+    return (
+        <>Content</>
+    )
+}
+
 export function SingleProduct() {
     const carouselImages = [HomeImg, HomeHalfPage, HomeWidgets, HomeSingleProduct];
 
     return (
         <>
             <HeaderPage />
+            <ContentPage />
         </>
     )
 }
