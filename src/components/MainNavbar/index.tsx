@@ -1,5 +1,5 @@
 import React, { ReactNode, SetStateAction, createContext, useState, useContext } from 'react'
-import LogoSVG from '../../../../public/images/logo.svg'
+import LogoSVG from '../../../public/images/logo.svg'
 import Image from 'next/image'
 import { List } from '@phosphor-icons/react'
 import { MenuMobile } from './MenuMobile'
