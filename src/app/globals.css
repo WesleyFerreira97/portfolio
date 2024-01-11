@@ -15,34 +15,5 @@
 a {
   color: inherit;
   text-decoration: none;
+  font-family: inherit;
 }
-
-/* Animations */
-.animation-homeSlideInLeft {
-  /* animation: slideInLeft 1s ease 1s forwards; */
-};
-
-.animation-homeSlideInRight {
-  /* display: none; */
-  /* animation: slideInRight 1s ease 1s forwards; */
-};
-
-/* @keyframes slideInLeft {
-  0% {
-    transform: translate3d(0%, 0, 0)
-  }
-  100% {
-    transform: translate3d(-45%, 0, 0)
-  }
-};
-
-@keyframes slideInRight {
-  0% {
-    transform: translate3d(80%, 0, 0)
-  }
-  100% {
-    transform: translate3d(45%, 0, 0)
-  }
-};
-
- */

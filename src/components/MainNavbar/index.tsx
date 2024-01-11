@@ -57,7 +57,7 @@ const Navbar = () => {
                         size='md'
                         style={{
                             type: "text",
-                            color: "lightGray"
+                            color: "white"
                         }}
                     >
                         <a href={value.path}>{value.label}</a>

@@ -14,18 +14,16 @@ import { HomeMainContent } from '@/components/Sections/HomeMainContent'
 export default function Home() {
 
     return (
-        <>
-            <MainNavbar>
-                <Container>
-                    <Container.Inner size='full'>
-                        <HomeMainContent />
-                    </Container.Inner>
-                </Container>
-                <AboutMe />
-                <Skills />
-                {/* <Articles /> */}
-                <MainNavbar.MenuMobile />
-            </MainNavbar>
-        </>
+        <MainNavbar>
+            <Container>
+                <Container.Inner size='full'>
+                    <HomeMainContent />
+                </Container.Inner>
+            </Container>
+            <AboutMe />
+            <Skills />
+            {/* <Articles /> */}
+            <MainNavbar.MenuMobile />
+        </MainNavbar>
     )
 }

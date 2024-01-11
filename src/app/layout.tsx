@@ -1,18 +1,24 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter, Titillium_Web, Raleway } from 'next/font/google'
+import { Inter, Titillium_Web, Raleway, Staatliches, Poppins } from 'next/font/google'
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 const primary = Raleway({
-  weight: ['800', "900"],
+  weight: ['300', '800', "900"],
   subsets: ['latin'],
   variable: "--primary-font"
 })
 
+// const secondary = Poppins({
+//   subsets: ['latin'],
+//   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+//   variable: "--secondary-font"
+// })
+
 const secondary = Titillium_Web({
   subsets: ['latin'],
-  weight: ['300', '400', '600', '700', '900'],
+  weight: ['200', '300', '400', '600', '700', '900'],
   variable: "--secondary-font"
 })
 
@@ -28,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${primary.variable} ${secondary.variable} font-sans`}>
+      <body className={`${primary.variable} ${secondary.variable} font-sans bg-[#ECE8E1]`}>
         {children}
       </body>
     </html>

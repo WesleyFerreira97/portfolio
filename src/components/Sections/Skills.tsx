@@ -54,7 +54,7 @@ export function Skills() {
                         size='md'
                         style={{
                             type: "text",
-                            color: "secondaryAlt",
+                            color: "gray",
                             weight: "semiBold",
                             className: 'mt-9'
                         }} >

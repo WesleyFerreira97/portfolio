@@ -32,9 +32,7 @@ const CarouselImage = ({ thumbImg }: CarouselImageProps) => {
 const HeaderPage = () => {
     return (
         <div className='relative flex flex-col'>
-            <div className='h-[40vh] bg-secondary flex flex-col justify-center items-center relative'>
-                {/* <span className='absolute z-30 h-[calc(100%+170vh)] bg-secondaryAlt w-[4px] left-28 hidden lg:block' /> */}
-                {/* <span className='absolute z-30 h-[2px] w-full bg-secondaryAlt -bottom-52 hidden lg:block' /> */}
+            <div className='h-[80vh] bg-secondary flex flex-col justify-center items-center relative'>
                 <div className='text-center flex flex-col lg:flex-row xl:gap-3'>
                     <Typography
                         bpSizes='text-3xl sm:text-5xl xl:text-6xl'
@@ -57,13 +55,25 @@ const HeaderPage = () => {
                         React Native
                     </Typography>
                 </div>
+                <div className='w-3/4 flex justify-center mt-6 mb-9'>
+                    <Typography
+                        size='md'
+                        style={{
+                            type: "text",
+                            color: "white",
+                            weight: "semiBold",
+                            className: "text-center"
+                        }} >
+                        App para administração de academias, gerenciamento de matriculas, vencimentos e clientes ativos, feito em react native CLI e react native paper
+                    </Typography>
+                </div>
                 <div className='my-8 z-50 flex gap-4'>
                     <Button icon={GithubLogo} text='Github' />
                     <Button icon={FigmaLogo} text='Figma' />
                 </div>
             </div>
-            <div className='relative w-full flex justify-center -mt-14 xl:-mt-10 overflow-visible'>
-                <span className='absolute w-full h-[250px] sm:h-[350px] bg-secondary block' />
+            <div className='relative h-full w-full flex justify-center -mt-14 xl:-mt-28 overflow-visible'>
+                <span className='absolute w-full h-[250px] sm:h-[350px] bg-secondarya block' />
                 <Image
                     src={SiamHome}
                     alt="Home"
@@ -77,7 +87,7 @@ const HeaderPage = () => {
 
 const ContentPage = () => {
     return (
-        <>Content</>
+        <div>Content</div>
     )
 }
 
@@ -85,10 +95,10 @@ export function SingleProduct() {
     const carouselImages = [HomeImg, HomeHalfPage, HomeWidgets, HomeSingleProduct];
 
     return (
-        <>
+        <div className="flex flex-col">
             <HeaderPage />
             <ContentPage />
-        </>
+        </div>
     )
 }
 
@@ -112,3 +122,7 @@ export function SingleProduct() {
     ))}
 
 </Swiper> */}
+
+
+
+

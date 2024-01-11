@@ -26,7 +26,7 @@ const gapSizes: ContainerGapProps = {
 const Inner = ({ children, size, gap }: PropsWithChildren<ContainerInnerProps>) => {
     const innerContainerStyles: { [key in ContainerSize]: string } = {
         full: "w-full",
-        boxed: "w-full max-w-[95%] md:max-w-[90%] lg:max-w-[80%] xl:max-w-[75%]",
+        boxed: "w-full max-w-[95%] md:max-w-[90%] lg:max-w-[80%] xl:max-w-[75%] relative",
     }
 
     const containerStyle = size === "full" ? innerContainerStyles.full : innerContainerStyles.boxed;
@@ -41,7 +41,7 @@ const Inner = ({ children, size, gap }: PropsWithChildren<ContainerInnerProps>) 
 
 function Container({ children }: PropsWithChildren<ContainerProps>) {
     return (
-        <div className="w-full flex justify-center flex-col items-center">
+        <div className="w-full flex justify-center flex-col items-center relative">
             {children}
         </div>
     )
