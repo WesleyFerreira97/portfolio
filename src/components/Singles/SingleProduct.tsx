@@ -10,6 +10,7 @@ import Image, { StaticImageData } from 'next/image'
 import { Typography } from '@/components/Ui/Typography'
 import { GithubLogo, FigmaLogo } from '@phosphor-icons/react'
 import { Button } from '@/components/Ui/Button'
+import { Container } from '../Layout/Container'
 
 type CarouselImageProps = {
     thumbImg: StaticImageData
@@ -32,7 +33,7 @@ const CarouselImage = ({ thumbImg }: CarouselImageProps) => {
 const HeaderPage = () => {
     return (
         <div className='relative flex flex-col'>
-            <div className='h-[80vh] bg-secondary flex flex-col justify-center items-center relative'>
+            <div className='h-[80vh] bg-secondary flex flex-col justify-center items-center'>
                 <div className='text-center flex flex-col lg:flex-row xl:gap-3'>
                     <Typography
                         bpSizes='text-3xl sm:text-5xl xl:text-6xl'
@@ -72,7 +73,7 @@ const HeaderPage = () => {
                     <Button icon={FigmaLogo} text='Figma' />
                 </div>
             </div>
-            <div className='relative h-full w-full flex justify-center -mt-14 xl:-mt-28 overflow-visible'>
+            <div className='w-full flex justify-center -mt-14 xl:-mt-28 overflow-hiddenn h-[700px]'>
                 <span className='absolute w-full h-[250px] sm:h-[350px] bg-secondarya block' />
                 <Image
                     src={SiamHome}
@@ -87,7 +88,38 @@ const HeaderPage = () => {
 
 const ContentPage = () => {
     return (
-        <div>Content</div>
+        <Container>
+            <Container.Inner>
+                <div className='flex justify-center'>
+                    <div className='w-[70%] flex flex-col items-center'>
+                        <Typography
+                            bpSizes='text-md'
+                            style={{
+                                type: "heading",
+                                color: "primary",
+                                className: "mb-4 uppercase"
+                            }} >
+                            Projeto
+                        </Typography>
+                        <div className='flex justify-center items-center'>
+                            <span className='w-40 h-[2px] bg-secondaryAlt block flex-grow' />
+                            <Typography
+                                size='md'
+                                style={{
+                                    type: "heading",
+                                    color: "secondaryAlt",
+                                    className: "mx-4 uppercase"
+                                }}
+                            >
+                                Siam Fight
+                            </Typography>
+                            <span className='w-40 h-[2px] bg-secondaryAlt block flex-grow' />
+                        </div>
+                    </div>
+
+                </div>
+            </Container.Inner>
+        </Container>
     )
 }
 
