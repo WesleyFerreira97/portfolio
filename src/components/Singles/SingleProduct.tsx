@@ -127,7 +127,8 @@ const ContentPage = () => {
                             style={{
                                 type: "text",
                                 color: "secondaryAlt",
-                                lineHeight: "snug"
+                                lineHeight: "snug",
+                                className: "text-center"
                             }}
                         >
                             <Typography.Paragraph>
