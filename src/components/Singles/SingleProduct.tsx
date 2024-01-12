@@ -90,19 +90,22 @@ const ContentPage = () => {
     return (
         <Container>
             <Container.Inner>
-                <div className='flex justify-center'>
-                    <div className='w-[70%] flex flex-col items-center'>
+                <div className='flex flex-col items-center justify-center'>
+                    <div className='w-[80%] flex flex-col items-center'>
                         <Typography
                             bpSizes='text-md'
                             style={{
-                                type: "heading",
+                                type: "text",
                                 color: "primary",
-                                className: "mb-4 uppercase"
+                                weight: "semiBold",
+                                className: "mb-3 uppercase"
                             }} >
                             Projeto
                         </Typography>
-                        <div className='flex justify-center items-center'>
-                            <span className='w-40 h-[2px] bg-secondaryAlt block flex-grow' />
+                        <div className='w-full flex justify-center items-center'>
+                            <span className='relative h-[2px] bg-secondaryAlt flex-grow flex justify-center items-center'>
+                                <span className='absolute right-0 bg-secondaryAlt h-[8px] w-[8px] rounded-full block' />
+                            </span>
                             <Typography
                                 size='md'
                                 style={{
@@ -113,8 +116,32 @@ const ContentPage = () => {
                             >
                                 Siam Fight
                             </Typography>
-                            <span className='w-40 h-[2px] bg-secondaryAlt block flex-grow' />
+                            <span className='relative h-[2px] bg-secondaryAlt flex-grow flex justify-center items-center'>
+                                <span className='absolute left-0 bg-secondaryAlt h-[8px] w-[8px] rounded-full block' />
+                            </span>
                         </div>
+                    </div>
+                    <div className='w-[80%] mt-4'>
+                        <Typography
+                            size='sm'
+                            style={{
+                                type: "text",
+                                color: "secondaryAlt",
+                                lineHeight: "snug"
+                            }}
+                        >
+                            <Typography.Paragraph>
+                                Esse projeto utiliza a API do github para fazer uma query nos perfis e trazer informações acerca da conta do usuário, além de implementar um chat, que envia e recebe dados em tempo real com uma plataforma de BackEnd as a Service ( Supabase).
+                            </Typography.Paragraph>
+
+                            <Typography.Paragraph>
+                                Esse projeto utiliza a API do github para fazer uma query nos perfis e trazer informações acerca da conta do usuário, além de implementar um chat, que envia e recebe dados em tempo real commentar um chat, que envia e recebe dados em tempo real commentar um chat, que envia e recebe dados em tempo real com
+                            </Typography.Paragraph>
+
+                            <Typography.Paragraph>
+                                Implementar um chat, que envia e recebe dados em tempo real commentar um chat, que envia e recebe dados em tempo real commentar um chat, que envia e recebe dados em tempo real com
+                            </Typography.Paragraph>
+                        </Typography>
                     </div>
 
                 </div>
