@@ -5,7 +5,7 @@ import { colorVariants, lineHeightVariants, sizeByBreakpoint, weightVariants } f
 const Paragraph = ({ children, ...props }: any) => {
     return (
         <p
-            className='my-2'
+            className='my-5'
             style={{ fontFamily: "inherit" }}
         >
             {children}

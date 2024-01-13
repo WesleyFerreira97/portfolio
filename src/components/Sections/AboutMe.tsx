@@ -60,7 +60,7 @@ const AboutMeInfo = () => {
                 size="md"
                 style={{
                     type: "text",
-                    weight: "semiBold",
+                    weight: "normal",
                     lineHeight: "relaxed",
                     className: "font-normal",
                 }}

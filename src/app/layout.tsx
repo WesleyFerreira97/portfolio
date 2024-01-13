@@ -10,17 +10,29 @@ const primary = Raleway({
   variable: "--primary-font"
 })
 
+// const primary = Staatliches({
+//   weight: ['400'],
+//   subsets: ['latin'],
+//   variable: "--primary-font"
+// })
+
 // const secondary = Poppins({
 //   subsets: ['latin'],
 //   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 //   variable: "--secondary-font"
 // })
 
-const secondary = Titillium_Web({
+const secondary = Inter({
   subsets: ['latin'],
   weight: ['200', '300', '400', '600', '700', '900'],
   variable: "--secondary-font"
 })
+
+// const secondary = Titillium_Web({
+//   subsets: ['latin'],
+//   weight: ['200', '300', '400', '600', '700', '900'],
+//   variable: "--secondary-font"
+// })
 
 export const metadata: Metadata = {
   title: 'Wesley Ferreira - Dev',

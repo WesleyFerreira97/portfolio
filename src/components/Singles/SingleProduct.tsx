@@ -32,8 +32,8 @@ const CarouselImage = ({ thumbImg }: CarouselImageProps) => {
 
 const HeaderPage = () => {
     return (
-        <div className='relative flex flex-col'>
-            <div className='h-[80vh] bg-secondary flex flex-col justify-center items-center'>
+        <div className='relative h-full flex flex-col sm:mb-8'>
+            <div className='h-[65vh] md:h-[60vh] xl:h-[40vh] bg-secondary flex flex-col justify-center items-center'>
                 <div className='text-center flex flex-col lg:flex-row xl:gap-3'>
                     <Typography
                         bpSizes='text-3xl sm:text-5xl xl:text-6xl'
@@ -58,27 +58,27 @@ const HeaderPage = () => {
                 </div>
                 <div className='w-3/4 flex justify-center mt-6 mb-9'>
                     <Typography
-                        size='md'
+                        bpSizes='text-lg md:text-xlg'
                         style={{
                             type: "text",
                             color: "white",
-                            weight: "semiBold",
+                            weight: "normal",
                             className: "text-center"
                         }} >
                         App para administração de academias, gerenciamento de matriculas, vencimentos e clientes ativos, feito em react native CLI e react native paper
                     </Typography>
                 </div>
-                <div className='my-8 z-50 flex gap-4'>
+                <div className='my-8 z-50 flex gap-4 text-x'>
                     <Button icon={GithubLogo} text='Github' />
                     <Button icon={FigmaLogo} text='Figma' />
                 </div>
             </div>
-            <div className='w-full flex justify-center -mt-14 xl:-mt-28 overflow-hiddenn h-[700px]'>
-                <span className='absolute w-full h-[250px] sm:h-[350px] bg-secondarya block' />
+            <div className='w-full flex justify-center overflow-hiddenn bg-primarya'>
+                <span className='absolute w-full h-[250px] sm:h-[350px] bg-secondary block' />
                 <Image
                     src={SiamHome}
                     alt="Home"
-                    className='z-50 absolute h-[400px] sm:h-[500px] xl:h-[600px] 2xl:h-[700px] object-contain'
+                    className='z-50 relative h-[400px] sm:h-[500px] xl:h-[600px] 2xl:h-[700px] object-contain'
                 />
             </div>
         </div>
@@ -90,8 +90,8 @@ const ContentPage = () => {
     return (
         <Container>
             <Container.Inner>
-                <div className='flex flex-col items-center justify-center'>
-                    <div className='w-[80%] flex flex-col items-center'>
+                <div className='max-w-[800px] m-auto flex flex-col items-center justify-center sm:mt-8 px-3 sm:px-0'>
+                    <div className='w-full flex flex-col items-center justify-center'>
                         <Typography
                             bpSizes='text-md'
                             style={{
@@ -114,14 +114,14 @@ const ContentPage = () => {
                                     className: "mx-4 uppercase"
                                 }}
                             >
-                                Siam Fight
+                                Admin App
                             </Typography>
                             <span className='relative h-[2px] bg-secondaryAlt flex-grow flex justify-center items-center'>
                                 <span className='absolute left-0 bg-secondaryAlt h-[8px] w-[8px] rounded-full block' />
                             </span>
                         </div>
                     </div>
-                    <div className='w-[80%] mt-4'>
+                    <div className='mt-4'>
                         <Typography
                             size='sm'
                             style={{
