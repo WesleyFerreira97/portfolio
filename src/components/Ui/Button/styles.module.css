@@ -1,0 +1,27 @@
+/* tailwind não suporta : hover:[&>span]:translate-x-0 */
+.buttonWrap {
+    cursor: pointer;
+    position: relative;
+    background-color: #313552;
+    padding: 0.5rem 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: .15rem;
+}
+
+.buttonWrap:active {
+    transform: scale(0.97);
+}
+
+.buttonWrap span {
+    transition: transform 0.3s ease-out;
+    transform: scaleX(0) skew(90deg);
+    transform-origin: bottom left;
+}
+
+.buttonWrap:hover  span {
+    transform: scaleX(1) skew(0deg);
+    transform-origin: bottom left;
+}
