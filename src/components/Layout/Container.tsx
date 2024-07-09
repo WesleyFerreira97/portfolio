@@ -41,7 +41,7 @@ const Inner = ({ children, size, gap }: PropsWithChildren<ContainerInnerProps>) 
 
 function Container({ children }: PropsWithChildren<ContainerProps>) {
     return (
-        <div className="w-full flex justify-center flex-col items-center relative">
+        <div className="w-full flex justify-center flex-col items-center relative bg-[#ddd]">
             {children}
         </div>
     )

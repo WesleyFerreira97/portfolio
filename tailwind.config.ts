@@ -28,7 +28,7 @@ const config: Config = {
         'primary': '#ED1755',
         'secondary': '#0C1127',
         'secondaryAlt': '#313552',
-        'lightGray': '#768079',
+        'lightGray': '#313030',
         'gray': '#383e3a',
         'dark-gray': '#0f1923',
       },

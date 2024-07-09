@@ -51,7 +51,7 @@ export function Skills() {
                 <div className='flex pb-10 max-w-[1200px] mx-auto'>
                     <Typography
                         as='p'
-                        size='md'
+                        bpSizes="text-[16px]"
                         style={{
                             type: "text",
                             color: "secondarAlt",

@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import ProfilePic from '../../../public/images/mainBg.png'
+import ProfilePic from '../../../public/images/profilePic.jpeg/'
 import S from './style.module.css'
 import { Quotes } from '@phosphor-icons/react'
 import { Container } from "../Layout/Container"
@@ -57,10 +57,11 @@ const AboutMeInfo = () => {
             <span className="block h-1 w-1/2 bg-primary mt-4 mb-8" />
             <Typography
                 as="div"
-                size="md"
+                bpSizes="text-[16px]"
                 style={{
                     type: "text",
                     weight: "normal",
+                    color: "lightGray",
                     lineHeight: "relaxed",
                     className: "font-normal",
                 }}

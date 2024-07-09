@@ -1,6 +1,5 @@
 "use client"
 import React from 'react'
-
 import { HomeVideoBg } from '@/components/HomeVideoBg'
 import { MainNavbar } from '@/components/MainNavbar'
 import { TypeWriter } from '@/components/TypeWriter'
