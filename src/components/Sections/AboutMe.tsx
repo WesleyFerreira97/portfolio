@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import ProfilePic from '../../../public/images/profilePic.jpeg/'
+import ProfilePic from '../../../public/images/profilePic.jpeg'
 import S from './style.module.css'
 import { Quotes } from '@phosphor-icons/react'
 import { Container } from "../Layout/Container"
@@ -63,7 +63,7 @@ const AboutMeInfo = () => {
                     weight: "normal",
                     color: "lightGray",
                     lineHeight: "relaxed",
-                    className: "font-normal",
+                    className: "font-normal tracking-[-0.25px]",
                 }}
             >
                 <Typography.Paragraph>

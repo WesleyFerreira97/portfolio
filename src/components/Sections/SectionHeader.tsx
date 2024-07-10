@@ -15,7 +15,7 @@ export function SectionHeader({ headerTitle, menuOptions }: SectionHeaderProps) 
     return (
         <Container>
             <Container.Inner gap='noGap'>
-                <div className='w-full flex text-center justify-center items-center flex-col'>
+                <div className='w-full flex text-center justify-center items-center flex-col mb-4'>
                     <Typography
                         as='h3'
                         size='lg'
@@ -23,7 +23,7 @@ export function SectionHeader({ headerTitle, menuOptions }: SectionHeaderProps) 
                             type: "heading",
                             color: "secondary",
                             weight: "bold",
-                            className: 'mb-9'
+                            className: 'mb-6'
                         }}>
                         {headerTitle}
                     </Typography>

@@ -15,7 +15,7 @@ export default function Home() {
     return (
         <MainNavbar>
             <Container>
-                <Container.Inner size='full'>
+                <Container.Inner size='full' gap='xxl'>
                     <HomeMainContent />
                 </Container.Inner>
             </Container>
