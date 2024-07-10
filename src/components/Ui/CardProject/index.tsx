@@ -1,6 +1,7 @@
 import React from 'react'
 import S from "./styles.module.css"
-import ProfilePic from '../../../public/images/mainBg.png'
+import ProfilePic2 from './../../../../public/images/bela_garota_images/home_main_content.png'
+import ProfilePic from '@/../public/images/bela_garota_images/home_main_content.png'
 import Image from 'next/image';
 import { Typography } from '../Typography';
 
@@ -27,7 +28,7 @@ const CardInfo = ({ props }: CardProjectProps) => {
                     style={{
                         type: 'text',
                         color: "primary",
-                        weight: "normal",
+                        weight: "semiBold",
                     }}
                 >
                     Projeto
@@ -52,7 +53,7 @@ const CardInfo = ({ props }: CardProjectProps) => {
                     style={{
                         type: 'heading',
                         className: "uppercase mb-6",
-                        color: "lightGray"
+                        color: "white"
                     }}
                 >
                     {props.projectType}
@@ -62,7 +63,8 @@ const CardInfo = ({ props }: CardProjectProps) => {
                     bpSizes='text-sm'
                     style={{
                         type: 'text',
-                        color: "lightGray"
+                        color: "white",
+                        weight: "normal"
                     }}
                 >
                     {props.description}
@@ -78,7 +80,7 @@ const CardInfo = ({ props }: CardProjectProps) => {
                             style={{
                                 type: 'text',
                                 className: "uppercase mx-1 mb-4 bg-zinc-200 py-1 px-3 rounded-sm  whitespace-nowrap flex-wrap",
-                                color: "gray",
+                                color: "secondary",
                                 weight: "bold"
                             }}
                         >
