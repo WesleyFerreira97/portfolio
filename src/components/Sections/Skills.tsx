@@ -54,7 +54,7 @@ export function Skills() {
                         bpSizes="text-[16px]"
                         style={{
                             type: "text",
-                            color: "secondarAlt",
+                            color: "lightGray",
                             weight: "normal",
                             className: 'mt-9 text-center font-normal tracking-[-0.25px]'
                         }} >

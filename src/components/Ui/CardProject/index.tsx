@@ -64,7 +64,7 @@ const CardInfo = ({ props }: CardProjectProps) => {
                     style={{
                         type: 'text',
                         color: "white",
-                        weight: "normal"
+                        weight: "light"
                     }}
                 >
                     {props.description}

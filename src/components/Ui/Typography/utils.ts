@@ -9,17 +9,15 @@ import {
 
 const sizeByBreakpoint = (type: FontTypes, size: Partial<Breakpoints>) => {
     const sizesHeading: MapBreakpointsToStrings = {
-        default: "text-2xl md:text-3xl",
         sm: "text-xl md:text-2xl",
         md: "text-2xl md:text-3xl",
-        lg: "text-4xl sm:text-5xl lg:text-5xl",
+        lg: "text-4xl sm:text-5xl",
         xlg: "text-5xl text-6xl",
     }
 
     const sizesText: MapBreakpointsToStrings = {
-        default: "text-base md:text-lg",
         sm: "text-sm md:text-base",
-        md: "text-base md:text-lg",
+        md: "text-base",
         lg: "text-lg md:text-2xl",
         xlg: "text-xl md:text-2xl",
     }
