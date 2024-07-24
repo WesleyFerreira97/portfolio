@@ -19,8 +19,13 @@ function Typography({ as: Tag = "p", style, ...props }: TypographyProps) {
         ? sizeByBreakpoint(style.type, props.size)
         : props.bpSizes
 
+    const textType = {
+        heading: "font-primary",
+        text: "font-secondary"
+    }
+
     const propsDefault = {
-        type: style.type === "heading" ? "font-primary" : "font-secondary",
+        type: textType[style.type],
         color: colorVariants(style.color),
         fontWeight: weightVariants(style.weight),
         lineHeight: lineHeightVariants(style.lineHeight),

@@ -19,7 +19,6 @@ type SizesProps = {
     bpSizes: string;
 };
 
-
 type TypographyProps = {
     as?: TypographyVariant;
     children: React.ReactNode;

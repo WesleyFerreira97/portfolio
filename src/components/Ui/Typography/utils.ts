@@ -21,7 +21,7 @@ const sizeByBreakpoint = (type: FontTypes, size: Partial<Breakpoints>) => {
         sm: "text-sm md:text-base",
         md: "text-base md:text-lg",
         lg: "text-lg md:text-2xl",
-        xlg: "text-xl md:text-2xl",
+        // xlg: "text-xl md:text-2xl",
     }
 
     return type == "heading" ? sizesHeading[size] : sizesText[size]

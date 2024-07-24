@@ -41,6 +41,7 @@ const AboutMeInfo = () => {
             >
                 Em Formação
             </Typography>
+            <Typography />
             <Typography
                 as="h3"
                 style={{
@@ -57,7 +58,8 @@ const AboutMeInfo = () => {
             <span className="block h-1 w-1/2 bg-primary mt-4 mb-8" />
             <Typography
                 as="div"
-                bpSizes="text-[16px]"
+                // size="md"
+                // bpSizes="text-[16px]"
                 style={{
                     type: "text",
                     weight: "normal",
