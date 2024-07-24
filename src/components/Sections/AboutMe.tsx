@@ -27,7 +27,7 @@ const Thumbnail = () => {
 
 const AboutMeInfo = () => {
     return (
-        <div className="w-full xl:w-[60%]">
+        <div className="w-full xl:w-[60%] flex xl:block flex-col items-center text-center xl:text-start">
             <Typography
                 as="span"
                 size="sm"
@@ -36,7 +36,7 @@ const AboutMeInfo = () => {
                     type: "heading",
                     weight: "bold",
                     lineHeight: "tight",
-                    className: "block mb-4",
+                    className: "block mb-2",
                 }}
             >
                 Em Formação
@@ -58,8 +58,12 @@ const AboutMeInfo = () => {
             <span className="block h-1 w-1/2 bg-primary mt-4 mb-8" />
             <Typography
                 as="div"
+<<<<<<< HEAD
                 // size="md"
                 // bpSizes="text-[16px]"
+=======
+                size="md"
+>>>>>>> d11d0255aec76a29790c9837626fbe7183ae1add
                 style={{
                     type: "text",
                     weight: "normal",
