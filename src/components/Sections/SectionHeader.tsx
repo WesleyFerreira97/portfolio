@@ -22,7 +22,7 @@ export function SectionHeader({ headerTitle, menuOptions }: SectionHeaderProps) 
                         style={{
                             type: "heading",
                             color: "secondary",
-                            weight: "bold",
+                            weight: "extraBold",
                             className: 'mb-6'
                         }}>
                         {headerTitle}

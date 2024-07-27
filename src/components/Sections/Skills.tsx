@@ -48,19 +48,7 @@ export function Skills() {
                     headerTitle='Projetos e Habilidades'
                     menuOptions={skills}
                 />
-                <div className='flex pb-10 max-w-[1200px] mx-auto'>
-                    <Typography
-                        as='p'
-                        bpSizes="text-[16px]"
-                        style={{
-                            type: "text",
-                            color: "lightGray",
-                            weight: "normal",
-                            className: 'mt-9 text-center font-normal tracking-[-0.25px]'
-                        }} >
-                        Sou desenvolvedor Mobile voltado a Android Nativo e React Native, Front-end com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
-                    </Typography>
-                </div>
+
 
                 {frontEndProjectsData.map((values, index) => (
                     <div

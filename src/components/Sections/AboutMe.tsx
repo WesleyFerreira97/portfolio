@@ -8,7 +8,7 @@ import { Typography } from "@/components/Ui/Typography"
 
 const Thumbnail = () => {
     return (
-        <div className="relative flex m-auto xl:m-[inherit] aspect-[9/11] h-[250px] xl:h-[500px] mb-9 xl:mb-0">
+        <div className="relative flex m-auto xl:m-[inherit] aspect-[9/11] h-[400px] xl:h-[500px] mb-9 xl:mb-0">
             <span className="absolute h-[90%] w-[90%] bg-secondary" />
             <div className="absolute right-[-30px] top-[20%] z-10 p-4 bg-primary">
                 <Quotes size={32} color={"#fff"} />
@@ -32,43 +32,38 @@ const AboutMeInfo = () => {
                 as="span"
                 size="sm"
                 style={{
-                    color: "secondary",
+                    color: "primary",
                     type: "heading",
                     weight: "bold",
-                    lineHeight: "tight",
+                    lineHeight: "none",
                     className: "block mb-2",
                 }}
             >
                 Em Formação
             </Typography>
-            <Typography />
             <Typography
                 as="h3"
                 style={{
                     type: "heading",
                     color: "secondary",
-                    weight: "bold",
-                    lineHeight: "normal",
+                    weight: "extraBold",
+                    lineHeight: "none",
                 }}
                 // bpSizes="text-2xl lg:text-3xl xl:text-6xl"
                 size="lg"
             >
-                Engenheiro de Software
+                {/* Engenheiro de Software */}
+                Software Engineer
             </Typography>
-            <span className="block h-1 w-1/2 bg-primary mt-4 mb-8" />
+            <span className="block h-1 w-1/4 bg-primary mt-4 mb-8" />
             <Typography
                 as="div"
-<<<<<<< HEAD
-                // size="md"
-                // bpSizes="text-[16px]"
-=======
                 size="md"
->>>>>>> d11d0255aec76a29790c9837626fbe7183ae1add
                 style={{
                     type: "text",
                     weight: "normal",
                     color: "lightGray",
-                    lineHeight: "relaxed",
+                    lineHeight: "loose",
                     className: "font-normal tracking-[-0.25px]",
                 }}
             >

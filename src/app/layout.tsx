@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const primary = Raleway({
-  weight: ['300', '800', "900"],
+  weight: ['300', '400', '500', '600', '700', '800', "900"],
   subsets: ['latin'],
   variable: "--primary-font"
 })
@@ -24,7 +24,7 @@ const primary = Raleway({
 
 const secondary = Inter({
   subsets: ['latin'],
-  weight: ['200', '300', '400', '600', '700', '900'],
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
   variable: "--secondary-font"
 })
 
