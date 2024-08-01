@@ -33,12 +33,11 @@ export function SectionHeader({ headerTitle, menuOptions }: SectionHeaderProps) 
                             <Typography
                                 key={index}
                                 as='li'
-                                // size='md'
-                                bpSizes="text-sm md:text-md lg:text-lg"
+                                size='md'
                                 style={{
                                     type: "text",
                                     color: "secondary",
-                                    weight: "bold",
+                                    weight: "semiBold",
                                     className: "hover:text-primary cursor-pointer whitespace-nowrap"
                                 }}
                             >

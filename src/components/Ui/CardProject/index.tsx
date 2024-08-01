@@ -96,13 +96,14 @@ const CardInfo = ({ props }: CardProjectProps) => {
 export function CardProject({ props }: CardProjectProps) {
     return (
         <div className="w-full h-full min-h-[350px] max-w-[1200px] flex flex-col mx-auto cursor-pointer relative">
-            <div className="h-full w-full lg:w-3/5 xl:w-3/5 absolute">
+            <div className="h-full max-md:w-full aspect-video absolute">
                 <div className='w-full h-full absolute bg-secondary z-10 opacity-40 hover:opacity-0 transition-opacity' />
                 <Image
                     src={props.thumb}
                     alt='Project Thumb'
                     fill={true}
                     className='object-cover'
+                    quality={100}
                 />
             </div>
 

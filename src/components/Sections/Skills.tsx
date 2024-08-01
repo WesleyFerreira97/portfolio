@@ -8,6 +8,9 @@ import { frontEndProjectsData } from '../../data/frontEndProjects';
 import { CardProject } from '@/components/Ui/CardProject';
 import { SectionHeader } from '@/components/Sections/SectionHeader';
 import { SingleProduct } from '../Singles/SingleProduct';
+import { ProjectSection } from '../Ui/ProjectSection';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { A11y, Navigation, Pagination, Scrollbar, Autoplay, } from "swiper/modules";
 
 type SkillsKeys = keyof typeof SkillsData
 
@@ -43,23 +46,36 @@ export function Skills() {
 
     return (
         <Container>
-            <Container.Inner>
+            <Container.Inner size='full'>
                 <SectionHeader
                     headerTitle='Projetos e Habilidades'
                     menuOptions={skills}
                 />
-
-
-                {frontEndProjectsData.map((values, index) => (
-                    <div
-                        key={index}
-                        className='my-20'
-                        onClick={() => handleModal(<SingleProduct />)}
-                    >
-                        <CardProject props={values} />
-                    </div>
-                ))}
-
+                <Swiper
+                    modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                    slidesPerView={1}
+                    // autoplay={{
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    // }}
+                    navigation
+                    loop
+                    watchOverflow
+                    scrollbar={{ draggable: true }}
+                    pagination={{ clickable: true }}
+                >
+                    {frontEndProjectsData.map((values, index) => (
+                        <SwiperSlide key={index}>
+                            <div
+                                key={index}
+                                className='my-20 bg-secondary py-6'
+                                onClick={() => handleModal(<SingleProduct />)}
+                            >
+                                <ProjectSection props={values} />
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
                 <Modal handleClose={toggleModalState} modalStatus={isModalOpen}>
                     {modalContent}
                 </Modal>
