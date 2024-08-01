@@ -25,7 +25,7 @@ export function ProjectSection({ props }: SectionProjectProps) {
         <Container>
             <Container.Inner>
                 <div className="flex">
-                    <div>
+                    <div className='w-[60%]'>
                         <Typography
                             as='span'
                             size='sm'
@@ -56,12 +56,13 @@ export function ProjectSection({ props }: SectionProjectProps) {
                             Esse projeto utiliza a API do github para fazer uma query nos perfis e trazer informações acerca da conta do usuário, além de implementar um chat, que envia e recebe dados em tempo real com uma plataforma de BackEnd as a Service ( Supabase).
                         </Typography>
                     </div>
-                    <div>
+                    <div className='relative w-full h-96'>
                         <Image
                             src={ImageTest}
                             fill={true}
                             alt='Profile Pic'
-                            className="object-cover"
+                            quality={100}
+                            className="object-contain aspect-video"
                         />
                     </div>
                 </div>

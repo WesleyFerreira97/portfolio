@@ -14,12 +14,12 @@ export default function Home() {
 
     return (
         <MainNavbar>
-            {/* <Container>
+            <Container>
                 <Container.Inner size='full' gap='xxl'>
                     <HomeMainContent />
                 </Container.Inner>
             </Container>
-            <AboutMe /> */}
+            <AboutMe />
             <Skills />
             {/* <Articles /> */}
             <MainNavbar.MenuMobile />
