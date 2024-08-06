@@ -1,8 +1,7 @@
 import React, { ReactNode, useCallback, useEffect } from 'react'
-import S from "./styles.module.css"
 import { X } from '@phosphor-icons/react';
-import { CloseButton } from '../../Ui/CloseButton';
-import { Container } from '../Container';
+import { CloseButton } from '../Ui/CloseButton';
+import { Container } from './Container';
 
 type ModalProps = {
     children?: ReactNode;
@@ -11,7 +10,9 @@ type ModalProps = {
 }
 
 export function Modal({ modalStatus, ...props }: ModalProps) {
-    let isOpen = modalStatus ? S.openModal : S.closeModal;
+    let isOpen = modalStatus
+        ? "transform translate-y-0 transition duration-[800ms] ease"
+        : "transform translate-y-[105%] transition duration-[800ms] ease";
 
     const toggleBodyOverflow = useCallback(() => {
         // Overlay Hidden when menu is open
@@ -33,10 +34,9 @@ export function Modal({ modalStatus, ...props }: ModalProps) {
         }
     }, [toggleBodyOverflow])
 
-
     return (
-        <div className={`${S.modalWrap} ${isOpen}`}>
-            <span className={S.closeButton}>
+        <div className={`h-screen w-screen fixed top-0 left-0 z-[99999] min-h-full overflow-y-scroll overflow-x-hidden bg-[#e1e1ec] ${isOpen}`}>
+            <span className="h-[70px] w-full flex items-center bg-secondary justify-center">
                 <CloseButton
                     onClick={props.handleClose}
                     size={32}

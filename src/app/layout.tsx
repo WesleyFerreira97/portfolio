@@ -25,7 +25,8 @@ const primary = Raleway({
 const secondary = Inter({
   subsets: ['latin'],
   weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: "--secondary-font"
+  variable: "--secondary-font",
+  display: "swap"
 })
 
 // const secondary = Titillium_Web({

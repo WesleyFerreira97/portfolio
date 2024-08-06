@@ -34,14 +34,15 @@ const CarouselImage = ({ thumbImg }: CarouselImageProps) => {
 const HeaderPage = () => {
     return (
         <div className='relative h-full flex flex-col sm:mb-8'>
-            <div className='h-[65vh] md:h-[60vh] xl:h-[40vh] bg-secondary flex flex-col justify-center items-center'>
+            <div className='h-[65vh] md:h-[60vh] xl:h-[60vh] bg-secondary flex flex-col justify-center items-center'>
                 <div className='text-center flex flex-col lg:flex-row xl:gap-3'>
                     <Typography
                         bpSizes='text-3xl sm:text-5xl xl:text-6xl'
                         style={{
                             type: "heading",
                             color: "white",
-                            className: 'z-50 uppercase'
+                            className: 'z-50 uppercase tracking-[0.1rem]',
+                            weight: "black"
                         }}
                     >
                         App Administrativo
@@ -51,19 +52,21 @@ const HeaderPage = () => {
                         style={{
                             type: "heading",
                             color: "secondaryAlt",
-                            className: 'z-50 uppercase'
+                            className: 'z-50 uppercase tracking-[0.1rem]',
+                            weight: "black"
                         }}
                     >
                         React Native
                     </Typography>
                 </div>
-                <div className='w-3/4 flex justify-center mt-6 mb-9'>
+                <div className='w-3/6 flex justify-center mt-6 mb-9'>
                     <Typography
-                        bpSizes='text-lg md:text-xlg'
+                        bpSizes='text-[1.25rem]'
+                        // size='md'
                         style={{
                             type: "text",
                             color: "white",
-                            weight: "normal",
+                            weight: "light",
                             className: "text-center"
                         }} >
                         App para administração de academias, gerenciamento de matriculas, vencimentos e clientes ativos, feito em react native CLI e react native paper
@@ -108,11 +111,13 @@ const ContentPage = () => {
                                 <span className='absolute right-0 bg-secondaryAlt h-[8px] w-[8px] rounded-full block' />
                             </span>
                             <Typography
+                                as='h2'
                                 size='md'
                                 style={{
                                     type: "heading",
                                     color: "secondaryAlt",
-                                    className: "mx-4 uppercase"
+                                    className: "mx-4 uppercase",
+                                    weight: "extraBold"
                                 }}
                             >
                                 Admin App
@@ -127,9 +132,10 @@ const ContentPage = () => {
                             size='sm'
                             style={{
                                 type: "text",
-                                color: "secondaryAlt",
-                                lineHeight: "snug",
-                                className: "text-center"
+                                weight: "normal",
+                                color: "lightGray",
+                                lineHeight: "loose",
+                                className: "font-normal tracking-[-0.25px]",
                             }}
                         >
                             <Typography.Paragraph>
