@@ -12,7 +12,7 @@ const sizeByBreakpoint = (type: FontTypes, size: Partial<Breakpoints>) => {
         sm: "text-[1.125rem]",
         md: "text-2xl md:text-3xl",
         lg: "text-[2.5rem]",
-        xlg: "text-5xl text-6xl",
+        xlg: "text-[2.5rem] xl:text-[3rem]",
     }
 
     const sizesText: MapBreakpointsToStrings = {

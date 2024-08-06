@@ -26,7 +26,8 @@ const config: Config = {
       },
       colors: {
         'primary': '#ED1755',
-        'secondary': '#0C1127',
+        // 'secondary': '#0C1127',
+        'secondary': '#090D1F',
         'secondaryAlt': '#313552',
         'lightGray': '#646F7E',
         'gray': '#383e3a',

@@ -27,31 +27,63 @@ export function ProjectSection({ props }: SectionProjectProps) {
                 <Typography
                     as='span'
                     size='sm'
-                    style={{ type: 'heading', color: "primary", weight: 'semiBold' }}
+                    style={{
+                        type: 'heading',
+                        color: "primary",
+                        weight: 'semiBold',
+                        className: "block mb-2 tracking-[0.03rem]"
+                    }}
                 >
                     Projeto
                 </Typography>
                 <Typography
                     as='h2'
-                    size='lg'
-                    style={{ type: 'heading', color: "white", weight: "extraBold", className: "uppercase", lineHeight: "loose" }}
+                    size='xlg'
+                    style={{
+                        type: 'heading',
+                        color: "white",
+                        weight: "extraBold",
+                        className: "uppercase leading-[120%] mb-[1rem]",
+                    }}
                 >
                     {props.projectTitle}
                 </Typography>
                 <Typography
                     as='h2'
-                    bpSizes='text-[14px]'
-                    style={{ type: 'heading', className: "uppercase color-secondary", color: "white", weight: "bold" }}
+                    bpSizes='text-[16px]'
+                    style={{ type: 'heading', className: "uppercase color-secondary tracking-[0.05rem]", color: "white", weight: "semiBold", }}
                 >
                     E-commerce
-                    <span className='text-lightGray mt-'> React JS/Native e Supabase</span>
+                    <span className='text-lightGray'> React JS/Native e Supabase</span>
                 </Typography>
                 <Typography
                     as='h2'
                     size='sm'
-                    style={{ type: 'heading', color: "white", weight: "light", lineHeight: "loose", className: "mt-8 " }}
+                    style={{
+                        type: 'heading',
+                        color: "white",
+                        weight: "light",
+                        lineHeight: "loose",
+                        className: "mt-8 tracking-[0.03rem]"
+                    }}
                 >
                     Esse projeto utiliza a API do github para fazer uma query nos perfis e trazer informações acerca da conta do usuário, além de implementar um chat, que envia e recebe dados em tempo real com uma plataforma de BackEnd as a Service ( Supabase).
+                </Typography>
+                <Typography
+                    as='ul'
+                    size='sm'
+                    style={{ type: 'heading', color: "white", weight: "light", lineHeight: "loose", className: "mt-8 flex" }}
+                >
+                    {props.skills && (
+                        props.skills.map((skill, index) => (
+                            <li
+                                key={index}
+                                className='mr-4 text-lightGray'
+                            >
+                                {skill}
+                            </li>
+                        ))
+                    )}
                 </Typography>
             </div>
             <div className='relative w-[50%] overflow-hidden h-[550px] aspect-video'>
