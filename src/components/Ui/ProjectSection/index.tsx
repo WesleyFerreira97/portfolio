@@ -5,7 +5,7 @@ import ImageTest from "@/../public/images/bela_garota_images/bg-thumbnail.png"
 import Image from 'next/image';
 import type { SingleInfoProps } from '@/data/frontEndProjects';
 import { Button } from '../Button';
-import { FigmaLogo, GithubLogo } from '@phosphor-icons/react';
+import { Clipboard, ArrowFatLineRight } from '@phosphor-icons/react';
 import { useSwiper } from 'swiper/react';
 
 type ProjectProps = {
@@ -28,7 +28,7 @@ export function ProjectSection({ ...props }: ProjectProps) {
     const swiper = useSwiper();
 
     return (
-        <div className="flex py-28 cursor-pointer">
+        <div className="flex h-[80vh] items-center justify-center cursor-pointer py-28">
             <div className='w-[50%] pl-64 pr-8'>
                 <Typography
                     as='span'
@@ -98,15 +98,15 @@ export function ProjectSection({ ...props }: ProjectProps) {
                 </button>
                 <div className='flex gap-4'>
                     <Button
-                        icon={GithubLogo}
-                        text='Detalhes'
+                        icon={Clipboard}
+                        text=' Detalhes'
                         animation={false}
                         bg='primary'
                         onClick={() => props.handleModal(props.singleData)}
                     />
                     <Button
-                        icon={FigmaLogo}
-                        text='Proximo Projeto'
+                        icon={ArrowFatLineRight}
+                        text=' Proximo Projeto'
                         onClick={() => swiper.slideNext()}
                     />
 

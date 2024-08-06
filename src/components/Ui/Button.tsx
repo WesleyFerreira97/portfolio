@@ -36,7 +36,7 @@ const Button = ({ icon, text, animation = true, bg = "secondaryAlt", ...props }:
                     className: "z-20"
                 }}
             >
-                <CurrentIcon size={16} className='inline mr-1' />
+                <CurrentIcon size={20} className='inline mr-1' />
                 {text}
             </Typography>
         </div>
