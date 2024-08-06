@@ -10,7 +10,7 @@ import { SectionHeader } from '@/components/Sections/SectionHeader';
 import { SingleProduct } from '../Singles/SingleProduct';
 import { ProjectSection } from '../Ui/ProjectSection';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { A11y, Navigation, Pagination, Scrollbar, Autoplay, } from "swiper/modules";
+import { A11y, Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
 
 type SkillsKeys = keyof typeof SkillsData
 
@@ -19,7 +19,6 @@ export function Skills() {
     const [singleInfo, setSingleInfo] = useState<SingleInfoProps>()
 
     const toggleModalState = () => setIsModalOpen(prev => !prev);
-    console.log(singleInfo, "single info");
 
     const handleModal = (value?: any) => {
         toggleModalState();
