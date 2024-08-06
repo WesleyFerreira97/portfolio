@@ -3,6 +3,7 @@ import React from 'react'
 import { Typography } from '../Typography';
 import ImageTest from "@/../public/images/bela_garota_images/bg-thumbnail.png"
 import Image from 'next/image';
+import type { SingleInfoProps } from '@/data/frontEndProjects';
 
 type ProjectProps = {
     projectTitle: string;
@@ -10,6 +11,8 @@ type ProjectProps = {
     description: string;
     skills: string[];
     thumb: any;
+    singleData?: SingleInfoProps;
+    handleModal: (value?: any) => void
 }
 
 
@@ -18,8 +21,7 @@ export type SectionProjectProps = {
 }
 
 
-export function ProjectSection({ props }: SectionProjectProps) {
-    console.log(props)
+export function ProjectSection({ ...props }: ProjectProps) {
 
     return (
         <div className="flex py-20">
@@ -85,6 +87,11 @@ export function ProjectSection({ props }: SectionProjectProps) {
                         ))
                     )}
                 </Typography>
+                <button
+                    onClick={() => props.handleModal(props.singleData)}
+                >
+                    Detalhes
+                </button>
             </div>
             <div className='relative w-[50%] overflow-hidden h-[550px] aspect-video'>
                 <Image

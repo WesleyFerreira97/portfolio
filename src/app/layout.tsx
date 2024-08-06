@@ -46,7 +46,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`${primary.variable} ${secondary.variable} font-sans bg-[#ECE8E1]`}>
+      <body className={`${primary.variable} ${secondary.variable} font-sans bg-[#e1e1ec]`}>
         {children}
       </body>
     </html>

@@ -11,6 +11,7 @@ import { Typography } from '@/components/Ui/Typography'
 import { GithubLogo, FigmaLogo } from '@phosphor-icons/react'
 import { Button } from '@/components/Ui/Button'
 import { Container } from '../Layout/Container'
+import { SingleInfoProps } from '@/data/frontEndProjects'
 
 type CarouselImageProps = {
     thumbImg: StaticImageData
@@ -151,7 +152,7 @@ const ContentPage = () => {
     )
 }
 
-export function SingleProduct() {
+export function SingleProduct(props: SingleInfoProps) {
     const carouselImages = [HomeImg, HomeHalfPage, HomeWidgets, HomeSingleProduct];
 
     return (

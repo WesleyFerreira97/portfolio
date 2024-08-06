@@ -4,7 +4,7 @@ import { Pencil } from '@phosphor-icons/react';
 import React, { useState } from 'react'
 import { SkillsData } from '../../data/skills';
 import { Typography } from '@/components/Ui/Typography';
-import { frontEndProjectsData } from '../../data/frontEndProjects';
+import { frontEndProjectsData, SingleInfoProps } from '../../data/frontEndProjects';
 import { CardProject } from '@/components/Ui/CardProject';
 import { SectionHeader } from '@/components/Sections/SectionHeader';
 import { SingleProduct } from '../Singles/SingleProduct';
@@ -16,13 +16,14 @@ type SkillsKeys = keyof typeof SkillsData
 
 export function Skills() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [modalContent, setModalContent] = useState("")
+    const [singleInfo, setSingleInfo] = useState<SingleInfoProps>()
 
     const toggleModalState = () => setIsModalOpen(prev => !prev);
+    console.log(singleInfo, "single info");
 
-    const handleModal = (value: any) => {
+    const handleModal = (value?: any) => {
         toggleModalState();
-        setModalContent(value)
+        setSingleInfo(value)
     }
 
     const skills = {
@@ -69,17 +70,23 @@ export function Skills() {
                             <div
                                 key={index}
                                 className='my-20 bg-secondary py-6'
-                                onClick={() => handleModal(<SingleProduct />)}
                             >
-                                <ProjectSection props={values} />
+                                <ProjectSection
+                                    {...values}
+                                    handleModal={handleModal}
+                                />
                             </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <Modal handleClose={toggleModalState} modalStatus={isModalOpen}>
-                    {modalContent}
-                </Modal>
+
+                {singleInfo && (
+                    <Modal handleClose={toggleModalState} modalStatus={isModalOpen}>
+                        <SingleProduct {...singleInfo} />
+                    </Modal>
+                )}
             </Container.Inner>
         </Container>
     )
 }
+
