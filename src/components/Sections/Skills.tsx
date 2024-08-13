@@ -32,13 +32,8 @@ const skills = {
 
 export function Skills() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const { dataSingle, setDataSingle } = useSingleContext()
+    const { dataSingle } = useSingleContext()
     const toggleModalState = () => setIsModalOpen(prev => !prev);
-
-    const handleModal = (value?: any) => {
-        toggleModalState();
-        // setSingleInfo(value)
-    }
 
     return (
         <Container>
@@ -68,7 +63,7 @@ export function Skills() {
                             >
                                 <ProjectSection
                                     {...values}
-                                    handleModal={handleModal}
+                                    handleModal={toggleModalState}
                                 />
                             </div>
                         </SwiperSlide>

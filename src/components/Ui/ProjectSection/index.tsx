@@ -7,6 +7,8 @@ import type { SingleInfoProps } from '@/data/frontEndProjects';
 import { Button } from '../Button';
 import { Clipboard, ArrowFatLineRight } from '@phosphor-icons/react';
 import { useSwiper } from 'swiper/react';
+import { SingleProjectProps } from '@/components/Singles/SingleProject';
+import { useSingleContext } from '@/components/Hooks/useSingleData';
 
 type ProjectProps = {
     projectTitle: string;
@@ -14,7 +16,7 @@ type ProjectProps = {
     description: string;
     skills: string[];
     thumb: any;
-    singleData?: SingleInfoProps;
+    singleData: SingleInfoProps;
     handleModal: (value?: any) => void
 }
 
@@ -26,9 +28,25 @@ export type SectionProjectProps = {
 
 export function ProjectSection({ ...props }: ProjectProps) {
     const swiper = useSwiper();
+    const { setDataSingle } = useSingleContext()
+    const data = props.singleData;
+
+    const singleData: SingleProjectProps = {
+        article: data.article,
+        articleTitle: data?.articleTitle,
+        description: props.description,
+        gallery: data.gallery,
+        links: data.links,
+        mainTitle: data.mainTitle
+    }
+
+    const handleSection = () => {
+        setDataSingle(singleData);
+        props.handleModal()
+    }
 
     return (
-        <div className="flex h-[80vh] items-center justify-center cursor-pointer py-28">
+        <div className="flex h-[85vh] items-center justify-center cursor-pointer py-28">
             <div className='w-[50%] pl-64 pr-8'>
                 <Typography
                     as='span'
@@ -83,7 +101,7 @@ export function ProjectSection({ ...props }: ProjectProps) {
                         color: "white",
                         weight: "light",
                         lineHeight: "loose",
-                        className: "mt-8 flex"
+                        className: "my-8 flex"
                     }}
                 >
                     {props.skills && (
@@ -103,8 +121,7 @@ export function ProjectSection({ ...props }: ProjectProps) {
                         text=' Detalhes'
                         animation={false}
                         bg='primary'
-                        // onClick={() => props.handleModal(props)}
-                        onClick={props.handleModal}
+                        onClick={handleSection}
                     />
                     <Button
                         icon={ArrowFatLineRight}
