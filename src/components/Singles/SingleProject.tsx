@@ -15,7 +15,7 @@ type CarouselImageProps = {
 
 const CarouselImage = ({ thumbImg }: CarouselImageProps) => {
     return (
-        <div className='h-96 w-full'>
+        <div className='h-[400px] sm:h-[500px] xl:h-[600px] 2xl:h-[700px]  w-full'>
             <Image
                 src={thumbImg}
                 fill={true}
@@ -95,7 +95,7 @@ const HeaderPage = (props: HeaderProps) => {
             </div>
             <div className='w-full flex justify-center overflow-hiddenn bg-primarya'>
                 <span className='absolute w-full h-[250px] sm:h-[350px] bg-secondary block' />
-                <div className='h-full w-full'>
+                <div className='h-full w-[60%]'>
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                         slidesPerView={1}
@@ -109,17 +109,18 @@ const HeaderPage = (props: HeaderProps) => {
                         scrollbar={{ draggable: true }}
                         pagination={{ clickable: true }}
                     >
-                        <SwiperSlide className='h-[400px] sm:h-[500px] xl:h-[600px] 2xl:h-[700px] '>
+                        <SwiperSlide className=''>
                             <CarouselImage
                                 thumbImg={SiamHome}
                             />
                         </SwiperSlide>
-                        <SwiperSlide className='h-[400px] sm:h-[500px] xl:h-[600px] 2xl:h-[700px] '>
-                            <CarouselImage
-                                thumbImg={SiamHome}
-                            />
+                        <SwiperSlide className=''>
+                            <div className='overflow-hidden'>
+                                <CarouselImage
+                                    thumbImg={SiamHome}
+                                />
+                            </div>
                         </SwiperSlide>
-
                     </Swiper>
                 </div>
             </div>
