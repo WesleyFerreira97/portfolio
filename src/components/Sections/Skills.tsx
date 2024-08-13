@@ -2,46 +2,42 @@ import { Container } from '@/components/Layout/Container'
 import { Modal } from '@/components/Layout/Modal';
 import { Pencil } from '@phosphor-icons/react';
 import React, { useState } from 'react'
-import { SkillsData } from '../../data/skills';
 import { Typography } from '@/components/Ui/Typography';
 import { frontEndProjectsData, SingleInfoProps } from '../../data/frontEndProjects';
-import { CardProject } from '@/components/Ui/CardProject';
 import { SectionHeader } from '@/components/Sections/SectionHeader';
-import { SingleProduct } from '../Singles/SingleProduct';
+import { SingleProject } from '../Singles/SingleProject';
 import { ProjectSection } from '../Ui/ProjectSection';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
+import { useSingleContext } from '../Hooks/useSingleData';
 
-type SkillsKeys = keyof typeof SkillsData
+const skills = {
+    frontEnd: {
+        title: "Front-End",
+        link: "string",
+    },
+    mobile: {
+        title: "Mobile",
+        link: "string",
+    },
+    designer: {
+        title: "Designer",
+        link: "string",
+    },
+    comunicacao: {
+        title: "Comunicação",
+        link: "string",
+    },
+}
 
 export function Skills() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [singleInfo, setSingleInfo] = useState<SingleInfoProps>()
-
+    const { dataSingle, setDataSingle } = useSingleContext()
     const toggleModalState = () => setIsModalOpen(prev => !prev);
 
     const handleModal = (value?: any) => {
         toggleModalState();
-        setSingleInfo(value)
-    }
-
-    const skills = {
-        frontEnd: {
-            title: "Front-End",
-            link: "string",
-        },
-        mobile: {
-            title: "Mobile",
-            link: "string",
-        },
-        designer: {
-            title: "Designer",
-            link: "string",
-        },
-        comunicacao: {
-            title: "Comunicação",
-            link: "string",
-        },
+        // setSingleInfo(value)
     }
 
     return (
@@ -79,13 +75,12 @@ export function Skills() {
                     ))}
                 </Swiper>
 
-                {singleInfo && (
+                {dataSingle && (
                     <Modal handleClose={toggleModalState} modalStatus={isModalOpen}>
-                        <SingleProduct {...singleInfo} />
+                        <SingleProject {...dataSingle} />
                     </Modal>
                 )}
             </Container.Inner>
         </Container>
     )
 }
-

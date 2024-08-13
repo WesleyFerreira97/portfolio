@@ -1,17 +1,13 @@
 import React from 'react'
-import HomeImg from "../../../public/images/bela_garota_images/home_main_content.png"
-import HomeHalfPage from "../../../public/images/bela_garota_images/home_halfpage.png"
-import HomeWidgets from "../../../public/images/bela_garota_images/home_widgets.png"
-import HomeSingleProduct from "../../../public/images/bela_garota_images/single_product.png"
 import SiamHome from "../../../public/images/bela_garota_images/SiamMockup.png"
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules';
 import Image, { StaticImageData } from 'next/image'
 import { Typography } from '@/components/Ui/Typography'
 import { GithubLogo, FigmaLogo } from '@phosphor-icons/react'
 import { Button } from '@/components/Ui/Button'
 import { Container } from '../Layout/Container'
-import { SingleInfoProps } from '@/data/frontEndProjects'
+import { ProjectDataProps, SingleInfoProps } from '@/data/frontEndProjects'
+import { A11y, Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
 
 type CarouselImageProps = {
     thumbImg: StaticImageData
@@ -24,14 +20,23 @@ const CarouselImage = ({ thumbImg }: CarouselImageProps) => {
                 src={thumbImg}
                 fill={true}
                 alt="Home"
-                className='object-cover w-full h-full'
+                // className='object-cover w-full h-full'
+                className='z-50 relative h-full w-full object-contain'
                 quality={100}
             />
+
         </div>
     )
 }
 
-const HeaderPage = () => {
+type ProjectProps = Pick<ProjectDataProps, "description">
+type SingleProps = Pick<SingleInfoProps, "mainTitle" | "gallery" | "links">
+type ContentProps = Pick<SingleInfoProps, "articleTitle" | "article">
+type HeaderProps = ProjectProps & SingleProps;
+export type SingleProjectProps = HeaderProps & ContentProps
+
+const HeaderPage = (props: HeaderProps) => {
+
     return (
         <div className='relative h-full flex flex-col sm:mb-8'>
             <div className='h-[65vh] md:h-[60vh] xl:h-[60vh] bg-secondary flex flex-col justify-center items-center'>
@@ -45,7 +50,7 @@ const HeaderPage = () => {
                             weight: "black"
                         }}
                     >
-                        App Administrativo
+                        {props.mainTitle[0]}
                     </Typography>
                     <Typography
                         bpSizes='text-3xl sm:text-5xl xl:text-6xl'
@@ -56,7 +61,7 @@ const HeaderPage = () => {
                             weight: "black"
                         }}
                     >
-                        React Native
+                        {props.mainTitle[1]}
                     </Typography>
                 </div>
                 <div className='w-3/6 flex justify-center mt-6 mb-9'>
@@ -69,28 +74,62 @@ const HeaderPage = () => {
                             weight: "light",
                             className: "text-center"
                         }} >
-                        App para administração de academias, gerenciamento de matriculas, vencimentos e clientes ativos, feito em react native CLI e react native paper
+                        {props.description}
                     </Typography>
                 </div>
                 <div className='my-8 z-50 flex gap-4 text-x'>
-                    <Button icon={GithubLogo} text='Github' />
-                    <Button icon={FigmaLogo} text='Figma' />
+                    {Object.entries(props.links).map((key, index) => {
+                        const label = key[0];
+                        const link = key[1];
+
+                        return (
+                            <Button
+                                key={index}
+                                icon={label == "repo" ? GithubLogo : FigmaLogo}
+                                text={label}
+                                href={link}
+                            />
+                        )
+                    })}
                 </div>
             </div>
             <div className='w-full flex justify-center overflow-hiddenn bg-primarya'>
                 <span className='absolute w-full h-[250px] sm:h-[350px] bg-secondary block' />
-                <Image
-                    src={SiamHome}
-                    alt="Home"
-                    className='z-50 relative h-[400px] sm:h-[500px] xl:h-[600px] 2xl:h-[700px] object-contain'
-                />
+                <div className='h-full w-full'>
+                    <Swiper
+                        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                        slidesPerView={1}
+                        // autoplay={{
+                        //     delay: 3000,
+                        //     disableOnInteraction: false,
+                        // }}
+                        navigation
+                        loop
+                        watchOverflow
+                        scrollbar={{ draggable: true }}
+                        pagination={{ clickable: true }}
+                    >
+                        <SwiperSlide className='h-[400px] sm:h-[500px] xl:h-[600px] 2xl:h-[700px] '>
+                            <CarouselImage
+                                thumbImg={SiamHome}
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide className='h-[400px] sm:h-[500px] xl:h-[600px] 2xl:h-[700px] '>
+                            <CarouselImage
+                                thumbImg={SiamHome}
+                            />
+                        </SwiperSlide>
+
+                    </Swiper>
+                </div>
             </div>
         </div>
     )
 }
 
+const ContentPage = (props: ContentProps) => {
+    const { articleTitle, article } = props;
 
-const ContentPage = () => {
     return (
         <Container>
             <Container.Inner>
@@ -120,7 +159,7 @@ const ContentPage = () => {
                                     weight: "extraBold"
                                 }}
                             >
-                                Admin App
+                                {articleTitle}
                             </Typography>
                             <span className='relative h-[2px] bg-secondaryAlt flex-grow flex justify-center items-center'>
                                 <span className='absolute left-0 bg-secondaryAlt h-[8px] w-[8px] rounded-full block' />
@@ -138,17 +177,13 @@ const ContentPage = () => {
                                 className: "font-normal tracking-[-0.25px]",
                             }}
                         >
-                            <Typography.Paragraph>
-                                Esse projeto utiliza a API do github para fazer uma query nos perfis e trazer informações acerca da conta do usuário, além de implementar um chat, que envia e recebe dados em tempo real com uma plataforma de BackEnd as a Service ( Supabase).
-                            </Typography.Paragraph>
+                            {article &&
+                                article.map((paragraph, index) => (
+                                    <Typography.Paragraph key={index}>
+                                        {paragraph}
+                                    </Typography.Paragraph>
 
-                            <Typography.Paragraph>
-                                Esse projeto utiliza a API do github para fazer uma query nos perfis e trazer informações acerca da conta do usuário, além de implementar um chat, que envia e recebe dados em tempo real commentar um chat, que envia e recebe dados em tempo real commentar um chat, que envia e recebe dados em tempo real com
-                            </Typography.Paragraph>
-
-                            <Typography.Paragraph>
-                                Implementar um chat, que envia e recebe dados em tempo real commentar um chat, que envia e recebe dados em tempo real commentar um chat, que envia e recebe dados em tempo real com
-                            </Typography.Paragraph>
+                                ))}
                         </Typography>
                     </div>
 
@@ -158,38 +193,14 @@ const ContentPage = () => {
     )
 }
 
-export function SingleProduct(props: SingleInfoProps) {
-    const carouselImages = [HomeImg, HomeHalfPage, HomeWidgets, HomeSingleProduct];
+// description maintitle gallery links
+
+export function SingleProject({ article, articleTitle, ...props }: SingleProjectProps) {
 
     return (
         <div className="flex flex-col">
-            <HeaderPage />
-            <ContentPage />
+            <HeaderPage {...props} />
+            <ContentPage article={article} articleTitle={articleTitle} />
         </div>
     )
 }
-
-
-
-{/* <Swiper
-    slidesPerView={3}
-    spaceBetween={10}
-    pagination={{
-        clickable: true,
-    }}
-    // modules={[Pagination]}
-    className="flex flex-col"
->
-    {carouselImages.map((image, index) => (
-        <>
-            <SwiperSlide key={index}>
-                <CarouselImage thumbImg={image} />
-            </SwiperSlide>
-        </>
-    ))}
-
-</Swiper> */}
-
-
-
-

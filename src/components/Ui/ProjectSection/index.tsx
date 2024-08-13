@@ -78,7 +78,13 @@ export function ProjectSection({ ...props }: ProjectProps) {
                 <Typography
                     as='ul'
                     size='sm'
-                    style={{ type: 'heading', color: "white", weight: "light", lineHeight: "loose", className: "mt-8 flex" }}
+                    style={{
+                        type: 'heading',
+                        color: "white",
+                        weight: "light",
+                        lineHeight: "loose",
+                        className: "mt-8 flex"
+                    }}
                 >
                     {props.skills && (
                         props.skills.map((skill, index) => (
@@ -91,18 +97,14 @@ export function ProjectSection({ ...props }: ProjectProps) {
                         ))
                     )}
                 </Typography>
-                <button
-                    onClick={() => props.handleModal(props.singleData)}
-                >
-                    Detalhes
-                </button>
                 <div className='flex gap-4'>
                     <Button
                         icon={Clipboard}
                         text=' Detalhes'
                         animation={false}
                         bg='primary'
-                        onClick={() => props.handleModal(props.singleData)}
+                        // onClick={() => props.handleModal(props)}
+                        onClick={props.handleModal}
                     />
                     <Button
                         icon={ArrowFatLineRight}

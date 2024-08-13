@@ -6,7 +6,8 @@ type ButtonProps = {
     text: string;
     animation?: boolean;
     bg?: "primary" | "secondary" | "secondaryAlt",
-    onClick?: () => void
+    onClick?: () => void;
+    href?: string;
 }
 
 const Button = ({ icon, text, animation = true, bg = "secondaryAlt", ...props }: ButtonProps) => {
@@ -21,7 +22,9 @@ const Button = ({ icon, text, animation = true, bg = "secondaryAlt", ...props }:
     const bgSelect = bg ? buttonColors[bg] : "";
 
     return (
-        <div
+        <a
+            href={props.href}
+            target="_blank"
             onClick={props.onClick}
             className={`${bgSelect} cursor-pointer relative px-9 py-3 flex justify-center items-center overflow-hidden rounded-sm active:scale-95 group`}
         >
@@ -33,13 +36,13 @@ const Button = ({ icon, text, animation = true, bg = "secondaryAlt", ...props }:
                 style={{
                     type: "text",
                     color: "white",
-                    className: "z-20"
+                    className: "z-20 capitalize"
                 }}
             >
                 <CurrentIcon size={20} className='inline mr-1' />
                 {text}
             </Typography>
-        </div>
+        </a>
     )
 }
 
