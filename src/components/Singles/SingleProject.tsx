@@ -38,7 +38,7 @@ export type SingleProjectProps = HeaderProps & ContentProps
 const HeaderPage = (props: HeaderProps) => {
 
     return (
-        <div className='relative h-full flex flex-col sm:mb-8'>
+        <div className='relative h-full flex flex-col sm:mb-6'>
             <div className='h-[65vh] md:h-[60vh] xl:h-[60vh] bg-secondary flex flex-col justify-center items-center'>
                 <div className='text-center flex flex-col lg:flex-row xl:gap-3'>
                     <Typography
@@ -93,7 +93,7 @@ const HeaderPage = (props: HeaderProps) => {
                     })}
                 </div>
             </div>
-            <div className='w-full flex justify-center overflow-hiddenn bg-primarya'>
+            <div className='w-full flex justify-center overflow-hiddenn'>
                 <span className='absolute w-full h-[250px] sm:h-[350px] bg-secondary block' />
                 <div className='h-full w-[60%]'>
                     <Swiper

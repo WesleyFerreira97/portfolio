@@ -1,4 +1,3 @@
-import { Container } from '@/components/Layout/Container';
 import React from 'react'
 import { Typography } from '../Typography';
 import ImageTest from "@/../public/images/bela_garota_images/bg-thumbnail.png"
@@ -91,7 +90,7 @@ export function ProjectSection({ ...props }: ProjectProps) {
                         className: "mt-8 tracking-[0.03rem]"
                     }}
                 >
-                    Esse projeto utiliza a API do github para fazer uma query nos perfis e trazer informações acerca da conta do usuário, além de implementar um chat, que envia e recebe dados em tempo real com uma plataforma de BackEnd as a Service ( Supabase).
+                    {props.description}
                 </Typography>
                 <Typography
                     as='ul'
