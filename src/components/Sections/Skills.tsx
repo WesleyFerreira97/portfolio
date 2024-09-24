@@ -37,38 +37,38 @@ export function Skills() {
 
     return (
         <Container>
-            <Container.Inner size='full'>
+            <Container.Inner size='full' gap='noGap'>
                 <SectionHeader
                     headerTitle='Projetos e Habilidades'
                     menuOptions={skills}
                 />
-                <Swiper
+                {/* <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                     slidesPerView={1}
                     // autoplay={{
                     //     delay: 3000,
                     //     disableOnInteraction: false,
-                    // }}
+                    // }}   
                     navigation
                     loop
                     watchOverflow
                     scrollbar={{ draggable: true }}
                     pagination={{ clickable: true }}
-                >
+                > */}
                     {frontEndProjectsData.map((values, index) => (
-                        <SwiperSlide key={index}>
+                        // <SwiperSlide key={index}>
                             <div
                                 key={index}
-                                className='my-20 bg-secondary py-6'
+                                className='bg-secondary py-6'
                             >
                                 <ProjectSection
                                     {...values}
                                     handleModal={toggleModalState}
                                 />
                             </div>
-                        </SwiperSlide>
+                        // </SwiperSlide>
                     ))}
-                </Swiper>
+                {/* </Swiper> */}
 
                 {dataSingle && (
                     <Modal handleClose={toggleModalState} modalStatus={isModalOpen}>
