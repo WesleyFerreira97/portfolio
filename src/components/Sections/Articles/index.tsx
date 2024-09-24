@@ -76,7 +76,7 @@ export function Articles() {
                         ))}
                     </ul>
                 </div>
-                <div className='mb-20 flex gap-3 flex-wrap'>
+                <div className='mb-20 flex justify-center gap-3 flex-wrap'>
                     {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((value, index) => (
                         <div
                             key={index}

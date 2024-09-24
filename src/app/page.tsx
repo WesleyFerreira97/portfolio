@@ -23,7 +23,7 @@ export default function Home() {
                 </Container>
                 <AboutMe />
                 <Skills />
-                {/* <Articles /> */}
+                <Articles />
                 <MainNavbar.MenuMobile />
             </MainNavbar>
         </SingleDataProvider>
