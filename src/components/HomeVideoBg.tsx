@@ -1,6 +1,8 @@
 import React from 'react'
 
 export function HomeVideoBg() {
+    const BASE_PATH = "portfolio"
+    
     return (
         <div className="h-full w-full absolute top-0 left-0 object-cover">
             <video className="absolute top-0 left-0 h-full w-full object-cover" autoPlay loop muted>
