@@ -17,7 +17,7 @@ export default function Home() {
         <SingleDataProvider>
             <MainNavbar>
                 <Container>
-                    <Container.Inner size='full' gap='xxl'>
+                    <Container.Inner size='full' gap='md'>
                         <HomeMainContent />
                     </Container.Inner>
                 </Container>

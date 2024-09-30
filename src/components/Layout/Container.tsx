@@ -17,7 +17,7 @@ const gapSizes: ContainerGapProps = {
     noGap: "",
     xs: "mb-12",
     sm: "mb-16",
-    md: "mb-20",
+    md: "my-12",
     lg: "mb-24",
     xl: "mb-28",
     xxl: "mb-24 lg:mb-36",
