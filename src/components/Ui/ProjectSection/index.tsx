@@ -46,7 +46,7 @@ export function ProjectSection({ ...props }: ProjectProps) {
 
     return (
         <div className="flex h-[85vh] items-center justify-center cursor-pointer py-28">
-            <div className='w-[50%] pl-64 pr-8'>
+            <div className='w-[50%] pl-24 lg:pl-64 pr-8'>
                 <Typography
                     as='span'
                     size='sm'
