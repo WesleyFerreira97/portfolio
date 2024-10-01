@@ -32,11 +32,11 @@ const Button = ({ icon, text, animation = true, bg = "secondaryAlt", ...props }:
                 <span className="flex bg-mask absolute w-full h-full bg-primary z-10 transform-gpu  transition-transform duration-[300ms] ease-out skew-x-[90deg] scale-x-0 origin-bottom-left group-hover:skew-x-0 group-hover:scale-x-100"></span>
             )}
             <Typography
-                size='md'
+                bpSizes="text-[0.8rem] md:text-[1rem] 2xl:text-[1.125rem]"
                 style={{
                     type: "text",
                     color: "white",
-                    className: "z-20 capitalize"
+                    className: "z-20 capitalize whitespace-nowrap"
                 }}
             >
                 <CurrentIcon size={20} className='inline mr-1' />

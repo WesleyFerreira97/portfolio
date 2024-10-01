@@ -48,7 +48,7 @@ export function ProjectSection({ ...props }: ProjectProps) {
     // bg-[#161853] 
     return (
         <div className="flex flex-col md:flex-row min-h-[85vh] items-center justify-center cursor-pointer md:py-12 md:pl-24 2xl:pl-40 max-md:py-12">
-            <div className='w-[90%] md:w-[50%] order-2 md:order-1 pt-6 text-center md:text-left md:pr-10 '>
+            <div className='w-[90%] md:w-[50%] order-2 md:order-1 pt-6 text-center md:text-left md:pr-10 2xl:pr-14 '>
                 <Typography
                     as='span'
                     bpSizes="text-[0.9rem] md:text-[1rem] 2xl:text-[1.125rem]"
@@ -82,8 +82,8 @@ export function ProjectSection({ ...props }: ProjectProps) {
                     <span className='text-lightGray'> React JS/Native e Supabase</span>
                 </Typography>
                 <Typography
-                    as='h2'
-                    bpSizes="text-[0.8rem] md:text-[1rem] 2xl:text-[1.125rem]"
+                    as='p'
+                    bpSizes="text-[0.8rem] md:text-[1rem] 2xl:text-[1.125rem] 2xl:mt-16"
                     style={{
                         type: 'heading',
                         color: "white",
@@ -102,7 +102,7 @@ export function ProjectSection({ ...props }: ProjectProps) {
                         color: "white",
                         weight: "light",
                         lineHeight: "loose",
-                        className: "mt-6 mb-3 flex flex-wrap justify-center md:justify-start whitespace-nowrap gap-x-3"
+                        className: "mt-6 mb-3 flex flex-wrap justify-center md:justify-start whitespace-nowrap gap-x-3 2xl:my-16"
                     }}
                 >
                     {props.skills && (
@@ -132,7 +132,7 @@ export function ProjectSection({ ...props }: ProjectProps) {
 
                 </div>
             </div>
-            <div className='relative w-[90%] md:w-[50%] md:order-1 overflow-hiddean md:h-[400px] 2xl:h-[550px] aspect-video'>
+            <div className='relative w-[90%] md:w-[50%] 2xl:w-[55%] md:order-1 overflow-hiddean md:h-[400px] 2xl:h-[550px] aspect-video'>
                 <Image
                     src={ImageTest}
                     fill={true}
