@@ -20,7 +20,7 @@ export type CardProjectProps = {
 
 const CardInfo = ({ props }: CardProjectProps) => {
     return (
-        <div className="h-full flex flex-col items-end text-right justify-center relative">
+        <div className="h-full flex flex-col items-end text-right justify-center relative gap-y-5">
             <div className="z-10 relative pr-4 pb-5">
                 <Typography
                     as='span'

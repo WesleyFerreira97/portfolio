@@ -102,14 +102,14 @@ export function ProjectSection({ ...props }: ProjectProps) {
                         color: "white",
                         weight: "light",
                         lineHeight: "loose",
-                        className: "my-8 flex justify-center md:justify-start"
+                        className: "mt-6 mb-3 flex flex-wrap justify-center md:justify-start whitespace-nowrap gap-x-3"
                     }}
                 >
                     {props.skills && (
                         props.skills.map((skill, index) => (
                             <li
                                 key={index}
-                                className='mr-4 text-lightGray'
+                                className='text-lightGray'
                             >
                                 {skill}
                             </li>
