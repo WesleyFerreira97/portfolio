@@ -16,14 +16,18 @@ export default function Home() {
     return (
         <SingleDataProvider>
             <MainNavbar>
-                <Container>
-                    <Container.Inner size='full' gap='md'>
-                        <HomeMainContent />
-                    </Container.Inner>
-                </Container>
-                <AboutMe />
-                <Skills />
-                {/* <Articles /> */}
+                <div className='mb-12'>
+                    <HomeMainContent />
+                </div>
+                <div className='my-36'>
+                    <AboutMe />
+                </div>
+                <div className='my-36'>
+                    <Skills />
+                </div>
+                <div className='my-36'>
+                    {/* <Articles /> */}
+                </div>
                 <MainNavbar.MenuMobile />
             </MainNavbar>
         </SingleDataProvider>

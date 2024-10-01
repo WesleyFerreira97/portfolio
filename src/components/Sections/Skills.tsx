@@ -38,10 +38,12 @@ export function Skills() {
     return (
         <Container>
             <Container.Inner size='full' gap='noGap'>
+                <div className='mb-12'>
                 <SectionHeader
                     headerTitle='Projetos e Habilidades'
                     menuOptions={skills}
                 />
+                </div>
                 {/* <Swiper
                     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                     slidesPerView={1}
@@ -59,7 +61,7 @@ export function Skills() {
                         // <SwiperSlide key={index}>
                             <div
                                 key={index}
-                                className='bg-secondary py-6'
+                                className='bg-secondary'
                             >
                                 <ProjectSection
                                     {...values}

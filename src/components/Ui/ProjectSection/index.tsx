@@ -43,13 +43,15 @@ export function ProjectSection({ ...props }: ProjectProps) {
         setDataSingle(singleData);
         props.handleModal()
     }
-
+    
+    // pl-24 lg:pl-64 pr-8
+    // bg-[#161853] 
     return (
-        <div className="flex h-[85vh] items-center justify-center cursor-pointer py-28">
-            <div className='w-[50%] pl-24 lg:pl-64 pr-8'>
+        <div className="flex flex-col md:flex-row min-h-[85vh] items-center justify-center cursor-pointer md:py-12 md:pl-24 2xl:pl-40 max-md:py-12">
+            <div className='w-[90%] md:w-[50%] order-2 md:order-1 pt-6 text-center md:text-left md:pr-10 '>
                 <Typography
                     as='span'
-                    size='sm'
+                    bpSizes="text-[0.9rem] md:text-[1rem] 2xl:text-[1.125rem]"
                     style={{
                         type: 'heading',
                         color: "primary",
@@ -61,19 +63,19 @@ export function ProjectSection({ ...props }: ProjectProps) {
                 </Typography>
                 <Typography
                     as='h2'
-                    size='xlg'
+                    bpSizes="text-[1.6rem] md:text-[2.3rem] 2xl:text-[3rem]"
                     style={{
                         type: 'heading',
                         color: "white",
                         weight: "extraBold",
-                        className: "uppercase leading-[120%] mb-[1rem]",
+                        className: "uppercase leading-[120%] mb-[0.5rem]",
                     }}
                 >
                     {props.projectTitle}
                 </Typography>
                 <Typography
                     as='h2'
-                    bpSizes='text-[16px]'
+                    bpSizes="text-[0.8rem] md:text-[1rem] 2xl:text-[1.125rem]"
                     style={{ type: 'heading', className: "uppercase color-secondary tracking-[0.05rem]", color: "white", weight: "semiBold", }}
                 >
                     E-commerce
@@ -81,7 +83,7 @@ export function ProjectSection({ ...props }: ProjectProps) {
                 </Typography>
                 <Typography
                     as='h2'
-                    size='sm'
+                    bpSizes="text-[0.8rem] md:text-[1rem] 2xl:text-[1.125rem]"
                     style={{
                         type: 'heading',
                         color: "white",
@@ -94,13 +96,13 @@ export function ProjectSection({ ...props }: ProjectProps) {
                 </Typography>
                 <Typography
                     as='ul'
-                    size='sm'
+                    bpSizes="text-[0.8rem] md:text-[1rem] 2xl:text-[1.125rem]"
                     style={{
                         type: 'heading',
                         color: "white",
                         weight: "light",
                         lineHeight: "loose",
-                        className: "my-8 flex"
+                        className: "my-8 flex justify-center md:justify-start"
                     }}
                 >
                     {props.skills && (
@@ -114,7 +116,7 @@ export function ProjectSection({ ...props }: ProjectProps) {
                         ))
                     )}
                 </Typography>
-                <div className='flex gap-4'>
+                <div className='flex justify-center md:justify-start gap-4'>
                     <Button
                         icon={Clipboard}
                         text=' Detalhes'
@@ -130,7 +132,7 @@ export function ProjectSection({ ...props }: ProjectProps) {
 
                 </div>
             </div>
-            <div className='relative w-[50%] overflow-hidden h-[550px] aspect-video'>
+            <div className='relative w-[90%] md:w-[50%] md:order-1 overflow-hiddean md:h-[400px] 2xl:h-[550px] aspect-video'>
                 <Image
                     src={ImageTest}
                     fill={true}

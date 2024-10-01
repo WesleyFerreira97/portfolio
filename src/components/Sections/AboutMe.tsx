@@ -87,9 +87,9 @@ const AboutMeInfo = () => {
 export function AboutMe() {
     return (
         <Container>
-            <Container.Inner gap="xxl">
+            <Container.Inner gap="noGap">
                 <div className="w-full flex justify-center gap-10">
-                    <div className="flex flex-col xl:flex-row justify-center gap-x-14 relative mb-">
+                    <div className="flex flex-col xl:flex-row justify-center gap-x-14 relative ">
                         <Thumbnail />
                         <AboutMeInfo />
                     </div>
