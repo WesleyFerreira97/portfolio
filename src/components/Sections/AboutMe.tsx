@@ -8,7 +8,7 @@ import { Typography } from "@/components/Ui/Typography"
 
 const Thumbnail = () => {
     return (
-        <div className="relative flex m-auto xl:m-[inherit] aspect-[9/11] h-[400px] xl:h-[500px] mb-9 xl:mb-0">
+        <div className="relative flex m-auto xl:m-[inherit] aspect-[9/11] h-[300px] md:h-[400px] xl:h-[500px] mb-9 xl:mb-0">
             <span className="absolute h-[90%] w-[90%] bg-secondary" />
             <div className="absolute right-[-30px] top-[20%] z-10 p-4 bg-primary">
                 <Quotes size={32} color={"#fff"} />

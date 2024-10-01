@@ -19,14 +19,17 @@ export default function Home() {
                 <div className='mb-12'>
                     <HomeMainContent />
                 </div>
-                <div className='my-36'>
+                <div className='my-24 md:my-36'>
                     <AboutMe />
                 </div>
-                <div className='my-36'>
+                <div className='mt-24 md:mt-36'>
                     <Skills />
                 </div>
-                <div className='my-36'>
+                {/* <div className='my-36'> */}
                     {/* <Articles /> */}
+                {/* </div> */}
+                <div className='bg-cyan-700'>
+                    footer
                 </div>
                 <MainNavbar.MenuMobile />
             </MainNavbar>

@@ -15,10 +15,10 @@ export function SectionHeader({ headerTitle, menuOptions }: SectionHeaderProps) 
     return (
         <Container>
             <Container.Inner gap='noGap'>
-                <div className='w-full flex text-center justify-center items-center flex-col mb-4'>
+                <div className='w-full flex justify-center items-center flex-col text-center mb-4'>
                     <Typography
                         as='h3'
-                        size='lg'
+                        bpSizes='text-[1.6rem] md:text-[2.3rem] 2xl:text-[3rem]'
                         style={{
                             type: "heading",
                             color: "secondary",
@@ -28,17 +28,17 @@ export function SectionHeader({ headerTitle, menuOptions }: SectionHeaderProps) 
                         {headerTitle}
                     </Typography>
 
-                    <ul className='flex [&>*]:px-3 [&>*]:pt-2 break-normal'>
+                    <ul className='flex flex-wrap justify-center [&>*]:px-3 [&>*]:pt-2 break-normal'>
                         {Object.values(menuOptions).map((value, index) => (
                             <Typography
                                 key={index}
                                 as='li'
-                                size='md'
+                                bpSizes='text-[0.8rem] md:text-[1rem] 2xl:text-[1.125rem]'
                                 style={{
                                     type: "text",
                                     color: "secondary",
                                     weight: "semiBold",
-                                    className: "hover:text-primary cursor-pointer whitespace-nowrap"
+                                    className: "flex flex-wrap hover:text-primary cursor-pointer whitespace-nowrap"
                                 }}
                             >
                                 {value.title}

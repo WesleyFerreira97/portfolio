@@ -38,7 +38,7 @@ export function Skills() {
     return (
         <Container>
             <Container.Inner size='full' gap='noGap'>
-                <div className='mb-12'>
+                <div className='mb-6 md:mb-12'>
                 <SectionHeader
                     headerTitle='Projetos e Habilidades'
                     menuOptions={skills}
