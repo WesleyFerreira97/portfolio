@@ -35,7 +35,7 @@ const Navbar = () => {
 
     return (
         <div className="w-full flex justify-between items-center pt-4 px-8 lg:px-16 pb-0">
-            <span className="h-20 w-16 flex flex-row relative text-2xl font-bold font-primary mr-8">
+            <span className="h-20 w-12 md:w-16 flex flex-row relative text-2xl font-bold font-primary mr-8">
                 <Image
                     src={LogoSVG}
                     alt='Logo Portfólio'
@@ -47,7 +47,7 @@ const Navbar = () => {
                 onClick={handleMenuOpen}
                 className="block lg:hidden"
             >
-                <List size={24} color='#fff' weight='fill' />
+                <List size={24} color='#fff' />
             </div>
             <ul className="hidden lg:flex gap-7">
                 {MenuOptions.map((value, index) => (
