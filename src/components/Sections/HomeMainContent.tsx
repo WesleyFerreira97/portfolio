@@ -36,16 +36,18 @@ export function HomeMainContent() {
 
                 {/* Terceiro Elemento */}
                 <p className={S.subtitleContainer}>
-                    <span className={S.subtitle}>
-                        {/* <span className={S.subtitleDesktop}>Desenvolvedor</span>
-        <span className={S.subtitleMobile}>Dev</span> */}
-                        Desenvolvedor
-                        <span className={S.subtitleTransition} >
-                            <TypeWriter textArray={["Front-End", "Mobile"]} />
-                        </span>
-                    </span>
+                    <div className={S.subtitle}>
+                        <span className={S.subtitleDesktop}>Desenvolvedor</span>
+                        <span className={S.subtitleMobile}>Dev</span>
+                        {/* Desenvolvedor */}
+                        <div className={S.writerContainer}>
+                            <div className={S.subtitleTransition} >
+                                <TypeWriter textArray={["Front-End", "Mobile"]} />
+                            </div>
+                        </div>
+                    </div>
                 </p>
-            </div>
+            </div> 
         </div>
     )
 }

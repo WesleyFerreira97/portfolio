@@ -44,6 +44,6 @@ export function TypeWriter({ textArray }: TypeWriterProps) {
 
     }, [charIndex, textArray, textArrayIndex])
 
-    return <span>{currentText}</span>
+    return <span className='whitespace-nowrap'>{currentText}</span>
 }
 

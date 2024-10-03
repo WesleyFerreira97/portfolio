@@ -83,13 +83,14 @@
   }
   
   .name {
-    font-size: 5rem;
+    /* font-size: 5rem; */
+    font-size: 3.5rem;
     animation:  fadeIn 1.2s forwards;
     animation-delay: 1.5s;
   }
   
   .surName {
-    font-size: 2em;
+    font-size: 1.6rem;
     animation:  fadeInHalf 2s forwards;
     animation-delay: 2.5s;
   }
@@ -101,29 +102,30 @@
   .subtitleMobile {
     display: block;
   }
-  /*  */
-  /*  */
-  /*  */
-  
+
   .subtitleContainer {
-    min-width: 65%;
+    /* min-width: 53%; */
+    margin-right: 110px;
     position: absolute;
     bottom: 0;
     border-radius: 0.3rem;
     padding: 0.4rem 1rem;
-    color: #fff;
+    
+    
+    font-size: 0.9rem;
+    /* background-color: #ed1755; */
     font-weight: 400;
     font-family: var(--secondary-font);
-    font-size: 1.3rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .3rem;
     line-height: 100%;
+    color: #fff;
   }
   
   .subtitle {
     z-index: -1;
-    display: block;
+    display: flex;
     transform: translate3d(0, 0, 0);
     animation: slideUp 1s forwards;
     animation-delay: 3.1s;
@@ -131,8 +133,8 @@
   
   .subtitleContainer::before {
     content: "";
-    height: 100%;
-    width: 120%;
+    height: 90%;
+    width: 300%;
     position: absolute;
     bottom: 0%;
     z-index: 555;
@@ -153,7 +155,13 @@
     color: #ed1755;
     animation: blink 1s infinite;
   }
-  
+  .writerContainer {
+    width: 100%;
+    /* height: 100%;
+    position: relative;
+    background-color: #ed1755;
+    z-index: 10000; */
+  }
   .mainContentWrap::before, .subtitleContainer::before  {
     background-color: #090d1f;
     border-bottom: #090d1f;
@@ -176,21 +184,31 @@
     animation-delay: 5.2s;
   }
   
+  @media (min-width: 450px) {
+    .name {
+        font-size: 4.5rem;
+      }
+      
+      .surName {
+        font-size: 2rem;
+      }
+  }
   @media (min-width: 767px) {
     .mainContent {
       height: 100vh;
     }
   
     .name {
-      font-size: 8rem;
+      font-size: 6rem;
     }
     
     .surName {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
   
     .subtitleContainer {
-      min-width: 480px;
+      /* min-width: 400px; */
+      font-size: 1.3rem;
     }
     .subtitleDesktop {
       display: block;
@@ -199,6 +217,16 @@
     .subtitleMobile {
       display: none;
     }
+  }
+
+  @media (min-width: 1280px) {
+    .name {
+        font-size: 8rem;
+      }
+      
+      .surName {
+        font-size: 4rem;
+      }
   }
   
   @keyframes slideDown {
