@@ -12,8 +12,12 @@ import { A11y, Navigation, Pagination, Scrollbar, Autoplay } from "swiper/module
 import { useSingleContext } from '../Hooks/useSingleData';
 
 const skills = {
+    todos: {
+        title: "Todos",
+        link: "#"
+    },
     frontEnd: {
-        title: "Front-End",
+        title: "Web",
         link: "string",
     },
     mobile: {
@@ -22,10 +26,6 @@ const skills = {
     },
     designer: {
         title: "Designer",
-        link: "string",
-    },
-    comunicacao: {
-        title: "Comunicação",
         link: "string",
     },
 }

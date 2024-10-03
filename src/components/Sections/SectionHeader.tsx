@@ -11,6 +11,7 @@ type SectionHeaderProps = {
         }
     }
 }
+
 export function SectionHeader({ headerTitle, menuOptions }: SectionHeaderProps) {
     return (
         <Container>

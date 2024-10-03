@@ -9,6 +9,7 @@ import { Skills } from '@/components/Sections/Skills'
 import { Articles } from '@/components/Sections/Articles'
 import { HomeMainContent } from '@/components/Sections/HomeMainContent'
 import { SingleDataProvider } from '@/components/Hooks/useSingleData'
+import { Footer } from '@/components/Sections/Footer'
 
 
 export default function Home() {
@@ -28,11 +29,11 @@ export default function Home() {
                 {/* <div className='my-36'> */}
                     {/* <Articles /> */}
                 {/* </div> */}
-            <div className='my-24 md:my-36'>
+                <div className='my-24 md:my-36'>
                     <AboutMe />
                 </div>
                 <div className='bg-cyan-700'>
-                    footer
+                    <Footer />
                 </div>
                 <MainNavbar.MenuMobile />
             </MainNavbar>
