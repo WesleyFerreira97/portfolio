@@ -30,9 +30,11 @@ export default function Home() {
                     {/* <Articles /> */}
                 {/* </div> */}
                 <div className='my-24 md:my-36'>
-                    <AboutMe />
+                    {/* <AboutMe /> */}
+                    <div className='h-[10vh]'></div>
                 </div>
-                <div className='bg-cyan-700'>
+                <div className='bg-cyan-700 '>
+                {/* border-t-8 border-primary border-solid */}
                     <Footer />
                 </div>
                 <MainNavbar.MenuMobile />
