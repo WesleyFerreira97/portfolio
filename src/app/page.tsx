@@ -27,11 +27,11 @@ export default function Home() {
                     <Skills />
                 </div>
                 {/* <div className='my-36'> */}
-                    {/* <Articles /> */}
                 {/* </div> */}
                 <div className='my-24 md:my-36'>
-                    {/* <AboutMe /> */}
-                    <div className='h-[10vh]'></div>
+                    {/* <Articles /> */}
+                    <AboutMe />
+                    {/* <div className='h-[10vh]'></div> */}
                 </div>
                 <div className='bg-cyan-700 '>
                 {/* border-t-8 border-primary border-solid */}
