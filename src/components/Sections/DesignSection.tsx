@@ -33,37 +33,34 @@ const Thumbnail = ({currentSlideRef}: ThumbnailProps) => {
                     watchOverflow
                     className="relative mt-auto ml-auto h-[276px] aspect-[9/11] md:h-[367px] xl:h-[460px] bg-red-800"
                 >
-                             
                     <SwiperSlide>
-                        <div className="w-ful h-full relative flex justify-center">
-                        <Image
-                            src={DesignThumb.src}
-                            fill={true}
-                            alt='Profile Pic'
-                            className="object-cover -z-10"
-                        />
-                        <div className="flex absolute bottom-0 pb-3">
-                                <Button
-                                    icon={FigmaLogo}
-                                    text='Abrir Figma'
-                                    animation={true}
-                                    bg='secondary'
-                                    onClick={() => window.open("https://www.google.com.br", '_blank')}
-                                />
-                        </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        TESTE 2
-                        {/* <div className="w-ful h-full"> */}
                         <Image
                             src={DesignThumb.src}
                             fill={true}
                             alt='Profile Pic'
                             className="object-cover"
                         />
-                        {/* </div> */}
                     </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="w-ful h-full relative flex justify-center">
+                            <Image
+                                src={DesignThumb.src}
+                                fill={true}
+                                alt='Profile Pic'
+                                className="object-cover -z-10"
+                            />
+                            <div className="flex absolute bottom-0 pb-3">
+                                    <Button
+                                        icon={FigmaLogo}
+                                        text='Abrir Figma'
+                                        animation={true}
+                                        bg='secondary'
+                                        onClick={() => window.open("https://www.google.com.br", '_blank')}
+                                    />
+                            </div>
+                        </div>
+                    </SwiperSlide>
+
                 </Swiper>
            
             </div>
