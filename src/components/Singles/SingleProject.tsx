@@ -39,10 +39,10 @@ const HeaderPage = (props: HeaderProps) => {
 
     return (
         <div className='relative h-full flex flex-col sm:mb-6'>
-            <div className='h-[65vh] md:h-[60vh] xl:h-[60vh] bg-secondary flex flex-col justify-center items-center'>
+            <div className=' md:h-[60vh] xl:h-[60vh] bg-secondary flex flex-col justify-center items-center'>
                 <div className='text-center flex flex-col lg:flex-row xl:gap-3'>
                     <Typography
-                        bpSizes='text-3xl sm:text-5xl xl:text-6xl'
+                        bpSizes='text-2xl sm:text-5xl xl:text-6xl'
                         style={{
                             type: "heading",
                             color: "white",
@@ -53,7 +53,7 @@ const HeaderPage = (props: HeaderProps) => {
                         {props.mainTitle[0]}
                     </Typography>
                     <Typography
-                        bpSizes='text-3xl sm:text-5xl xl:text-6xl'
+                        bpSizes='text-1xl sm:text-5xl xl:text-6xl'
                         style={{
                             type: "heading",
                             color: "secondaryAlt",
@@ -64,10 +64,9 @@ const HeaderPage = (props: HeaderProps) => {
                         {props.mainTitle[1]}
                     </Typography>
                 </div>
-                <div className='w-3/6 flex justify-center mt-6 mb-9'>
+                <div className='w-[90%] xl:w-[50%] flex justify-center mt-6 mb-9'>
                     <Typography
-                        bpSizes='text-[1.25rem]'
-                        // size='md'
+                        bpSizes='text-[0.8rem] lg:text-[1.25rem]'
                         style={{
                             type: "text",
                             color: "white",
@@ -77,7 +76,7 @@ const HeaderPage = (props: HeaderProps) => {
                         {props.description}
                     </Typography>
                 </div>
-                <div className='my-8 z-50 flex gap-4 text-x'>
+                <div className='mb-8 mt-4 z-50 flex gap-4 text-x'>
                     {Object.entries(props.links).map((key, index) => {
                         const label = key[0];
                         const link = key[1];
@@ -95,7 +94,7 @@ const HeaderPage = (props: HeaderProps) => {
             </div>
             <div className='w-full flex justify-center overflow-hiddenn'>
                 <span className='absolute w-full h-[250px] sm:h-[350px] bg-secondary block' />
-                <div className='h-full w-[60%]'>
+                <div className='h-full w-[100%]'>
                     <Swiper
                         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                         slidesPerView={1}
