@@ -34,19 +34,26 @@ const Thumbnail = ({currentSlideRef}: ThumbnailProps) => {
                     className="relative mt-auto ml-auto h-[276px] aspect-[9/11] md:h-[367px] xl:h-[460px] bg-red-800"
                 >
                              
-                    <SwiperSlide className="relativea">
-                        <div className="w-ful h-full">
-                            TESTE 1
+                    <SwiperSlide>
+                        <div className="w-ful h-full relative flex justify-center">
                         <Image
                             src={DesignThumb.src}
                             fill={true}
                             alt='Profile Pic'
                             className="object-cover -z-10"
                         />
-                        
+                        <div className="flex absolute bottom-0 pb-3">
+                                <Button
+                                    icon={FigmaLogo}
+                                    text='Abrir Figma'
+                                    animation={true}
+                                    bg='secondary'
+                                    onClick={() => window.open("https://www.google.com.br", '_blank')}
+                                />
+                        </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className="relative">
+                    <SwiperSlide>
                         TESTE 2
                         {/* <div className="w-ful h-full"> */}
                         <Image
@@ -113,7 +120,7 @@ const AboutMeInfo = (props: AboutMeProps) => {
                 Acredito que uma habilidade essencial para todo desenvolvedor front-end é a capacidade de avaliar e contribuir na criação do design de uma aplicação. Embora não seja uma habilidade primária, saber desempenhá-la nos permite ter uma melhor compreensão das reais necessidades do projeto e facilita o trabalho em conjunto com os demais designers.
                 </Typography.Paragraph>
             </Typography>
-            <div className="navigation-buttons">
+            <div className="flex">
                     <Button
                         icon={FigmaLogo}
                         text=' Próximo Projeto'
