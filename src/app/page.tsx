@@ -10,7 +10,11 @@ import { Articles } from '@/components/Sections/Articles'
 import { HomeMainContent } from '@/components/Sections/HomeMainContent'
 import { SingleDataProvider } from '@/components/Hooks/useSingleData'
 import { Footer } from '@/components/Sections/Footer'
-
+import { DesignSection } from '@/components/Sections/DesignSection'
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
 export default function Home() {
 
@@ -30,7 +34,7 @@ export default function Home() {
                 {/* </div> */}
                 <div className='my-24 md:my-36'>
                     {/* <Articles /> */}
-                    <AboutMe />
+                    <DesignSection />
                     {/* <div className='h-[10vh]'></div> */}
                 </div>
                 <div className='bg-cyan-700 '>
