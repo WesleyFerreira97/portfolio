@@ -110,16 +110,16 @@ const HeaderPage = (props: HeaderProps) => {
                     >
                         <SwiperSlide className=''>
                             <CarouselImage
-                                thumbImg={SiamHome}
+                                thumbImg={props.gallery[0]}
                             />
                         </SwiperSlide>
-                        <SwiperSlide className=''>
+                        {/* <SwiperSlide className=''>
                             <div className='overflow-hidden'>
                                 <CarouselImage
                                     thumbImg={SiamHome}
                                 />
                             </div>
-                        </SwiperSlide>
+                        </SwiperSlide> */}
                     </Swiper>
                 </div>
             </div>
