@@ -68,16 +68,15 @@ const AboutMeInfo = () => {
                 }}
             >
                 <Typography.Paragraph>
-                    Sou desenvolvedor Mobile e Front-end, voltado a Android Nativo e React Native, com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
+                    Sou desenvolvedor Front-end e Mobile, possuindo um conhecimento aprofundado em React JS/Next, React Native, JavaScript e TypeScript. Tenho também proficiência para me adaptar às principais bibliotecas e frameworks front-end do mercado, como Vue JS e Angular, além de experiência em design voltado para a criação de layouts.
                 </Typography.Paragraph>
-
                 <Typography.Paragraph>
-                    Sou desenvolvedor Mobile e Front-end, voltado a Android Nativo e React Native, com conhecimento aprofundado em React JS/Next, Typescript e proficiência o suficiente para se adaptar as principais bibliotecas e frameworks front-end do mercado como Vue JS e Angular, possuo conhecimentos em design voltado a criação de layouts.
+                    Com o objetivo de me tornar um profissional com conhecimentos mais sólidos e bases fortes, iniciei uma graduação de Engenharia de Software e estudo diariamente algoritmos, estrutura de dados. Além disso, busco constantemente expandir meus conhecimentos em tecnologias, melhorias e agilidades no desenvolvimento de Softwares, a fim de me tornar um profissional mais completo e preparado para os desafios do mercado.
                 </Typography.Paragraph>
-
                 <Typography.Paragraph>
-                    Atualmente estou cursando ensino superior em Engenharia de Software
+                    No momento também tenho focado em evoluir no aprendizado da lingua inglesa, com estudos diários através de pesquisas, videos e curso na plataforma DIO.ME com o curso English4Tech, voltado ao desenvolvimento rápido de inglês para profissionais de tecnologia.
                 </Typography.Paragraph>
+          
 
             </Typography>
         </div>
