@@ -61,7 +61,7 @@ const Navbar = () => {
                             weight: "light"
                         }}
                     >
-                        <a href={value.path}>{value.label}</a>
+                        <a href={value.path} target='_blank'>{value.label}</a>
                     </Typography>
                 ))}
             </ul>

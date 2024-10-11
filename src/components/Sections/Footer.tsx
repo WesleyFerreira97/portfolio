@@ -96,7 +96,8 @@ export function Footer() {
                 isActive={activeIndex === 3}
                 onClick={() => handleItemClick(
                     3,
-                    "Download Currículo"
+                    "Download Currículo",
+                    "/portfolio/cv-wesley.docx"
                 )}
             />
             </div>
