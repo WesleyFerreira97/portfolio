@@ -8,20 +8,14 @@ import { Clipboard, ArrowFatLineRight } from '@phosphor-icons/react';
 import { useSwiper } from 'swiper/react';
 import { SingleProjectProps } from '@/components/Singles/SingleProject';
 import { useSingleContext } from '@/components/Hooks/useSingleData';
+import type { ProjectDataProps } from '@/data/frontEndProjects';
 
-type ProjectProps = {
-    projectTitle: string;
-    projectType: string;
-    description: string;
-    skills: string[];
-    thumb: any;
-    singleData: SingleInfoProps;
-    handleModal: (value?: any) => void
-}
-
+type ProjectProps = ProjectDataProps 
+& { handleModal: (value?: any) => void }
+& { button?: any}
 
 export type SectionProjectProps = {
-    props: ProjectProps
+    props: ProjectProps;
 }
 
 
@@ -45,7 +39,8 @@ export function ProjectSection({ ...props }: ProjectProps) {
     }
     
     return (
-        <div className="flex flex-col md:flex-row min-h-[80vh] items-center justify-center cursor-pointer md:py-12 md:pl-24 2xl:pl-40 max-md:py-16">
+        <div id={props.slug}
+        className="flex flex-col md:flex-row min-h-[80vh] items-center justify-center cursor-pointer md:py-12 md:pl-24 2xl:pl-40 max-md:py-16">
             <div className='w-[90%] md:w-[50%] order-2 md:order-1 pt-6 text-center md:text-left md:pr-10 2xl:pr-14 '>
                 <Typography
                     as='span'
@@ -122,12 +117,12 @@ export function ProjectSection({ ...props }: ProjectProps) {
                         bg='primary'
                         onClick={handleSection}
                     />
-                    <Button
+                    {/* <Button
                         icon={ArrowFatLineRight}
                         text=' Proximo Projeto'
                         onClick={() => swiper.slideNext()}
-                    />
-
+                    /> */}
+                    {props.button}
                 </div>
             </div>
             <div className='relative w-[90%] md:w-[50%] 2xl:w-[55%] md:order-1 overflow-hiddean md:h-[400px] 2xl:h-[550px] aspect-video'>

@@ -1,6 +1,6 @@
 import { Container } from '@/components/Layout/Container'
 import { Modal } from '@/components/Layout/Modal';
-import { Pencil } from '@phosphor-icons/react';
+import { ArrowFatLineRight, Pencil } from '@phosphor-icons/react';
 import React, { useState } from 'react'
 import { Typography } from '@/components/Ui/Typography';
 import { frontEndProjectsData, SingleInfoProps } from '../../data/frontEndProjects';
@@ -10,23 +10,24 @@ import { ProjectSection } from '../Ui/ProjectSection';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { A11y, Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
 import { useSingleContext } from '../Hooks/useSingleData';
+import { Button } from '../Ui/Button';
 
 const skills = {
-    todos: {
-        title: "Todos",
-        link: "#"
-    },
+    // todos: {
+    //     title: "Todos",
+    //     link: "#"
+    // },
     frontEnd: {
         title: "Web",
-        link: "string",
+        link: "#bg-web",
     },
     mobile: {
         title: "Mobile",
-        link: "string",
+        link: "#bg-app",
     },
     designer: {
         title: "Designer",
-        link: "string",
+        link: "#design",
     },
 }
 
@@ -57,7 +58,7 @@ export function Skills() {
                     scrollbar={{ draggable: true }}
                     pagination={{ clickable: true }}
                 > */}
-                    {frontEndProjectsData.map((values, index) => (
+                    {frontEndProjectsData.map(({button, ...values}, index) => (
                         // <SwiperSlide key={index}>
                             <div
                                 key={index}
@@ -66,6 +67,13 @@ export function Skills() {
                                 <ProjectSection
                                     {...values}
                                     handleModal={toggleModalState}
+                                    // button={(
+                                    //     <Button
+                                    //     icon={button?.icon}
+                                    //     text={button.title}
+                                    //     onClick={() => console.log("opa")}
+                                    // />
+                                    // )}
                                 />
                             </div>
                         // </SwiperSlide>

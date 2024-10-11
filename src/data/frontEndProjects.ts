@@ -3,6 +3,7 @@ import BgWebThumb from "../../public/images/bela_garota_images/home_main_content
 import BGSingleImage from "@/../public/images/bela_garota_images/home_widgets.png"
 import SiamMockup from "../../public/images/bela_garota_images/SiamMockup.png"
 import { StaticImageData } from "next/image";
+import { ArrowFatLineRight, Icon, Browsers } from "@phosphor-icons/react";
 
 type SingleInfoProps = {
     mainTitle: string[];
@@ -17,12 +18,18 @@ type SingleInfoProps = {
 }
 
 type ProjectDataProps = {
+    slug: string;
     projectType: string;
     projectTitle: string;
     description: string;
     skills: string[];
     thumb: StaticImageData;
     singleData: SingleInfoProps;
+    button?: {
+        title: string;
+        link: string;
+        icon: Icon;
+    }
 }
 
 const BGApp: SingleInfoProps = {
@@ -56,15 +63,20 @@ const singleBGWeb: SingleInfoProps = {
     }
 }
 
-
 const frontEndProjectsData: ProjectDataProps[] = [
     {
+        slug: "bg-web",
         projectType: "E-commerce React JS/Native",
         projectTitle: "Bela Garota Web",
         description: "E-commerce Web, feito com Next JS, exibe todos os produtos cadastrados no banco de dados, com a possibilidade de adicionar ao carrinho, visualizar detalhes do produto e finalizar a compra.",
         skills: ["React JS", "Next JS", "Typescript", "Next UI", "Supabase", "Supabase"],
         thumb: BgWebThumb,
-        singleData: singleBGWeb
+        singleData: singleBGWeb,
+        button: {
+            title: "Ver Projeto",
+            link: "#bg-web",
+            icon: Browsers
+        }
     },
     // {
     //     projectType: "E-commerce React JS/Native",
@@ -75,14 +87,22 @@ const frontEndProjectsData: ProjectDataProps[] = [
     //     singleData: single2
     // },
     {
+        slug: "bg-app",
         projectType: "E-commerce React JS/Native",
         projectTitle: "Bela Garota APP",
         description: "",
         skills: ["React JS", "Next JS", "Typescript", "Next UI", "Supabase"],
         thumb: SiamMockup,
-        singleData: BGApp
+        singleData: BGApp,
+        button: {
+            title: "Ver Projeto",
+            link: "#bg-web",
+            icon: Browsers
+        }
     }
 ]
 
 export type { SingleInfoProps, ProjectDataProps }
 export { singleBGWeb, frontEndProjectsData }
+
+

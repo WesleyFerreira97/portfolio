@@ -6,6 +6,7 @@ import { Quotes, PaintBucket, FigmaLogo } from '@phosphor-icons/react'
 import { Container } from "../Layout/Container"
 import { Typography } from "@/components/Ui/Typography"
 import DesignThumb from "@/../public/images/creative-design.jpg"
+import ThumbBG from "@/../public/images/bela_garota_images/thumb-portfolio.jpg"
 import { Swiper, SwiperSlide } from "swiper/react"
 import BGHome from "@/../public/images/bela_garota_images/bg-thumbnail.png"
 import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules"
@@ -44,7 +45,7 @@ const Thumbnail = ({currentSlideRef}: ThumbnailProps) => {
                     <SwiperSlide>
                         <div className="w-ful h-full relative flex justify-center">
                             <Image
-                                src={DesignThumb.src}
+                                src={ThumbBG.src}
                                 fill={true}
                                 alt='Profile Pic'
                                 className="object-cover -z-10"
@@ -55,7 +56,7 @@ const Thumbnail = ({currentSlideRef}: ThumbnailProps) => {
                                         text='Abrir Figma'
                                         animation={true}
                                         bg='secondary'
-                                        onClick={() => window.open("https://www.google.com.br", '_blank')}
+                                        onClick={() => window.open("https://www.figma.com/design/lmFQgPgVlMSPvrPGhiTi39/Layout---Garota-Moda?node-id=225-2&t=Z9oVZ7poZBN7cqyJ-1", '_blank')}
                                     />
                             </div>
                         </div>
