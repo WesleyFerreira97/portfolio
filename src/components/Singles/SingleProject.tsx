@@ -193,8 +193,6 @@ const ContentPage = (props: ContentProps) => {
     )
 }
 
-// description maintitle gallery links
-
 export function SingleProject({ article, articleTitle, ...props }: SingleProjectProps) {
 
     return (

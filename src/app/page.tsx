@@ -27,7 +27,7 @@ export default function Home() {
                 <div className='mt-24 md:mt-36'>
                     <Skills />
                 </div>
-                <div className='my-24 md:my-36'>
+                <div id="design" className='my-24 md:my-36'>
                     {/* <Articles /> */}
                     <DesignSection />
                 </div>

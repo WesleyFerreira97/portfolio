@@ -31,19 +31,23 @@ export function SectionHeader({ headerTitle, menuOptions }: SectionHeaderProps) 
 
                     <ul className='flex flex-wrap justify-center [&>*]:px-3 [&>*]:pt-2 break-normal'>
                         {Object.values(menuOptions).map((value, index) => (
-                            <Typography
+                            <a 
                                 key={index}
-                                as='li'
-                                bpSizes='text-[0.8rem] md:text-[1rem] 2xl:text-[1.125rem]'
-                                style={{
-                                    type: "text",
-                                    color: "secondary",
-                                    weight: "semiBold",
-                                    className: "flex flex-wrap hover:text-primary cursor-pointer whitespace-nowrap"
-                                }}
+                                href={value.link}
                             >
-                                {value.title}
-                            </Typography>
+                                <Typography
+                                    as='li'
+                                    bpSizes='text-[0.8rem] md:text-[1rem] 2xl:text-[1.125rem]'
+                                    style={{
+                                        type: "text",
+                                        color: "secondary",
+                                        weight: "semiBold",
+                                        className: "flex flex-wrap hover:text-primary cursor-pointer whitespace-nowrap"
+                                    }}
+                                >
+                                    {value.title}
+                                </Typography>
+                            </a>
                         ))}
                     </ul>
                 </div>
@@ -51,3 +55,4 @@ export function SectionHeader({ headerTitle, menuOptions }: SectionHeaderProps) 
         </Container>
     )
 }
+
