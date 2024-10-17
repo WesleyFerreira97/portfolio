@@ -30,11 +30,7 @@ const BGApp: SingleInfoProps = {
     thumb: BgWebThumb,
     gallery: [BgWebThumb, BgWebThumb, BgWebThumb, BgWebThumb],
     articleTitle: "Admin App",
-    article: ["Esse projeto utiliza a API do github para fazer uma query nos perfis e trazer informações acerca da conta do usuário, além de implementar um chat, que envia e recebe dados em tempo real com uma plataforma de BackEnd as a Service ( Supabase).",
-        "Esse projeto utiliza a API do github para fazer uma query nos perfis e trazer informações acerca da conta do usuário, além de implementar um chat, que envia e recebe dados em tempo real com uma plataforma de BackEnd as a Service ( Supabase).",
-        "Esse projeto utiliza a API do github para fazer uma query nos perfis e trazer informações acerca da conta do usuário, além de implementar um chat, que envia e recebe dados em tempo real com uma plataforma de BackEnd as a Service ( Supabase).",
-        "Esse projeto utiliza a API do github para fazer uma query nos perfis e trazer informações acerca da conta do usuário, além de implementar um chat, que envia e recebe dados em tempo real com uma plataforma de BackEnd as a Service ( Supabase)."
-    ],
+    article: [],
     links: {
         repo: "https://github.com/WesleyFerreira97/BG-React-native-app",
         preview: "https://bg-next-theme-seven.vercel.app/"
@@ -46,9 +42,9 @@ const singleBGWeb: SingleInfoProps = {
     thumb: BGSingleImage,
     gallery: [BGSingleImage],
     articleTitle: "Web E-commerce",
-    article: ["O Projeto Bela Garota foi desenvolvido com o propósito base de criar uma plataforma de e-commerce voltada para pequenos e médios empreendedores e suprir uma deficiência comum em pequenos negócios onde a limitação financeira torna inviável desenvolver e manter um projeto para vendas online integrada as principais redes sociais como Instagram e Whatsapp.", 
-    "Aqui temos a versão Web do projeto, desenvolvida utilizando as principais bibliotecas e frameworks atuais web, como React, Next JS, Next UI, entre outros.",
-    "Foi utilizado um serviço de backend as a service ( BaaS ), Supabase, utilizando como banco de dados o postgrest, onde todos os produtos, categorias e pedidos são cadastrados e disponibilizados. "
+    article: ["O Projeto Bela Garota foi desenvolvido com o propósito base de criar uma plataforma de e-commerce voltada para pequenos e médios empreendedores e suprir uma deficiência comum em pequenos negócios onde a limitação financeira torna inviável desenvolver e manter um projeto para vendas online integrada as principais redes sociais como Instagram e Whatsapp.",
+        "Aqui temos a versão Web do projeto, desenvolvida utilizando as principais bibliotecas e frameworks atuais web, como React, Next JS, Next UI, entre outros.",
+        "Foi utilizado um serviço de backend as a service ( BaaS ), Supabase, utilizando como banco de dados o postgrest, onde todos os produtos, categorias e pedidos são cadastrados e disponibilizados. "
     ],
     links: {
         repo: "https://github.com/WesleyFerreira97/BG-next-theme",
