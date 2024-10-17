@@ -29,7 +29,7 @@ const BGApp: SingleInfoProps = {
     mainTitle: ["Bela Garota - App", "React Native"],
     thumb: BgWebThumb,
     gallery: [BgWebThumb, BgWebThumb, BgWebThumb, BgWebThumb],
-    articleTitle: "Admin App",
+    articleTitle: "APP Administrativo",
     article: [],
     links: {
         repo: "https://github.com/WesleyFerreira97/BG-React-native-app",
